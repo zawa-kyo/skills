@@ -5,10 +5,6 @@ description: Suggest concise English Conventional Commit message candidates from
 
 # Suggest Commit Messages
 
-## Language Versions
-
-This file and `SKILL-ja.md` are documents that describe the same skill. When changing either file, update the other in the same change so the English and Japanese versions stay aligned while remaining natural in each language.
-
 ## Overview
 
 Draft a small set of concise English commit message candidates from the repository's current changes. Prefer staged changes, but if nothing is staged, inspect all unstaged changes, including untracked files, instead. Always fetch and check the Git state again at execution time, even if prior context mentions cached, staged, unstaged, or untracked content.
