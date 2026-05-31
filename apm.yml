@@ -1,0 +1,5 @@
+name: zawa-kyo-skills
+version: 0.1.0
+description: A collection of reusable agent skills maintained by zawa-kyo.
+author: Kyohei Ozawa
+includes: auto
