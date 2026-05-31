@@ -8,7 +8,8 @@ description: Clean up English documentation, comments, prompts, release notes, a
 ## Overview
 
 Improve English prose in technical documents, comments, prompts, policies, release notes, and guides.
-Treat `stop-slop` as the baseline pass for removing predictable AI writing patterns, then apply the additional checks in this skill for English technical prose.
+Use `stop-slop` as the baseline anti-AI-writing pass, then apply the additional checks in this skill for English technical prose.
+If this skill conflicts with `stop-slop`, follow `stop-slop`.
 
 The goal is clear, specific, human English. Do not turn practical documentation into marketing copy, and do not change technical meaning for style.
 
@@ -18,7 +19,7 @@ The goal is clear, specific, human English. Do not turn practical documentation 
 2. Separate prose from literal technical artifacts.
    - Prose: sentences, headings, bullets, descriptions, labels, comments, prompts, and explanations.
    - Technical artifacts: commands, file paths, config keys, code identifiers, package names, API names, URLs, examples, quoted values, and product names.
-3. Apply `stop-slop` as the baseline anti-AI-writing pass when it is available. Focus on removing filler, formulaic contrasts, passive or distant phrasing, vague abstractions, over-softening, punchline endings, and em dashes.
+3. Apply `stop-slop` as the baseline anti-AI-writing pass when it is available. Do not duplicate its checklist here.
 4. Apply the technical-prose checks in this skill.
 5. Preserve technical artifacts unless the user explicitly asks to rename them.
 6. Keep the repository's existing terminology, capitalization, and tone consistent.
@@ -51,9 +52,9 @@ Keep technical writing grounded:
 - Use contractions only when they match the surrounding document's tone.
 - Avoid adding enthusiasm, sales language, or broad claims the source text does not support.
 
-## Additional Personal Checks
+## Project-Specific Checks
 
-When maintaining this skill, add stable checks here rather than changing `stop-slop` directly.
+When maintaining this skill, add stable checks here rather than changing or restating `stop-slop` directly.
 
 - Remove introductory throat-clearing before lists, examples, and conclusions.
 - Replace generic claims such as `improves developer experience` with the specific improvement.
