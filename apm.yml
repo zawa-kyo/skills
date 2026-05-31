@@ -3,3 +3,8 @@ version: 0.1.0
 description: A collection of reusable agent skills maintained by zawa-kyo.
 author: Kyohei Ozawa
 includes: auto
+targets:
+  - agent-skills
+devDependencies:
+  apm:
+    - anthropics/skills/skills/skill-creator#da20c92503b2e8ff1cf28ca81a0df4673debdbf7

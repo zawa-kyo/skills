@@ -1,0 +1,5 @@
+# APM dependencies
+apm_modules/
+
+# APM deployed skill outputs
+.agents/skills/
