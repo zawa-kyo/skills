@@ -1,18 +1,18 @@
 # Repository Instructions
 
-## Repository Shape
+## Repository Layout
 
-This repository publishes reusable agent skills through `apm`. Each directory under `meta/` is an independent skill package.
+This repository publishes reusable agent skills with `apm`. Each directory under `meta/` is an independent skill package.
 
-For each skill:
+Each skill contains:
 
 - `SKILL.md` is the English skill definition.
 - `SKILL-ja.md` is the Japanese skill definition for the same behavior.
-- `agents/openai.yaml` defines the OpenAI-facing display metadata and default prompt.
+- `agents/openai.yaml` defines OpenAI display metadata and the default prompt.
 
 ## Language Versions
 
-When generating or editing text in this repository, check whether an English Markdown file and a corresponding Japanese `*-ja.md` file exist for the same content. If either side exists, update both files in the same change so they stay aligned.
+When you generate or edit text in this repository, check whether an English Markdown file and a corresponding Japanese `*-ja.md` file exist for the same content. When one exists, update both files in the same change so they stay aligned.
 
 Keep the versions equivalent in meaning, but write each one naturally in its own language. Do not make the Japanese file a mechanical line-by-line translation when a more natural Japanese expression preserves the same intent.
 
@@ -24,7 +24,7 @@ This applies especially to:
 
 ## Skill Maintenance
 
-When adding, renaming, or removing a skill, update all repository surfaces that mention the skill:
+When you add, rename, or remove a skill, update every repository file that mentions the skill:
 
 - the `meta/<skill>/` directory contents
 - `README.md` and `README-ja.md` install examples and skill table
