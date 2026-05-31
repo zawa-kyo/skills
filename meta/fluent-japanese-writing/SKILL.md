@@ -19,11 +19,18 @@ Improve Japanese prose in technical documents, comments, policies, and guides. T
 2. Separate prose from literal technical artifacts.
    - Prose: sentences, headings, bullets, explanations, labels.
    - Technical artifacts: command names, file paths, config keys, code identifiers, package names, URLs, examples, and quoted values.
-3. Rewrite prose into fluent Japanese.
-4. Preserve technical artifacts unless the user explicitly asks to rename them.
-5. Keep the repository's existing terminology and tone consistent.
-6. Avoid broad rewrites that change the document's structure or intent unless the user asks for a larger edit.
-7. After editing, search for the targeted awkward terms to confirm the intended cleanup is complete.
+3. Check whether Node.js and `npx` are available with `command -v node` and `command -v npx`.
+   - If both are available, run textlint through Node.js with `npx`; do not use the textlint MCP server for this skill.
+   - For file targets, use:
+     `npx --yes --package textlint --package @textlint-ja/textlint-rule-preset-ai-writing textlint --rule @textlint-ja/preset-ai-writing <target-file>`
+   - For prose that is not already in a file, place only the target text in a temporary Markdown file and run the same command against that file.
+   - Treat lint findings as input for the rewrite, not as automatic edits. Preserve technical meaning and local terminology even when a lint suggestion is too broad.
+   - If Node.js or `npx` is unavailable, tell the user that this lint check requires Node.js and `npx`, and ask them to make those available before running the lint-assisted pass.
+4. Rewrite prose into fluent Japanese, reflecting relevant findings from `@textlint-ja/textlint-rule-preset-ai-writing`.
+5. Preserve technical artifacts unless the user explicitly asks to rename them.
+6. Keep the repository's existing terminology and tone consistent.
+7. Avoid broad rewrites that change the document's structure or intent unless the user asks for a larger edit.
+8. After editing, search for the targeted awkward terms to confirm the intended cleanup is complete. When `npx` was available, rerun the lint command on the edited target and address any remaining relevant findings.
 
 ## Wording Guidelines
 
@@ -67,6 +74,8 @@ Preserve literal technical artifacts:
 
 - Does the result read like documentation written by a careful Japanese-speaking maintainer?
 - Are unnecessary English words replaced with fluent Japanese?
+- Was `@textlint-ja/textlint-rule-preset-ai-writing` run through `npx` when Node.js was available, without using the textlint MCP server?
+- Were relevant lint findings reflected without accepting broad suggestions that would distort the document's intent?
 - Are commands, paths, identifiers, config keys, and examples preserved exactly?
 - Did any wording change alter the technical meaning?
 - Are repeated terms consistent across the edited files?
