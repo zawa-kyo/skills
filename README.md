@@ -1,8 +1,8 @@
 # zawa-kyo/skills
 
-A collection of reusable agent skills maintained by zawa-kyo, distributed via [apm](https://github.com/microsoft/apm).
+Reusable agent skills maintained by zawa-kyo and distributed with [apm](https://github.com/microsoft/apm).
 
-Each directory under `meta/` is a standalone skill.
+Each directory under `meta/` is a standalone skill package.
 
 ## Install
 
@@ -28,9 +28,9 @@ dependencies:
 
 ## Skills
 
-| Skill                   | Install path                   | Description                                                                                                        |
-| ----------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| Review Essential Code   | `meta/review-essential-code`   | Review code changes for bugs, regressions, missing tests, and essential maintainability.                           |
-| Suggest Commit Messages | `meta/suggest-commit-messages` | Suggest concise English Conventional Commit messages from staged or unstaged Git diffs.                            |
-| Fluent Japanese Writing | `meta/fluent-japanese-writing` | Rewrite Japanese technical prose into fluent, readable Japanese while preserving commands, paths, and identifiers. |
-| Cleanup English Writing | `meta/cleanup-english-writing` | Clean up English technical prose so it reads direct, human, and less AI-like while preserving technical meaning.   |
+| Skill                   | Install path                   | Description                                                                                                       |
+| ----------------------- | ------------------------------ | ----------------------------------------------------------------------------------------------------------------- |
+| Review Essential Code   | `meta/review-essential-code`   | Review code changes for bugs, regressions, missing tests, and essential maintainability.                          |
+| Suggest Commit Messages | `meta/suggest-commit-messages` | Suggest concise English Conventional Commit messages from staged or unstaged Git diffs.                           |
+| Fluent Japanese Writing | `meta/fluent-japanese-writing` | Make Japanese technical prose fluent while preserving commands, paths, and identifiers.                           |
+| Cleanup English Writing | `meta/cleanup-english-writing` | Make English technical prose direct and less AI-like while preserving commands, paths, and identifiers.           |
