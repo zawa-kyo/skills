@@ -5,10 +5,6 @@ description: Review code changes for bugs, regressions, missing tests, and wheth
 
 # Review Essential Code
 
-## Language Versions
-
-This file and `SKILL-ja.md` are documents that describe the same skill. When changing either file, update the other in the same change so the English and Japanese versions stay aligned while remaining natural in each language.
-
 ## Overview
 
 Review changes with the normal code-review lens first: correctness, regressions, edge cases, security, performance, and test coverage. Then add simplicity as an additional important lens: whether the code solves the root problem in the local design idiom, or merely patches symptoms with special cases, duplicated logic, broad guards, needless abstraction, and similar workarounds.

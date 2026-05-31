@@ -5,10 +5,6 @@ description: Rewrite Japanese documentation and comments into fluent, human-read
 
 # Fluent Japanese Writing
 
-## Language Versions
-
-This file and `SKILL-ja.md` describe the same skill. When changing either file, update the other in the same change so the English and Japanese versions stay aligned while remaining natural in each language.
-
 ## Overview
 
 Improve Japanese prose in technical documents, comments, policies, and guides. The goal is not to translate every technical word mechanically, but to make the text read fluently to a Japanese-speaking maintainer while preserving precise technical meaning.
