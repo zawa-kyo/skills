@@ -8,3 +8,4 @@ targets:
 devDependencies:
   apm:
     - anthropics/skills/skills/skill-creator
+    - vercel-labs/skills/skills/find-skills
