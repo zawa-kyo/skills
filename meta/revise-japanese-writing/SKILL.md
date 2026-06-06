@@ -1,13 +1,15 @@
 ---
-name: fluent-japanese-writing
-description: Rewrite Japanese documentation and comments into fluent, human-readable Japanese while preserving code identifiers, commands, file paths, configuration keys, product names, and intentional technical terms. Use when the user asks to make Japanese prose more fluent or natural, remove awkward AI-like phrasing, reduce unnecessary English mixing, or align Japanese wording across docs.
+name: revise-japanese-writing
+description: Review and revise Japanese documentation and comments into fluent, human-readable prose while preserving code identifiers, commands, file paths, configuration keys, product names, and intentional technical terms. Use when the user asks to make Japanese prose more fluent or natural, remove awkward AI-like phrasing, reduce unnecessary English mixing, align Japanese wording across docs, or apply the shared Japanese prose standard referenced by agent instructions.
 ---
 
-# Fluent Japanese Writing
+# Revise Japanese Writing
 
 ## Overview
 
-Improve Japanese prose in technical documents, comments, policies, and guides. The goal is not to translate every technical word mechanically, but to make the text read fluently to a Japanese-speaking maintainer while preserving precise technical meaning.
+Review and improve Japanese prose in technical documents, comments, policies, and guides. The goal is not to translate every technical word mechanically, but to make the text read fluently to a Japanese-speaking maintainer while preserving precise technical meaning.
+
+This skill is the source of truth for detailed Japanese prose style. Agent-level instruction files may reference this skill for Japanese tone, notation, terminology, and punctuation instead of duplicating those rules.
 
 ## Workflow
 
@@ -30,7 +32,14 @@ Improve Japanese prose in technical documents, comments, policies, and guides. T
 
 ## Wording Guidelines
 
-Prefer fluent Japanese for ordinary prose:
+- Think in Japanese when writing Japanese. Avoid drafting in English and translating it into Japanese.
+- Japanese particles carry important meaning. Do not omit them except in intentional quotations, labels, or code-like fragments.
+- Match the surrounding document's tone, especially polite style and plain style.
+- Match established terminology, notation, and symbol usage. Do not mix multiple forms for the same concept.
+- Do not force Japanese replacements for domain terms that are common in Japanese, lack a clear Japanese equivalent, or would become less precise when translated.
+- Use technical terms, loanwords, and abbreviations according to the reader and document purpose. Define or explain abbreviations on first use.
+- Use punctuation, brackets, question marks, exclamation points, and similar symbols consistently within a document, and avoid overusing them
+- Prefer fluent Japanese for ordinary prose:
 
 | Source term          | Preferred Japanese                                                    |
 | -------------------- | --------------------------------------------------------------------- |
@@ -70,6 +79,9 @@ Preserve literal technical artifacts:
 
 - Does the result read like documentation written by a careful Japanese-speaking maintainer?
 - Are unnecessary English words replaced with fluent Japanese?
+- Are Japanese particles present where natural Japanese requires them?
+- Does the text match the surrounding tone, terminology, notation, and punctuation style?
+- Are abbreviations, loanwords, and technical terms appropriate for the reader and document purpose?
 - Was `@textlint-ja/textlint-rule-preset-ai-writing` run through `npx` when Node.js was available, without using the textlint MCP server?
 - Were relevant lint findings reflected without accepting broad suggestions that would distort the document's intent?
 - Are commands, paths, identifiers, config keys, and examples preserved exactly?

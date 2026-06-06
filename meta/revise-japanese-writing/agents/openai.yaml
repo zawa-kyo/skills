@@ -1,0 +1,4 @@
+interface:
+  display_name: "Revise Japanese Writing"
+  short_description: "Review and revise Japanese technical prose"
+  default_prompt: "Use $revise-japanese-writing to review and revise this Japanese technical prose while preserving commands, paths, and identifiers."
