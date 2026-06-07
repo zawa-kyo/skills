@@ -16,8 +16,9 @@ Turn a personal discussion log, rough back-and-forth, or scattered notes into a 
 3. If critical information is missing and the ambiguity would materially change the summary, ask up to three concise clarification questions. Otherwise continue and mark uncertain points explicitly.
 4. Reconstruct the content by issue, rationale, and outcome. Do not simply replay the conversation in chronological order unless the sequence itself is necessary to explain the result.
 5. Preserve both the conclusion and the context that led to it. Include the user's purpose, relevant constraints, tradeoffs, and unresolved points when they matter.
-6. Write the result as a Markdown note that can be saved directly as an `.md` file.
-7. At the end, quickly self-check whether the summary is coherent, decision-useful, and faithful to the source discussion.
+6. When the source is incomplete, paraphrased, or already summarized rather than a raw transcript, preserve only supported facts. Mark inferred details conservatively instead of filling gaps with confident specifics.
+7. Write the result as a Markdown note that can be saved directly as an `.md` file.
+8. At the end, quickly self-check whether the summary is coherent, decision-useful, and faithful to the source discussion.
 
 ## Framework Selection
 
@@ -33,6 +34,7 @@ Choose one primary framework and say which one you used.
 | `Decision memo`          | The conversation compares options, criteria, tradeoffs, and a recommended direction.                                           | Making a recommendation and preserving the basis for it.        |
 
 You may blend techniques, but the final note should still have one dominant organizing frame.
+State the chosen framework explicitly inside the note itself, near the top, using a visible label such as `Framework: Decision memo`. Do not treat framework choice as internal reasoning only.
 
 ## Output Contract
 
@@ -51,6 +53,7 @@ Do not force one fixed template for every case. The exact section order and head
 - Write for clarity, not completeness-by-default.
 - Prefer structure over chronology.
 - Separate confirmed conclusions from interpretation, assumptions, and open questions.
+- When details are inferred from partial source material, signal that uncertainty plainly instead of inventing specifics.
 - When the source discussion is messy, make that mess legible rather than hiding it.
 - Use direct headings and concise prose.
 - Keep the output in Markdown and avoid decorative formatting.
@@ -66,9 +69,7 @@ Respond in the user's language unless they ask otherwise. Return the Markdown no
 ```md
 # Why we should create a wrapper skill
 
-## Framework
-
-PREP
+Framework: PREP
 
 ## Point
 
@@ -96,9 +97,7 @@ Build the wrapper and make framework selection part of the workflow.
 ```md
 # Discussion summary for the new skill
 
-## Framework
-
-Decision memo
+Framework: Decision memo
 
 ## Current conclusion
 
