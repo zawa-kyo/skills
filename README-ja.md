@@ -14,6 +14,7 @@ apm install -g zawa-kyo/skills/dev/suggest-commit-messages
 apm install -g zawa-kyo/skills/writing/revise-japanese-writing
 apm install -g zawa-kyo/skills/writing/revise-english-writing
 apm install -g zawa-kyo/skills/writing/edit-existing-document
+apm install -g zawa-kyo/skills/writing/summarize-discussion-coherently
 ```
 
 または `apm.yml` に追加します。
@@ -26,6 +27,7 @@ dependencies:
     - zawa-kyo/skills/writing/revise-japanese-writing
     - zawa-kyo/skills/writing/revise-english-writing
     - zawa-kyo/skills/writing/edit-existing-document
+    - zawa-kyo/skills/writing/summarize-discussion-coherently
 ```
 
 ## 🎒 スキルの詳細
@@ -44,3 +46,4 @@ dependencies:
 | Revise Japanese Writing | `writing/revise-japanese-writing` | コマンド、パス、識別子を保ったまま、日本語の技術文書を確認し、自然で読みやすい日本語に整える。 |
 | Revise English Writing  | `writing/revise-english-writing`  | コマンド、パス、識別子を保ったまま、英語の技術文書を直接的で AI っぽさの少ない文章に整える。   |
 | Edit Existing Document  | `writing/edit-existing-document`  | 既存文書の構成に合う形で編集し、重複や矛盾する説明を増やさないようにする。                     |
+| Summarize Discussion Coherently | `writing/summarize-discussion-coherently` | 個人の対話ログを、整理フレームを選びつつ、未整理点も残した一貫した Markdown 要約にまとめる。 |
