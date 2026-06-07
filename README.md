@@ -46,4 +46,4 @@ dependencies:
 | `edit-existing-document`          | Fit edits into existing document structure while avoiding duplicate or conflicting guidance.                                        |
 | `revise-english-writing`          | Make English technical prose direct and less AI-like while preserving commands, paths, and identifiers.                             |
 | `revise-japanese-writing`         | Review and revise Japanese technical prose while preserving commands, paths, and identifiers.                                       |
-| `summarize-discussion-coherently` | Turn personal discussion logs into coherent Markdown summaries with the right organizing framework and unresolved points preserved. |
+| `summarize-discussion-coherently` | Turn personal discussion logs into coherent structured summaries with the right organizing framework and unresolved points preserved. |

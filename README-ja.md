@@ -46,4 +46,4 @@ dependencies:
 | `edit-existing-document`          | 既存文書の構成に合う形で編集し、重複や矛盾する説明を増やさないようにする。                     |
 | `revise-english-writing`          | コマンド、パス、識別子を保ったまま、英語の技術文書を直接的で AI っぽさの少ない文章に整える。   |
 | `revise-japanese-writing`         | コマンド、パス、識別子を保ったまま、日本語の技術文書を確認し、自然で読みやすい日本語に整える。 |
-| `summarize-discussion-coherently` | 個人の対話ログを、整理フレームを選びつつ、未整理点も残した一貫した Markdown 要約にまとめる。   |
+| `summarize-discussion-coherently` | 個人の対話ログを、整理フレームを選びつつ、未整理点も残した一貫した構造的な要約にまとめる。       |

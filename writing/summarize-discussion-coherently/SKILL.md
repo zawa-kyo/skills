@@ -1,13 +1,13 @@
 ---
 name: summarize-discussion-coherently
-description: Summarize a discussion into a coherent Markdown note that preserves the conclusion, background, intent, unresolved points, and next steps. Choose an appropriate organizing framework such as PREP, TAPS, SCQA, a chronological recap, an issue-structuring memo, or a decision memo based on the conversation itself. Use when the user asks to "summarize what we've discussed so far", organize a personal conversation log, turn rough dialogue into a structured note, or wants the summary to clarify purpose and unresolved issues instead of only compressing text.
+description: Summarize a discussion into a coherent, structured summary that preserves the conclusion, background, intent, unresolved points, and next steps. Choose an appropriate organizing framework such as PREP, TAPS, SCQA, a chronological recap, an issue-structuring memo, or a decision memo based on the conversation itself. Use when the user asks to "summarize what we've discussed so far", organize a personal conversation log, turn rough dialogue into a structured summary, or wants the summary to clarify purpose and unresolved issues instead of only compressing text.
 ---
 
 # Summarize Discussion Coherently
 
 ## Overview
 
-Turn a personal discussion log, rough back-and-forth, or scattered notes into a coherent Markdown document. Do not merely shorten the text. Reconstruct the discussion so the reader can understand what the conversation was trying to achieve, what was concluded, what reasoning mattered, and what remains unresolved.
+Turn a personal discussion log, rough back-and-forth, or scattered notes into a coherent structured summary. Do not merely shorten the text. Reconstruct the discussion so the reader can understand what the conversation was trying to achieve, what was concluded, what reasoning mattered, and what remains unresolved.
 
 ## Workflow
 
@@ -17,7 +17,7 @@ Turn a personal discussion log, rough back-and-forth, or scattered notes into a 
 4. Reconstruct the content by issue, rationale, and outcome. Do not simply replay the conversation in chronological order unless the sequence itself is necessary to explain the result.
 5. Preserve both the conclusion and the context that led to it. Include the user's purpose, relevant constraints, tradeoffs, and unresolved points when they matter.
 6. When the source is incomplete, paraphrased, or already summarized rather than a raw transcript, preserve only supported facts. Mark inferred details conservatively instead of filling gaps with confident specifics.
-7. Write the result as a Markdown note that can be saved directly as an `.md` file.
+7. Write the result as a clearly structured summary.
 8. At the end, quickly self-check whether the summary is coherent, decision-useful, and faithful to the source discussion.
 
 ## Framework Selection
@@ -56,11 +56,11 @@ Do not force one fixed template for every case. The exact section order and head
 - When details are inferred from partial source material, signal that uncertainty plainly instead of inventing specifics.
 - When the source discussion is messy, make that mess legible rather than hiding it.
 - Use direct headings and concise prose.
-- Keep the output in Markdown and avoid decorative formatting.
+- Keep the output structured and easy to scan. Use Markdown headings and lists when they help clarity, but do not treat file output as part of the task.
 
 ## Final Response
 
-Respond in the user's language unless they ask otherwise. Return the Markdown note directly. If any important uncertainty remains, mark it explicitly inside the note instead of burying it in side commentary.
+Respond in the user's language unless they ask otherwise. Return the structured summary directly. If any important uncertainty remains, mark it explicitly inside the summary instead of burying it in side commentary.
 
 ## Example Shapes
 
@@ -77,7 +77,7 @@ The best path is to build a wrapper on top of an existing meeting-summary skill.
 
 ## Reason
 
-Existing skills already handle Markdown summaries well, but they do not reliably reorganize personal discussions by purpose, rationale, and unresolved points.
+Existing skills already handle structured summaries reasonably well, but they do not reliably reorganize personal discussions by purpose, rationale, and unresolved points.
 
 ## Example
 
@@ -105,7 +105,7 @@ Use `summarize-discussion-coherently` as the skill name and keep the output cont
 
 ## Purpose
 
-Define a reusable skill that turns personal dialogue into a coherent Markdown summary.
+Define a reusable skill that turns personal dialogue into a coherent structured summary.
 
 ## Options considered
 
