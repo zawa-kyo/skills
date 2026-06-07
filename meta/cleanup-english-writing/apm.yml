@@ -1,8 +1,0 @@
-name: cleanup-english-writing
-version: 0.1.0
-description: Clean up English technical prose while preserving technical meaning.
-author: Kyohei Ozawa
-includes: auto
-dependencies:
-  apm:
-    - hardikpandya/stop-slop

@@ -1,9 +1,9 @@
 ---
-name: cleanup-english-writing
+name: revise-english-writing
 description: 英語のドキュメント、コメント、プロンプト、リリースノートなどの技術文書を、コマンド、パス、識別子、製品名、技術的な意味を保ったまま、直接的で人間らしく保守しやすい英語に整える。英語の文章をより自然にしたい、AI っぽさを減らしたい、冗長さを削りたい、明確にしたい、既存プロジェクトの文体に合わせたい、といった依頼で使う。
 ---
 
-# Cleanup English Writing
+# Revise English Writing
 
 ## 概要
 

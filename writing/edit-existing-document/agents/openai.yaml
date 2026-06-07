@@ -1,0 +1,4 @@
+interface:
+  display_name: "Edit Existing Document"
+  short_description: "Fit document edits into existing structure"
+  default_prompt: "Use $edit-existing-document to edit this existing document or comment while preserving structure, avoiding duplicate guidance, and checking related files that must stay aligned."

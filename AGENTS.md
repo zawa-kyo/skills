@@ -2,7 +2,7 @@
 
 ## Repository Layout
 
-This repository publishes reusable agent skills with `apm`. Each directory under `meta/` is an independent skill package.
+This repository publishes reusable agent skills with `apm`. Each directory under `dev/` or `writing/` is an independent skill package.
 
 Each skill contains:
 
@@ -20,13 +20,13 @@ This applies especially to:
 
 - `README.md` and `README-ja.md`
 - `AGENTS.md` and `AGENTS-ja.md`
-- each `meta/<skill>/SKILL.md` and `meta/<skill>/SKILL-ja.md`
+- each `dev/<skill>/SKILL.md`, `dev/<skill>/SKILL-ja.md`, `writing/<skill>/SKILL.md`, and `writing/<skill>/SKILL-ja.md`
 
 ## Skill Maintenance
 
 When you add, rename, or remove a skill, update every repository file that mentions the skill:
 
-- the `meta/<skill>/` directory contents
+- the relevant `dev/<skill>/` or `writing/<skill>/` directory contents
 - `README.md` and `README-ja.md` install examples and skill table
 - `apm.yml` metadata if package-level information changes
 - `agents/openai.yaml` when the displayed name, short description, or default prompt should change

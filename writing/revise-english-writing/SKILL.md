@@ -1,9 +1,9 @@
 ---
-name: cleanup-english-writing
-description: Clean up English documentation, comments, prompts, release notes, and other technical prose so it reads direct, human, and maintainable while preserving commands, paths, identifiers, product names, and technical meaning. Use when the user asks to make English prose more natural, less AI-like, less verbose, clearer, or aligned with an existing project voice.
+name: revise-english-writing
+description: Revise English documentation, comments, prompts, release notes, and other technical prose so it reads direct, human, and maintainable while preserving commands, paths, identifiers, product names, and technical meaning. Use when the user asks to make English prose more natural, less AI-like, less verbose, clearer, or aligned with an existing project voice.
 ---
 
-# Cleanup English Writing
+# Revise English Writing
 
 ## Overview
 
