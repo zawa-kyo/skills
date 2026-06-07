@@ -1,4 +1,0 @@
-interface:
-  display_name: "Cleanup English Writing"
-  short_description: "Make English technical prose direct and human"
-  default_prompt: "Use $cleanup-english-writing to make this English technical prose clearer, less AI-like, and more direct while preserving commands, paths, and identifiers."

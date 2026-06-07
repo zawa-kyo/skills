@@ -1,0 +1,8 @@
+name: revise-english-writing
+version: 0.1.0
+description: Revise English technical prose while preserving technical meaning.
+author: Kyohei Ozawa
+includes: auto
+dependencies:
+  apm:
+    - hardikpandya/stop-slop

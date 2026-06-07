@@ -9,7 +9,7 @@ description: 既存のドキュメント、README、ポリシー、ガイド、A
 
 既存の文章を、依頼された箇所だけのパッチとして扱わずに編集する。文書やコメントを変える前に、文書の目的、読者、セクション構成、周辺説明を確認し、全体の流れに合う形で変更する。
 
-このスキルは、構成判断と既存文書への統合方針を担当する。言語別の文体スキルの代わりにはしない。日本語の本文では `revise-japanese-writing` を使い、英語の本文では使える場合に `cleanup-english-writing` や `stop-slop` を併用する。
+このスキルは、構成判断と既存文書への統合方針を担当する。言語別の文体スキルの代わりにはしない。日本語の本文では `revise-japanese-writing` を使い、英語の本文では使える場合に `revise-english-writing` や `stop-slop` を併用する。
 
 ## 対象
 
@@ -27,7 +27,7 @@ description: 既存のドキュメント、README、ポリシー、ガイド、A
 次の判断の基準としては使わない。
 
 - 日本語文体の細かな判断。`revise-japanese-writing` を使う。
-- 英語文体の細かな判断。`cleanup-english-writing` や `stop-slop` を使う。
+- 英語文体の細かな判断。`revise-english-writing` や `stop-slop` を使う。
 - `.docx`、プレゼンテーション、スプレッドシートのレンダリング確認。該当する文書、プレゼンテーション、スプレッドシート用のスキルを使う。
 - コード品質レビュー。`review-essential-code` を使う。
 - プロジェクト固有の配置ルール。最も近い `AGENTS.md`、リポジトリ文書、既存の慣習に従う。

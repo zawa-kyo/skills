@@ -2,7 +2,7 @@
 
 ## リポジトリレイアウト
 
-このリポジトリは、再利用可能なエージェントスキルを `apm` で公開する。`meta/` 配下の各ディレクトリは、それぞれ独立したスキルパッケージとして扱う。
+このリポジトリは、再利用可能なエージェントスキルを `apm` で公開する。`dev/` または `writing/` 配下の各ディレクトリは、それぞれ独立したスキルパッケージとして扱う。
 
 各スキルには次のファイルを置く。
 
@@ -20,13 +20,13 @@
 
 - `README.md` と `README-ja.md`
 - `AGENTS.md` と `AGENTS-ja.md`
-- 各 `meta/<skill>/SKILL.md` と `meta/<skill>/SKILL-ja.md`
+- 各 `dev/<skill>/SKILL.md`、`dev/<skill>/SKILL-ja.md`、`writing/<skill>/SKILL.md`、`writing/<skill>/SKILL-ja.md`
 
 ## Skill のメンテナンス
 
 スキルを追加、改名、削除する場合は、そのスキルに触れているリポジトリ内のファイルをすべて更新する。
 
-- `meta/<skill>/` ディレクトリの内容
+- 対応する `dev/<skill>/` または `writing/<skill>/` ディレクトリの内容
 - `README.md` と `README-ja.md` のインストール例とスキル一覧
 - パッケージ単位の情報が変わる場合は `apm.yml`
 - 表示名、short description、default prompt を変える必要がある場合は `agents/openai.yaml`

@@ -9,7 +9,7 @@ description: Use when editing an existing document, README, policy, guide, AGENT
 
 Edit existing prose without treating the requested change as an isolated patch. Before changing a document or comment, understand the document's purpose, audience, section structure, and nearby explanations so the edit fits the whole text.
 
-This skill handles structure and integration decisions. It does not replace language-specific prose skills: use `revise-japanese-writing` for Japanese prose, and use `cleanup-english-writing` or `stop-slop` for English prose when those skills are available and relevant.
+This skill handles structure and integration decisions. It does not replace language-specific prose skills: use `revise-japanese-writing` for Japanese prose, and use `revise-english-writing` or `stop-slop` for English prose when those skills are available and relevant.
 
 ## Scope
 
@@ -27,7 +27,7 @@ Also use it when creating a new document that must fit into an existing document
 Do not use this skill as the source of truth for:
 
 - Detailed Japanese prose style. Use `revise-japanese-writing`.
-- Detailed English prose style. Use `cleanup-english-writing` and `stop-slop`.
+- Detailed English prose style. Use `revise-english-writing` and `stop-slop`.
 - Render verification for `.docx`, presentations, or spreadsheets. Use the relevant document, presentation, or spreadsheet skill.
 - Code quality review. Use `review-essential-code`.
 - Project-specific placement rules. Follow the nearest `AGENTS.md`, repository docs, and existing project conventions.
