@@ -13,6 +13,7 @@ apm install -g zawa-kyo/skills/meta/review-essential-code
 apm install -g zawa-kyo/skills/meta/suggest-commit-messages
 apm install -g zawa-kyo/skills/meta/revise-japanese-writing
 apm install -g zawa-kyo/skills/meta/cleanup-english-writing
+apm install -g zawa-kyo/skills/meta/edit-existing-document
 ```
 
 Or add them to an `apm.yml`:
@@ -24,6 +25,7 @@ dependencies:
     - zawa-kyo/skills/meta/suggest-commit-messages
     - zawa-kyo/skills/meta/revise-japanese-writing
     - zawa-kyo/skills/meta/cleanup-english-writing
+    - zawa-kyo/skills/meta/edit-existing-document
 ```
 
 ## 🎒 Skill Details
@@ -34,3 +36,4 @@ dependencies:
 | Suggest Commit Messages | `meta/suggest-commit-messages` | Suggest concise English Conventional Commit messages from staged or unstaged Git diffs.                 |
 | Revise Japanese Writing | `meta/revise-japanese-writing` | Review and revise Japanese technical prose while preserving commands, paths, and identifiers.           |
 | Cleanup English Writing | `meta/cleanup-english-writing` | Make English technical prose direct and less AI-like while preserving commands, paths, and identifiers. |
+| Edit Existing Document  | `meta/edit-existing-document`  | Fit edits into existing document structure while avoiding duplicate or conflicting guidance.            |
