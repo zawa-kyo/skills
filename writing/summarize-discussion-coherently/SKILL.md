@@ -23,14 +23,14 @@ Turn a personal discussion log, rough back-and-forth, or scattered notes into a 
 
 Choose one primary framework and say which one you used.
 
-| Framework | Use it when | What it is good at |
-| --- | --- | --- |
-| `PREP` | The discussion mainly needs to land one clear claim with supporting reasoning and a concise example or illustration. | Producing a short, persuasive summary with a clear throughline. |
-| `TAPS` | The note should move from topic or tension to analysis, proposal, and next steps. | Turning a messy discussion into an actionable progression. |
-| `SCQA` | The discussion needs a narrative flow from context to complication, key question, and answer. | Explaining why the issue matters before stating the conclusion. |
-| `Chronological recap` | The order of the exchange materially affects the meaning, such as when later turns revise or overturn earlier assumptions. | Preserving sequence without losing coherence. |
-| `Issue-structuring memo` | The discussion contains multiple mixed concerns, assumptions, objections, or open questions that need to be separated clearly. | Cutting tangled dialogue into distinct issues and statuses. |
-| `Decision memo` | The conversation compares options, criteria, tradeoffs, and a recommended direction. | Making a recommendation and preserving the basis for it. |
+| Framework                | Use it when                                                                                                                    | What it is good at                                              |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------- |
+| `PREP`                   | The discussion mainly needs to land one clear claim with supporting reasoning and a concise example or illustration.           | Producing a short, persuasive summary with a clear throughline. |
+| `TAPS`                   | The note should move from topic or tension to analysis, proposal, and next steps.                                              | Turning a messy discussion into an actionable progression.      |
+| `SCQA`                   | The discussion needs a narrative flow from context to complication, key question, and answer.                                  | Explaining why the issue matters before stating the conclusion. |
+| `Chronological recap`    | The order of the exchange materially affects the meaning, such as when later turns revise or overturn earlier assumptions.     | Preserving sequence without losing coherence.                   |
+| `Issue-structuring memo` | The discussion contains multiple mixed concerns, assumptions, objections, or open questions that need to be separated clearly. | Cutting tangled dialogue into distinct issues and statuses.     |
+| `Decision memo`          | The conversation compares options, criteria, tradeoffs, and a recommended direction.                                           | Making a recommendation and preserving the basis for it.        |
 
 You may blend techniques, but the final note should still have one dominant organizing frame.
 
@@ -67,21 +67,27 @@ Respond in the user's language unless they ask otherwise. Return the Markdown no
 # Why we should create a wrapper skill
 
 ## Framework
+
 PREP
 
 ## Point
+
 The best path is to build a wrapper on top of an existing meeting-summary skill.
 
 ## Reason
+
 Existing skills already handle Markdown summaries well, but they do not reliably reorganize personal discussions by purpose, rationale, and unresolved points.
 
 ## Example
+
 The current discussion asked not only for a conclusion, but also for background and issue clarification. That is beyond a plain meeting-minutes output.
 
 ## Restated point
+
 Build the wrapper and make framework selection part of the workflow.
 
 ## Open questions
+
 - Which framework names should be exposed to the user?
 ```
 
@@ -91,27 +97,36 @@ Build the wrapper and make framework selection part of the workflow.
 # Discussion summary for the new skill
 
 ## Framework
+
 Decision memo
 
 ## Current conclusion
+
 Use `summarize-discussion-coherently` as the skill name and keep the output contract fixed while letting the internal structure vary by framework.
 
 ## Purpose
+
 Define a reusable skill that turns personal dialogue into a coherent Markdown summary.
 
 ## Options considered
+
 ### Fixed template
+
 Easy to standardize, but it undermines the value of choosing a framework.
 
 ### Minimum contract plus framework-specific structure
+
 Preserves consistency while keeping the chosen framework meaningful.
 
 ## Recommendation
+
 Adopt the minimum contract approach.
 
 ## Unresolved points
+
 - How opinionated the default heading structure should be
 
 ## Next steps
+
 - Draft `SKILL.md` and `SKILL-ja.md`
 ```
