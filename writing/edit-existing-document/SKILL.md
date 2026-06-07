@@ -1,24 +1,27 @@
 ---
 name: edit-existing-document
-description: Use when editing an existing document, README, policy, guide, AGENTS.md, CLAUDE.md, prompt, or code comment. Ensures the change fits the existing structure, avoids duplicating nearby content, preserves the document's purpose and audience, checks related language versions or companion files, and proposes section reorganization before making structural changes.
+description: Use when editing an existing document, README, policy, AGENTS.md, CLAUDE.md, code comment, or similar text. Fits the change into the existing structure and avoids duplicating nearby explanations so the document stays coherent. Checks related language versions or companion files, and proposes section reorganization before editing when needed.
 ---
 
 # Edit Existing Document
 
 ## Purpose
 
-Edit existing prose without treating the requested change as an isolated patch. Before changing a document or comment, understand the document's purpose, audience, section structure, and nearby explanations so the edit fits the whole text.
+When revising existing prose, do not treat the requested change as an isolated patch. Edit with the whole text in mind. Before changing a document or comment, understand the document's purpose, audience, section structure, and nearby explanations so the edit fits the overall flow.
 
-This skill handles structure and integration decisions. It does not replace language-specific prose skills: use `revise-japanese-writing` for Japanese prose, and use `revise-english-writing` or `stop-slop` for English prose when those skills are available and relevant.
+This skill handles structure and integration decisions. It does not replace language-specific prose skills. When revising prose in Japanese or English, also use:
+
+- Japanese: `revise-japanese-writing`
+- English: `revise-english-writing`, `stop-slop`
 
 ## Scope
 
 Use this skill for existing text such as:
 
-- `README.md`, guides, policies, design docs, and runbooks.
-- `AGENTS.md`, `CLAUDE.md`, prompts, and agent instructions.
-- Code comments and explanatory text inside configuration files.
-- Tasks that add, revise, move, merge, or reorganize prose in an existing document set.
+- `README.md`, guides, policies, design docs, and runbooks
+- `AGENTS.md`, `CLAUDE.md`, prompts, and agent instructions
+- Code comments and explanatory text inside configuration files
+- Tasks that add, revise, move, merge, or reorganize prose in an existing document set
 
 Also use it when creating a new document that must fit into an existing documentation structure.
 
@@ -29,7 +32,7 @@ Do not use this skill as the source of truth for:
 - Detailed Japanese prose style. Use `revise-japanese-writing`.
 - Detailed English prose style. Use `revise-english-writing` and `stop-slop`.
 - Render verification for `.docx`, presentations, or spreadsheets. Use the relevant document, presentation, or spreadsheet skill.
-- Code quality review. Use `review-essential-code`.
+- Non-document file changes, such as code quality reviews.
 - Project-specific placement rules. Follow the nearest `AGENTS.md`, repository docs, and existing project conventions.
 
 ## Workflow
@@ -37,7 +40,7 @@ Do not use this skill as the source of truth for:
 1. Identify the requested change and the target file or files. If the target is unclear and cannot be inferred safely, ask before editing.
 2. Read the target section and enough surrounding text to understand the local flow.
 3. Inspect the whole document's heading structure before deciding where the change belongs.
-4. Check whether nearby sections already cover the same idea, conflict with it, or operate at a different level of detail.
+4. Check whether nearby sections already cover the same idea, conflict with it, or use a different level of detail or abstraction.
 5. Decide whether the right edit is a small addition, a revision of existing text, a move, a merge, or a broader reorganization.
 6. Check for related files that must stay aligned, such as English and Japanese versions of the same document, generated metadata, or companion examples.
 7. If no broader reorganization is needed, make the smallest edit that preserves the document's flow and avoids duplicate guidance.
@@ -60,7 +63,7 @@ When this gate applies, briefly propose the reorganization first. Include the re
 ## Editing Principles
 
 - Prefer integrating with existing wording over appending a new paragraph at the end of a section.
-- Preserve the document's purpose and reader. Do not add operational detail to a high-level policy unless the document already carries that detail.
+- Preserve the document's intent and purpose. Do not add operational detail to a high-level policy unless the document already carries that detail.
 - Avoid repeating guidance that already exists nearby. Revise or point to the existing explanation instead.
 - Keep terminology, heading style, list style, examples, and cross-references consistent with the surrounding document.
 - Do not hard-code numbering in headings or prose when the order may change later; use Markdown lists when sequence matters.
