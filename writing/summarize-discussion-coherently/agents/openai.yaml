@@ -1,0 +1,4 @@
+interface:
+  display_name: "Summarize Discussion Coherently"
+  short_description: "Turn dialogue into a coherent structured summary"
+  default_prompt: "Use $summarize-discussion-coherently to turn this discussion or conversation log into a coherent structured summary with the right organizing framework, key background, unresolved points, and next steps."
