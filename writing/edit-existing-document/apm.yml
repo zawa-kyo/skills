@@ -1,0 +1,10 @@
+name: edit-existing-document
+version: 0.1.0
+description: Fit existing document edits into the surrounding structure.
+author: Kyohei Ozawa
+includes: auto
+dependencies:
+  apm:
+    - zawa-kyo/skills/writing/revise-japanese-writing
+    - zawa-kyo/skills/writing/revise-english-writing
+    - hardikpandya/stop-slop
