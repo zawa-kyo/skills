@@ -11,6 +11,7 @@ Install an individual skill globally:
 ```sh
 apm install -g zawa-kyo/skills/dev/review-essential-code
 apm install -g zawa-kyo/skills/dev/suggest-commit-messages
+apm install -g zawa-kyo/skills/dev/bootstrap-repo-docs
 apm install -g zawa-kyo/skills/writing/revise-japanese-writing
 apm install -g zawa-kyo/skills/writing/revise-english-writing
 apm install -g zawa-kyo/skills/writing/edit-existing-document
@@ -24,6 +25,7 @@ dependencies:
   apm:
     - zawa-kyo/skills/dev/review-essential-code
     - zawa-kyo/skills/dev/suggest-commit-messages
+    - zawa-kyo/skills/dev/bootstrap-repo-docs
     - zawa-kyo/skills/writing/revise-japanese-writing
     - zawa-kyo/skills/writing/revise-english-writing
     - zawa-kyo/skills/writing/edit-existing-document
@@ -36,6 +38,7 @@ dependencies:
 
 | Skill                     | Description                                                                              |
 | ------------------------- | ---------------------------------------------------------------------------------------- |
+| `bootstrap-repo-docs`     | Bootstrap bilingual README and AGENTS docs for a new or nearly empty repository.        |
 | `review-essential-code`   | Review code changes for bugs, regressions, missing tests, and essential maintainability. |
 | `suggest-commit-messages` | Suggest concise English Conventional Commit messages from staged or unstaged Git diffs.  |
 

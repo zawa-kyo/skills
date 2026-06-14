@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bootstrap Repo Docs"
+  short_description: "Set up bilingual docs for a new repository"
+  default_prompt: "Use $bootstrap-repo-docs to create or align README.md, AGENTS.md, and their *-ja.md counterparts for a new or nearly empty repository."

@@ -11,6 +11,7 @@ zawa-kyo が管理する [apm](https://github.com/microsoft/apm) で配布する
 ```sh
 apm install -g zawa-kyo/skills/dev/review-essential-code
 apm install -g zawa-kyo/skills/dev/suggest-commit-messages
+apm install -g zawa-kyo/skills/dev/bootstrap-repo-docs
 apm install -g zawa-kyo/skills/writing/revise-japanese-writing
 apm install -g zawa-kyo/skills/writing/revise-english-writing
 apm install -g zawa-kyo/skills/writing/edit-existing-document
@@ -24,6 +25,7 @@ dependencies:
   apm:
     - zawa-kyo/skills/dev/review-essential-code
     - zawa-kyo/skills/dev/suggest-commit-messages
+    - zawa-kyo/skills/dev/bootstrap-repo-docs
     - zawa-kyo/skills/writing/revise-japanese-writing
     - zawa-kyo/skills/writing/revise-english-writing
     - zawa-kyo/skills/writing/edit-existing-document
@@ -36,6 +38,7 @@ dependencies:
 
 | Skill                     | Description                                                                                        |
 | ------------------------- | -------------------------------------------------------------------------------------------------- |
+| `bootstrap-repo-docs`     | 作成直後か、まだ最小構成のままのリポジトリに対して、README と AGENTS の日英対応文書を初期整備する。 |
 | `review-essential-code`   | バグ、リグレッション、テスト不足に加えて、本質的な保守しやすさの観点からコード変更をレビューする。 |
 | `suggest-commit-messages` | staged または unstaged の Git diff から、簡潔な英語の Conventional Commit メッセージを提案する。   |
 
