@@ -1,13 +1,13 @@
 ---
 name: bootstrap-repo-docs
-description: Bootstrap documentation and agent guidance for a new or nearly empty repository. Use when a repository has only minimal files such as README.md, .gitignore, or an empty root, and the user wants to establish README.md, AGENTS.md, and matching *-ja.md files with a clear bilingual synchronization rule.
+description: Set up initial documentation and agent guidance for a new or minimally scaffolded repository. Use when a repository has only a few starter files such as README.md or .gitignore, and the user wants README.md, AGENTS.md, and matching *-ja.md files with a clear bilingual synchronization rule.
 ---
 
 # Bootstrap Repository Docs
 
 ## Overview
 
-Set up the initial documentation structure for a new repository without assuming a full project scaffold already exists. This skill is for repositories that are empty or nearly empty, such as a repo with only `README.md`, `.gitignore`, or a few placeholder files.
+Set up an initial documentation baseline for a new repository without assuming the project is already scaffolded. Use this skill for repositories with only a few starter files, such as `README.md`, `.gitignore`, or simple placeholders.
 
 The goal is to establish a small, durable documentation baseline:
 
@@ -27,13 +27,13 @@ Use this skill when the user wants to:
 - establish a lightweight documentation policy before substantial implementation begins
 - bring a sparse repository up to a usable baseline for future agent work
 
-Do not use this skill for mature repositories that already have a well-developed documentation structure unless the user explicitly wants to realign or simplify it.
+Do not use this skill for mature repositories with an established documentation structure unless the user explicitly wants to realign or simplify it.
 
 ## Assumptions
 
 - The repository may be almost empty.
 - Existing files may be incomplete rather than wrong.
-- The user usually wants a minimal but operational setup, not a full documentation suite.
+- The user usually wants a small but usable setup, not a full documentation suite.
 - The bilingual policy should be introduced early so later edits follow it consistently.
 
 ## Files To Inspect First
@@ -65,7 +65,7 @@ Read enough existing content to determine:
    - `AGENTS.md` and `AGENTS-ja.md`
 5. In `AGENTS.md`, add a durable instruction that paired English and Japanese documentation files must be updated together and kept aligned in meaning.
 6. Write the Japanese files naturally in Japanese. Keep them equivalent in intent, but do not translate mechanically line by line.
-7. Keep the first pass intentionally small. Prefer a clear baseline over a speculative, overbuilt policy set.
+7. Keep the first pass intentionally small. Prefer a clear baseline to a speculative or overbuilt policy set.
 8. Report which files were created or updated and any assumptions used to shape the initial docs.
 
 ## What To Put In `README`
@@ -76,7 +76,7 @@ For a minimal repository, `README.md` and `README-ja.md` should usually cover on
 - the current status if the repository is still being initialized
 - the top-level structure if it helps future contributors
 - how to start working in the repository if that can be stated confidently
-- any short note about where repository-specific agent guidance lives
+- a short note about where repository-specific agent guidance lives
 
 Do not invent setup steps, architecture claims, or release workflows that are not supported by the repository contents or the user's request.
 

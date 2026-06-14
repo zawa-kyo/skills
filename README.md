@@ -38,7 +38,7 @@ dependencies:
 
 | Skill                     | Description                                                                              |
 | ------------------------- | ---------------------------------------------------------------------------------------- |
-| `bootstrap-repo-docs`     | Bootstrap bilingual README and AGENTS docs for a new or nearly empty repository.        |
+| `bootstrap-repo-docs`     | Set up bilingual README and AGENTS docs for a new or minimally scaffolded repository.   |
 | `review-essential-code`   | Review code changes for bugs, regressions, missing tests, and essential maintainability. |
 | `suggest-commit-messages` | Suggest concise English Conventional Commit messages from staged or unstaged Git diffs.  |
 
