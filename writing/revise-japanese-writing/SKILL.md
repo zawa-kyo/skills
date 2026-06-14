@@ -37,6 +37,7 @@ This skill is the source of truth for detailed Japanese prose style. Agent-level
 - Match the surrounding document's tone, especially polite style and plain style.
 - Match established terminology, notation, and symbol usage. Do not mix multiple forms for the same concept.
 - Do not force Japanese replacements for domain terms that are common in Japanese, lack a clear Japanese equivalent, or would become less precise when translated.
+- When several forms are possible, choose the one that reads most naturally in Japanese prose: full Japanese translation, katakana, or the original alphabetic form. Prefer established Japanese usage over literal translation. For example, keep `hexagonal architecture` as `ヘキサゴナルアーキテクチャ`, not `六角形アーキテクチャ`.
 - Use technical terms, loanwords, and abbreviations according to the reader and document purpose. Define or explain abbreviations on first use.
 - Use punctuation, brackets, question marks, exclamation points, and similar symbols consistently within a document, and avoid overusing them
 - Prefer fluent Japanese for ordinary prose:
