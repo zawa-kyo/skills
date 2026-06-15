@@ -83,14 +83,14 @@ Preserve literal technical artifacts:
 
 ## Review Checklist
 
-- Does the result read like documentation written by a careful Japanese-speaking maintainer?
+- Does the result read like documentation a careful Japanese-speaking maintainer would plausibly have written that way from the outset?
 - Are unnecessary English words replaced with fluent Japanese?
 - Are Japanese particles present where natural Japanese requires them?
 - Does the text match the surrounding tone, terminology, notation, and punctuation style?
 - Are abbreviations, loanwords, and technical terms appropriate for the reader and document purpose?
 - Was the documented `npx` lint command run on the Japanese target when Node.js was available, without using the textlint MCP server?
 - Were relevant lint findings reflected without accepting broad suggestions that would distort the document's intent?
-- Are there any literal translated compounds or established terms replaced with wording that Japanese readers would find unnatural?
+- Are there any literal translated compounds, English-tracing explanations, or established terms replaced with wording that Japanese readers would find unnatural?
 - When multiple forms were possible, was the most natural choice made among Japanese translation, katakana, and the original alphabetic form?
 - Are commands, paths, identifiers, config keys, and examples preserved exactly?
 - Did any wording change alter the technical meaning?
