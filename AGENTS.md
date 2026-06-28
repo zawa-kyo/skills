@@ -1,6 +1,6 @@
-# Repository Instructions
+# Agent Guide
 
-## Repository Layout
+## Repository Structure
 
 This repository publishes reusable agent skills with `apm`. Each directory under `dev/` or `writing/` is an independent skill package.
 
@@ -10,7 +10,7 @@ Each skill contains:
 - `SKILL-ja.md` is the Japanese skill definition for the same behavior.
 - `agents/openai.yaml` defines OpenAI display metadata and the default prompt.
 
-## Language Versions
+## Document Sync
 
 When you generate or edit text in this repository, check whether an English Markdown file and a corresponding Japanese `*-ja.md` file exist for the same content. When one exists, update both files in the same change so they stay aligned.
 
@@ -22,7 +22,7 @@ This applies especially to:
 - `AGENTS.md` and `AGENTS-ja.md`
 - each `dev/<skill>/SKILL.md`, `dev/<skill>/SKILL-ja.md`, `writing/<skill>/SKILL.md`, and `writing/<skill>/SKILL-ja.md`
 
-## Skill Maintenance
+## Maintenance
 
 When you add, rename, or remove a skill, update every repository file that mentions the skill:
 
@@ -34,3 +34,9 @@ When you add, rename, or remove a skill, update every repository file that menti
 Keep skill instructions operational and specific. Prefer concrete workflows, trigger conditions, output expectations, and verification steps over broad advice.
 
 For paired `SKILL.md` and `SKILL-ja.md` files, keep the frontmatter `name` identical. Localize `description` naturally, but preserve the same activation intent and behavioral scope.
+
+## `SKILL.md` Guidance
+
+- Keep `SKILL.md` at or below 300 lines when practical. If the content would exceed that size, propose splitting supporting material into separate files before expanding the main file.
+- Treat `SKILL.md` as the orchestrator for the overall workflow. Move detailed procedures, templates, reference material, and similar supporting content into `references/`. Keeping everything in one file is fine when `SKILL.md` is not bloated.
+- Structure `SKILL.md` so both agents and humans can read it easily. Prefer a flow from abstract guidance to concrete instructions.
