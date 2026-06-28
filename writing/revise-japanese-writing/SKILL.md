@@ -135,7 +135,7 @@ Follow the surrounding document's format first. For Japanese articles, book-like
 
 ## References
 
-List sources used to maintain this skill, such as related skills or web pages, under `references/`.
+Record materials used to create or maintain this skill, such as related skills or web pages, in `references/background.md`.
 
 ## Output
 
