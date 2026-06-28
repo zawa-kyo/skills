@@ -2,8 +2,6 @@
 
 ## Japanese Technical Writing Skill
 
-### Source
-
 [k16shikano/SKILL.md](https://gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d)
 
 ### Summary
@@ -25,7 +23,6 @@ This reference adds checks for argument flow and reader load.
 - Explain the mechanism behind causal claims instead of only asserting the outcome.
 - Preserve justified uncertainty, such as unverified possibilities, reader doubts, character perceptions, and counterfactuals.
 - Separate distinct decisions, causes, and problem types instead of merging them into one vague category.
-- Keep formalized terms and categories consistent after introducing them.
 - Reduce reader load by omitting incidental details the reader will not need later.
 - Remove empty emphasis, theatrical setup, rhetorical questions, and AI-like posture words when they add no information.
 - Remove repeated claims, duplicate section roles, and summary sentences that restate what the reader can infer.
@@ -37,3 +34,18 @@ This reference adds checks for argument flow and reader load.
 - Do not require one sentence per line when the surrounding repository uses another style.
 - Do not ban punctuation or symbols mechanically when they are part of established notation, proper nouns, code, citations, or local style.
 - Do not rewrite a document's structure unless the user asked for a larger edit or the current structure directly harms readability.
+
+## その文章、AIに書かせただろ
+
+[その文章、AIに書かせただろ](https://note.com/ikora/n/n0bbb2828b91e)
+
+### Summary
+
+This article informed the anti-AI-writing checks for Japanese prose.
+It treats surface markers such as dashes, excessive quotation marks, emoji, slogan-like headings, favored abstract words, stacked intensifiers, grand metaphors, and generic claims as symptoms rather than the whole problem.
+
+### Incorporated Ideas
+
+- Treat surface markers as review signals, not mechanical bans.
+- Remove meaningless quotation marks, emoji, inflated metaphors, and stacked intensifiers when they do not serve the document.
+- Replace generalized claims with the writer's concrete experience, observed behavior, or specific constraint.

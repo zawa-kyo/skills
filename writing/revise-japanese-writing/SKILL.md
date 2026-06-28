@@ -47,6 +47,7 @@ This skill is the source of truth for detailed Japanese prose style. Agent-level
 - Use lint as a floor, not as the final arbiter. Mechanical checks help with recurring patterns, but natural term choice still requires contextual judgment.
 - Use punctuation, brackets, question marks, exclamation points, and similar symbols consistently within a document, and avoid overusing them.
 - Avoid empty emphasis and posture words that make prose sound careful without adding information, such as broad claims of importance, depth, comprehensiveness, or significance.
+- Treat AI-like surface markers as signals, not mechanical bans. Remove meaningless quotation marks, emoji, grand metaphors, stacked intensifiers, or generic claims when they do not fit the document's purpose.
 - Avoid theatrical setup, rhetorical questions, and punch-line contrasts when a direct explanation is enough. Use emphasis only where it clarifies the argument.
 - Choose precise subjects and verbs. Do not hide actors behind vague words such as `AI`, `tool`, `system`, or `context` when the document can name the responsible agent, component, or reader role.
 - Prefer fluent Japanese for ordinary prose:
