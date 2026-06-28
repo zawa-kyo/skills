@@ -34,23 +34,44 @@ This skill is the source of truth for detailed Japanese prose style. Agent-level
 9. After editing, manually review term choice for translated compounds, established names, and unnatural literal renderings that lint may miss.
 10. After editing, search for the targeted awkward terms to confirm the intended cleanup is complete. When `npx` was available, rerun the lint command on the edited Japanese target and address any remaining relevant findings.
 
-## Wording Guidelines
+## Prose Guidelines
+
+### Principles
 
 - Think in Japanese when writing Japanese. Avoid drafting in English and translating it into Japanese.
 - Japanese particles carry important meaning. Do not omit them except in intentional quotations, labels, or code-like fragments.
 - Match the surrounding document's tone, especially polite style and plain style.
 - Match established terminology, notation, and symbol usage. Do not mix multiple forms for the same concept.
+- Use lint as a floor, not as the final arbiter. Mechanical checks help with recurring patterns, but natural term choice still requires contextual judgment.
+
+### Preserve Technical Artifacts
+
+Preserve literal technical artifacts:
+
+- Commands: `mise run install`, `uv run pre-commit run -a`
+- File paths: `docs/index.md`, `.apm/skills`
+- Config keys: `dependencies`, `interface.default_prompt`
+- Skill names and package names: `review-essential-code`, `suggest-commit-messages`
+- Product names and proper nouns: GitHub, Homebrew, Claude Code, Codex
+
+### Judgment Criteria
+
 - Do not force Japanese replacements for domain terms that are common in Japanese, lack a clear Japanese equivalent, or would become less precise when translated.
 - When several forms are possible, choose the one that reads most naturally in Japanese prose: full Japanese translation, katakana, or the original alphabetic form. Prefer established Japanese usage over literal translation. For example, keep `hexagonal architecture` as `ヘキサゴナルアーキテクチャ`, not `六角形アーキテクチャ`.
 - Watch for translationese: compound terms that are understandable but not actually used by Japanese readers, literal renderings of source-language wording, and abstract words chosen only because they map neatly to the source text.
 - Use technical terms, loanwords, and abbreviations according to the reader and document purpose. Define or explain abbreviations on first use.
-- Use lint as a floor, not as the final arbiter. Mechanical checks help with recurring patterns, but natural term choice still requires contextual judgment.
+
+### Prose Noise
+
 - Use punctuation, brackets, question marks, exclamation points, and similar symbols consistently within a document, and avoid overusing them.
 - Avoid empty emphasis and posture words that make prose sound careful without adding information, such as broad claims of importance, depth, comprehensiveness, or significance.
 - Treat AI-like surface markers as signals, not mechanical bans. Remove meaningless quotation marks, emoji, grand metaphors, stacked intensifiers, or generic claims when they do not fit the document's purpose.
 - Avoid theatrical setup, rhetorical questions, and punch-line contrasts when a direct explanation is enough. Use emphasis only where it clarifies the argument.
 - Choose precise subjects and verbs. Do not hide actors behind vague words such as `AI`, `tool`, `system`, or `context` when the document can name the responsible agent, component, or reader role.
-- Prefer fluent Japanese for ordinary prose:
+
+### Preferred Terms
+
+Prefer fluent Japanese for ordinary prose.
 
 | Source term          | Preferred Japanese                                                    |
 | -------------------- | --------------------------------------------------------------------- |
@@ -78,28 +99,28 @@ Keep project-specific preferences when they are established:
 - Use context-specific alternatives such as `管理元`, `置き場所`, `参照先`, `基準`, `まとめるディレクトリ`, or `まとめるファイル`.
 - Avoid redundant phrases such as `ポリシー文書` when `ポリシー` is enough.
 
-Preserve literal technical artifacts:
-
-- Commands: `mise run install`, `uv run pre-commit run -a`
-- File paths: `docs/index.md`, `.apm/skills`
-- Config keys: `dependencies`, `interface.default_prompt`
-- Skill names and package names: `review-essential-code`, `suggest-commit-messages`
-- Product names and proper nouns: GitHub, Homebrew, Claude Code, Codex
-
 ## Structure Guidelines
 
 Apply these checks when revising long-form prose, articles, guides, or explanations. For short README entries, comments, labels, and policies, use only the checks that fit the surrounding document.
+
+### Paragraphs and Flow
 
 - Keep one paragraph focused on one topic or step in the reasoning. Split paragraphs that mix setup, investigation, result, and evaluation.
 - Make the first sentence of a paragraph show what role the paragraph plays. Use connective expressions when the relationship to the previous paragraph is not obvious.
 - Move the argument in one direction. Handle necessary objections, conditions, or reader doubts before stating the conclusion.
 - When denying or narrowing a claim, write the denied claim clearly and give the reason. Do not rely on vague denials such as "not everything is solved."
+
+### Argument Rigor
+
 - Match claim scope to the examples and evidence provided. If the examples support only part of a claim, narrow the claim.
 - State causal mechanisms when claiming that one thing causes another. Do not leave the reader to infer why the result follows.
 - Avoid promising detection, guarantee, or resolution without conditions. Use conditional wording when the result depends on context.
 - Preserve uncertainty when the source text has a reason to be uncertain, such as an unverified possibility, a reader's likely doubt, a character's perception, or a counterfactual. Tighten weak hedging only when the text already proves the claim.
 - Do not collapse distinct decisions, causes, or problem types into one vague category. Separate them and explain which example or tool supports which part of the claim.
 - Define central terms before relying on them, then keep using those terms consistently. Do not fall back to vague labels such as `AI`, `tool`, or `context` after the text has established a more precise term.
+
+### Reader Load
+
 - Manage reader load by omitting incidental names, timestamps, numbers, and implementation details that the reader will not need later.
 - Do not interrupt an argument with forward references. Place "later section" notes after the current reasoning has reached a stable point.
 - Remove repeated claims and sections that serve the same logical role. Keep one clear statement instead of restating the same point from nearby angles.
@@ -119,6 +140,8 @@ Follow the surrounding document's format first. For Japanese articles, book-like
 
 ## Review Checklist
 
+### General
+
 - Does the result read like documentation a careful Japanese-speaking maintainer would plausibly have written that way from the outset?
 - Are unnecessary English words replaced with fluent Japanese?
 - Are Japanese particles present where natural Japanese requires them?
@@ -126,12 +149,18 @@ Follow the surrounding document's format first. For Japanese articles, book-like
 - Are abbreviations, loanwords, and technical terms appropriate for the reader and document purpose?
 - Was the documented `npx` lint command run on the Japanese target when Node.js was available, without using the textlint MCP server?
 - Were relevant lint findings reflected without accepting broad suggestions that would distort the document's intent?
+
+### Terms and Technical Artifacts
+
 - Are there any literal translated compounds, English-tracing explanations, or established terms replaced with wording that Japanese readers would find unnatural?
 - When multiple forms were possible, was the most natural choice made among Japanese translation, katakana, and the original alphabetic form?
 - Are commands, paths, identifiers, config keys, and examples preserved exactly?
 - Did any wording change alter the technical meaning?
 - Are repeated terms consistent across the edited files?
 - Did the cleanup avoid replacing proper nouns or code-like text by mistake?
+
+### Long-Form Prose
+
 - For long-form prose, does each paragraph advance one clear step in the argument?
 - Are claims, examples, conditions, and causal explanations aligned?
 - Did the edit preserve necessary uncertainty while removing unsupported hedging?
