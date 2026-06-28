@@ -1,6 +1,6 @@
-# Repository Instructions
+# Agent Guide
 
-## Repository Layout
+## Repository Structure
 
 This repository publishes reusable agent skills with `apm`. Each directory under `dev/` or `writing/` is an independent skill package.
 
@@ -10,7 +10,7 @@ Each skill contains:
 - `SKILL-ja.md` is the Japanese skill definition for the same behavior.
 - `agents/openai.yaml` defines OpenAI display metadata and the default prompt.
 
-## Language Versions
+## Document Sync
 
 When you generate or edit text in this repository, check whether an English Markdown file and a corresponding Japanese `*-ja.md` file exist for the same content. When one exists, update both files in the same change so they stay aligned.
 
@@ -22,7 +22,7 @@ This applies especially to:
 - `AGENTS.md` and `AGENTS-ja.md`
 - each `dev/<skill>/SKILL.md`, `dev/<skill>/SKILL-ja.md`, `writing/<skill>/SKILL.md`, and `writing/<skill>/SKILL-ja.md`
 
-## Skill Maintenance
+## Maintenance
 
 When you add, rename, or remove a skill, update every repository file that mentions the skill:
 
