@@ -96,9 +96,12 @@ Apply these checks when revising long-form prose, articles, guides, or explanati
 - Match claim scope to the examples and evidence provided. If the examples support only part of a claim, narrow the claim.
 - State causal mechanisms when claiming that one thing causes another. Do not leave the reader to infer why the result follows.
 - Avoid promising detection, guarantee, or resolution without conditions. Use conditional wording when the result depends on context.
-- Define or introduce central terms before relying on them, and keep their treatment consistent across sections.
+- Preserve uncertainty when the source text has a reason to be uncertain, such as an unverified possibility, a reader's likely doubt, a character's perception, or a counterfactual. Tighten weak hedging only when the text already proves the claim.
+- Do not collapse distinct decisions, causes, or problem types into one vague category. Separate them and explain which example or tool supports which part of the claim.
+- Define central terms before relying on them, then keep using those terms consistently. Do not fall back to vague labels such as `AI`, `tool`, or `context` after the text has established a more precise term.
 - Manage reader load by omitting incidental names, timestamps, numbers, and implementation details that the reader will not need later.
 - Do not interrupt an argument with forward references. Place "later section" notes after the current reasoning has reached a stable point.
+- Remove repeated claims and sections that serve the same logical role. Keep one clear statement instead of restating the same point from nearby angles.
 
 ## Formatting Guidelines
 
@@ -130,6 +133,8 @@ Follow the surrounding document's format first. For Japanese articles, book-like
 - Did the cleanup avoid replacing proper nouns or code-like text by mistake?
 - For long-form prose, does each paragraph advance one clear step in the argument?
 - Are claims, examples, conditions, and causal explanations aligned?
+- Did the edit preserve necessary uncertainty while removing unsupported hedging?
+- Are distinct causes, decisions, and problem types separated instead of being merged into a vague category?
 - Did the edit remove empty emphasis, theatrical setup, vague actors, and redundant summary sentences?
 - Did formatting choices follow the local document style before applying long-form prose defaults?
 

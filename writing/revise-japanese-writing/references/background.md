@@ -23,8 +23,12 @@ This reference adds checks for argument flow and reader load.
 - Make each paragraph move the argument one step.
 - Match claims to the examples, evidence, and stated conditions.
 - Explain the mechanism behind causal claims instead of only asserting the outcome.
+- Preserve justified uncertainty, such as unverified possibilities, reader doubts, character perceptions, and counterfactuals.
+- Separate distinct decisions, causes, and problem types instead of merging them into one vague category.
+- Keep formalized terms and categories consistent after introducing them.
 - Reduce reader load by omitting incidental details the reader will not need later.
 - Remove empty emphasis, theatrical setup, rhetorical questions, and AI-like posture words when they add no information.
+- Remove repeated claims, duplicate section roles, and summary sentences that restate what the reader can infer.
 - Use consistent formatting defaults for long-form Markdown, such as code fences, restrained bold, footnotes for side notes, and simple headings.
 
 ### Boundaries
