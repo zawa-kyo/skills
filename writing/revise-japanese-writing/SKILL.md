@@ -7,7 +7,7 @@ description: Review and revise Japanese documentation and comments into fluent, 
 
 ## Overview
 
-Review and improve Japanese prose in technical documents, comments, policies, and guides. The goal is not to translate every technical word mechanically, but to make the text read fluently to a Japanese-speaking maintainer while preserving precise technical meaning.
+Review and improve Japanese prose in technical documents, comments, policies, guides, articles, and explanatory drafts. The goal is not to translate every technical word mechanically, but to make the text read fluently to a Japanese-speaking maintainer while preserving precise technical meaning and the document's argument.
 
 This skill is the source of truth for detailed Japanese prose style. Agent-level instruction files may reference this skill for Japanese tone, notation, terminology, and punctuation instead of duplicating those rules.
 
@@ -30,8 +30,9 @@ This skill is the source of truth for detailed Japanese prose style. Agent-level
 5. Preserve technical artifacts unless the user explicitly asks to rename them.
 6. Keep the repository's existing terminology and tone consistent.
 7. Avoid broad rewrites that change the document's structure or intent unless the user asks for a larger edit.
-8. After editing, manually review term choice for translated compounds, established names, and unnatural literal renderings that lint may miss.
-9. After editing, search for the targeted awkward terms to confirm the intended cleanup is complete. When `npx` was available, rerun the lint command on the edited Japanese target and address any remaining relevant findings.
+8. For long-form prose, articles, guides, or explanatory drafts, review paragraph structure, argument flow, reader load, and unnecessary staging before making sentence-level changes.
+9. After editing, manually review term choice for translated compounds, established names, and unnatural literal renderings that lint may miss.
+10. After editing, search for the targeted awkward terms to confirm the intended cleanup is complete. When `npx` was available, rerun the lint command on the edited Japanese target and address any remaining relevant findings.
 
 ## Wording Guidelines
 
@@ -44,7 +45,10 @@ This skill is the source of truth for detailed Japanese prose style. Agent-level
 - Watch for translationese: compound terms that are understandable but not actually used by Japanese readers, literal renderings of source-language wording, and abstract words chosen only because they map neatly to the source text.
 - Use technical terms, loanwords, and abbreviations according to the reader and document purpose. Define or explain abbreviations on first use.
 - Use lint as a floor, not as the final arbiter. Mechanical checks help with recurring patterns, but natural term choice still requires contextual judgment.
-- Use punctuation, brackets, question marks, exclamation points, and similar symbols consistently within a document, and avoid overusing them
+- Use punctuation, brackets, question marks, exclamation points, and similar symbols consistently within a document, and avoid overusing them.
+- Avoid empty emphasis and posture words that make prose sound careful without adding information, such as broad claims of importance, depth, comprehensiveness, or significance.
+- Avoid theatrical setup, rhetorical questions, and punch-line contrasts when a direct explanation is enough. Use emphasis only where it clarifies the argument.
+- Choose precise subjects and verbs. Do not hide actors behind vague words such as `AI`, `tool`, `system`, or `context` when the document can name the responsible agent, component, or reader role.
 - Prefer fluent Japanese for ordinary prose:
 
 | Source term          | Preferred Japanese                                                    |
@@ -81,6 +85,34 @@ Preserve literal technical artifacts:
 - Skill names and package names: `review-essential-code`, `suggest-commit-messages`
 - Product names and proper nouns: GitHub, Homebrew, Claude Code, Codex
 
+## Structure Guidelines
+
+Apply these checks when revising long-form prose, articles, guides, or explanations. For short README entries, comments, labels, and policies, use only the checks that fit the surrounding document.
+
+- Keep one paragraph focused on one topic or step in the reasoning. Split paragraphs that mix setup, investigation, result, and evaluation.
+- Make the first sentence of a paragraph show what role the paragraph plays. Use connective expressions when the relationship to the previous paragraph is not obvious.
+- Move the argument in one direction. Handle necessary objections, conditions, or reader doubts before stating the conclusion.
+- When denying or narrowing a claim, write the denied claim clearly and give the reason. Do not rely on vague denials such as "not everything is solved."
+- Match claim scope to the examples and evidence provided. If the examples support only part of a claim, narrow the claim.
+- State causal mechanisms when claiming that one thing causes another. Do not leave the reader to infer why the result follows.
+- Avoid promising detection, guarantee, or resolution without conditions. Use conditional wording when the result depends on context.
+- Define or introduce central terms before relying on them, and keep their treatment consistent across sections.
+- Manage reader load by omitting incidental names, timestamps, numbers, and implementation details that the reader will not need later.
+- Do not interrupt an argument with forward references. Place "later section" notes after the current reasoning has reached a stable point.
+
+## Formatting Guidelines
+
+Follow the surrounding document's format first. For Japanese articles, book-like drafts, and explanatory Markdown without an existing house style, prefer these defaults:
+
+- Use one sentence per line when it improves reviewability and does not conflict with the project style.
+- Put code, diffs, logs, and configuration fragments in fenced code blocks.
+- Use footnotes for side notes that would interrupt the main argument.
+- Use bold text mainly for first definitions or important logical distinctions; do not use it as decoration.
+- Avoid em dashes, double dashes, and box-drawing separators in Japanese prose and headings. Use parentheses, commas, or separate sentences instead.
+- Avoid using `・` for ordinary Japanese parallel items unless it is part of a proper noun or established notation.
+- Keep headings as one natural phrase. Do not pack a category and topic into a separator-based heading.
+- In definition lists, prefer `term: explanation` in English prose and `用語：説明` in Japanese prose, matching the surrounding document language.
+
 ## Review Checklist
 
 - Does the result read like documentation a careful Japanese-speaking maintainer would plausibly have written that way from the outset?
@@ -96,6 +128,14 @@ Preserve literal technical artifacts:
 - Did any wording change alter the technical meaning?
 - Are repeated terms consistent across the edited files?
 - Did the cleanup avoid replacing proper nouns or code-like text by mistake?
+- For long-form prose, does each paragraph advance one clear step in the argument?
+- Are claims, examples, conditions, and causal explanations aligned?
+- Did the edit remove empty emphasis, theatrical setup, vague actors, and redundant summary sentences?
+- Did formatting choices follow the local document style before applying long-form prose defaults?
+
+## References
+
+List sources used to maintain this skill, such as related skills or web pages, under `references/`.
 
 ## Output
 
