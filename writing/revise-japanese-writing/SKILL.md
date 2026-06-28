@@ -48,11 +48,13 @@ This skill is the source of truth for detailed Japanese prose style. Agent-level
 
 Preserve literal technical artifacts:
 
-- Commands: `mise run install`, `uv run pre-commit run -a`
-- File paths: `docs/index.md`, `.apm/skills`
-- Config keys: `dependencies`, `interface.default_prompt`
-- Skill names and package names: `review-essential-code`, `suggest-commit-messages`
-- Product names and proper nouns: GitHub, Homebrew, Claude Code, Codex
+| Type                           | Examples                                           |
+| ------------------------------ | -------------------------------------------------- |
+| Commands                       | `mise run install`, `uv run pre-commit run -a`     |
+| File paths                     | `docs/index.md`, `.apm/skills`                     |
+| Config keys                    | `dependencies`, `interface.default_prompt`         |
+| Skill names and package names  | `review-essential-code`, `suggest-commit-messages` |
+| Product names and proper nouns | GitHub, Homebrew, Claude Code, Codex               |
 
 ### Judgment Criteria
 
@@ -73,24 +75,24 @@ Preserve literal technical artifacts:
 
 Prefer fluent Japanese for ordinary prose.
 
-| Source term          | Preferred Japanese                                                    |
-| -------------------- | --------------------------------------------------------------------- |
-| `repository`         | `リポジトリ`                                                          |
-| `public repository`  | `パブリックリポジトリ` or `公開リポジトリ`, depending on the sentence |
-| `private repository` | `プライベートリポジトリ`                                              |
-| `skill`              | `スキル`                                                              |
-| `task`               | `タスク`                                                              |
-| `shell function`     | `シェル関数`                                                          |
-| `shell script`       | `シェルスクリプト`                                                    |
-| `formatter`          | `フォーマッタ`                                                        |
-| `editor`             | `エディタ`                                                            |
-| `token`              | `トークン`                                                            |
-| `user scope`         | `ユーザー単位`                                                        |
-| `project scope`      | `プロジェクト単位`                                                    |
-| `dependency`         | `依存関係`                                                            |
-| `package`            | `パッケージ`                                                          |
-| `tag`                | `タグ`                                                                |
-| `commit`             | `コミット`                                                            |
+| Source term          | Preferred Japanese                         |
+| -------------------- | ------------------------------------------ |
+| `repository`         | `リポジトリ`                               |
+| `public repository`  | `パブリックリポジトリ` or `公開リポジトリ` |
+| `private repository` | `プライベートリポジトリ`                   |
+| `skill`              | `スキル`                                   |
+| `task`               | `タスク`                                   |
+| `shell function`     | `シェル関数`                               |
+| `shell script`       | `シェルスクリプト`                         |
+| `formatter`          | `フォーマッタ`                             |
+| `editor`             | `エディタ`                                 |
+| `token`              | `トークン`                                 |
+| `user scope`         | `ユーザー単位`                             |
+| `project scope`      | `プロジェクト単位`                         |
+| `dependency`         | `依存関係`                                 |
+| `package`            | `パッケージ`                               |
+| `tag`                | `タグ`                                     |
+| `commit`             | `コミット`                                 |
 
 Keep project-specific preferences when they are established:
 

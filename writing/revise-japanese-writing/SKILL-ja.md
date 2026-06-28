@@ -48,11 +48,13 @@ description: 日本語のドキュメントやコメントを確認し、コー�
 
 文字どおり保持すべき技術要素は変更しない。
 
-- コマンド: `mise run install`, `uv run pre-commit run -a`
-- ファイルパス: `docs/index.md`, `.apm/skills`
-- 設定キー: `dependencies`, `interface.default_prompt`
-- スキル名やパッケージ名: `review-essential-code`, `suggest-commit-messages`
-- 製品名や固有名詞: GitHub, Homebrew, Claude Code, Codex
+| 種類                   | 例                                                 |
+| ---------------------- | -------------------------------------------------- |
+| コマンド               | `mise run install`, `uv run pre-commit run -a`     |
+| ファイルパス           | `docs/index.md`, `.apm/skills`                     |
+| 設定キー               | `dependencies`, `interface.default_prompt`         |
+| スキル名やパッケージ名 | `review-essential-code`, `suggest-commit-messages` |
+| 製品名や固有名詞       | GitHub, Homebrew, Claude Code, Codex               |
 
 ### 判断基準
 
@@ -73,24 +75,24 @@ description: 日本語のドキュメントやコメントを確認し、コー�
 
 普通の文章では読みやすい日本語を優先する。
 
-| 元の語               | 推奨する日本語                                              |
-| -------------------- | ----------------------------------------------------------- |
-| `repository`         | `リポジトリ`                                                |
-| `public repository`  | 文脈に応じて `パブリックリポジトリ` または `公開リポジトリ` |
-| `private repository` | `プライベートリポジトリ`                                    |
-| `skill`              | `スキル`                                                    |
-| `task`               | `タスク`                                                    |
-| `shell function`     | `シェル関数`                                                |
-| `shell script`       | `シェルスクリプト`                                          |
-| `formatter`          | `フォーマッタ`                                              |
-| `editor`             | `エディタ`                                                  |
-| `token`              | `トークン`                                                  |
-| `user scope`         | `ユーザー単位`                                              |
-| `project scope`      | `プロジェクト単位`                                          |
-| `dependency`         | `依存関係`                                                  |
-| `package`            | `パッケージ`                                                |
-| `tag`                | `タグ`                                                      |
-| `commit`             | `コミット`                                                  |
+| 元の語               | 推奨する日本語                                 |
+| -------------------- | ---------------------------------------------- |
+| `repository`         | `リポジトリ`                                   |
+| `public repository`  | `パブリックリポジトリ` または `公開リポジトリ` |
+| `private repository` | `プライベートリポジトリ`                       |
+| `skill`              | `スキル`                                       |
+| `task`               | `タスク`                                       |
+| `shell function`     | `シェル関数`                                   |
+| `shell script`       | `シェルスクリプト`                             |
+| `formatter`          | `フォーマッタ`                                 |
+| `editor`             | `エディタ`                                     |
+| `token`              | `トークン`                                     |
+| `user scope`         | `ユーザー単位`                                 |
+| `project scope`      | `プロジェクト単位`                             |
+| `dependency`         | `依存関係`                                     |
+| `package`            | `パッケージ`                                   |
+| `tag`                | `タグ`                                         |
+| `commit`             | `コミット`                                     |
 
 リポジトリ固有の好みがある場合はそれを優先する。
 
