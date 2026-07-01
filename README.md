@@ -1,12 +1,12 @@
 # 📚 skills
 
-Reusable agent skills maintained by zawa-kyo and distributed with [apm](https://github.com/microsoft/apm).
+Reusable agent skills maintained by zawa-kyo for [apm](https://github.com/microsoft/apm).
 
 Each directory under `dev/` or `writing/` is a standalone skill package.
 
 ## 🚀 Install
 
-Install an individual skill globally:
+Install one skill globally:
 
 ```sh
 apm install -g zawa-kyo/skills/dev/bootstrap-repo-docs
@@ -19,7 +19,7 @@ apm install -g zawa-kyo/skills/writing/revise-japanese-writing
 apm install -g zawa-kyo/skills/writing/summarize-discussion-coherently
 ```
 
-Or add them to an `apm.yml`:
+Or add one or more skills to `apm.yml`:
 
 ```yaml
 dependencies:
@@ -38,18 +38,18 @@ dependencies:
 
 ## 👨‍💻 `dev`
 
-| Skill                     | Description                                                                              |
-| ------------------------- | ---------------------------------------------------------------------------------------- |
-| `bootstrap-repo-docs`     | Set up bilingual README and AGENTS docs for a new or minimally scaffolded repository.    |
-| `guide-unit-tests`        | Guide unit test design while coding or reviewing boundaries, assertions, and quality.    |
-| `review-essential-code`   | Review code changes for bugs, regressions, missing tests, and essential maintainability. |
-| `suggest-commit-messages` | Suggest concise English Conventional Commit messages from staged or unstaged Git diffs.  |
+| Skill                     | Description                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `bootstrap-repo-docs`     | Set up bilingual README and AGENTS docs for a new or minimally scaffolded repository.                  |
+| `guide-unit-tests`        | Guide unit test design during implementation or review, including boundaries, assertions, and quality. |
+| `review-essential-code`   | Review code changes for bugs, regressions, missing tests, and essential maintainability.               |
+| `suggest-commit-messages` | Suggest concise English Conventional Commit messages from staged or unstaged Git diffs.                |
 
 ## ✏️ `writing`
 
 | Skill                             | Description                                                                                                                           |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `edit-existing-document`          | Fit edits into existing document structure while avoiding duplicate or conflicting guidance.                                          |
-| `revise-english-writing`          | Make English technical prose direct and less AI-like while preserving commands, paths, and identifiers.                               |
+| `edit-existing-document`          | Fit edits into an existing document structure without adding duplicate or conflicting guidance.                                       |
+| `revise-english-writing`          | Make English technical prose direct and natural while preserving commands, paths, and identifiers.                                    |
 | `revise-japanese-writing`         | Review and revise Japanese technical prose while preserving commands, paths, and identifiers.                                         |
 | `summarize-discussion-coherently` | Turn personal discussion logs into coherent structured summaries with the right organizing framework and unresolved points preserved. |
