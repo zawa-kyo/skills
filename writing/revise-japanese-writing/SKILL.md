@@ -64,6 +64,7 @@ Preserve literal technical artifacts:
 - Watch for translationese: compound terms that are understandable but not actually used by Japanese readers, literal renderings of source-language wording, and abstract words chosen only because they map neatly to the source text.
 - For possible calques, test whether the Japanese phrase appears to trace an English idiom, metaphor, or marked construction. If it does, discard the English shape and choose the expression again in Japanese. Do not flag ordinary grammar or established loanwords as calques.
 - Use technical terms, loanwords, and abbreviations according to the reader and document purpose. Define or explain abbreviations on first use.
+- Preserve the part of speech that the sentence needs. Do not abbreviate English compound terms when shortening would make the meaning or part of speech ambiguous. For example, when referring to the `squash merge` method or a completed merge, use `スカッシュマージ`, `スカッシュマージ済み`, or a clear Japanese phrase instead of `スカッシュ`.
 
 ### Prose Noise
 
@@ -166,6 +167,7 @@ Follow the surrounding document's format first. For Japanese articles, book-like
 - Did any wording change alter the technical meaning?
 - Are repeated terms consistent across the edited files?
 - Are key concepts named consistently, without unnecessary synonym rotation or one vague term covering multiple concepts?
+- Are English compound terms left unabbreviated when shortening them would make the meaning or part of speech ambiguous?
 - Did the cleanup avoid replacing proper nouns or code-like text by mistake?
 
 ### Long-Form Prose
