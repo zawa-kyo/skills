@@ -9,12 +9,13 @@ Each directory under `dev/` or `writing/` is a standalone skill package.
 Install an individual skill globally:
 
 ```sh
+apm install -g zawa-kyo/skills/dev/bootstrap-repo-docs
+apm install -g zawa-kyo/skills/dev/guide-unit-tests
 apm install -g zawa-kyo/skills/dev/review-essential-code
 apm install -g zawa-kyo/skills/dev/suggest-commit-messages
-apm install -g zawa-kyo/skills/dev/bootstrap-repo-docs
-apm install -g zawa-kyo/skills/writing/revise-japanese-writing
-apm install -g zawa-kyo/skills/writing/revise-english-writing
 apm install -g zawa-kyo/skills/writing/edit-existing-document
+apm install -g zawa-kyo/skills/writing/revise-english-writing
+apm install -g zawa-kyo/skills/writing/revise-japanese-writing
 apm install -g zawa-kyo/skills/writing/summarize-discussion-coherently
 ```
 
@@ -23,12 +24,13 @@ Or add them to an `apm.yml`:
 ```yaml
 dependencies:
   apm:
+    - zawa-kyo/skills/dev/bootstrap-repo-docs
+    - zawa-kyo/skills/dev/guide-unit-tests
     - zawa-kyo/skills/dev/review-essential-code
     - zawa-kyo/skills/dev/suggest-commit-messages
-    - zawa-kyo/skills/dev/bootstrap-repo-docs
-    - zawa-kyo/skills/writing/revise-japanese-writing
-    - zawa-kyo/skills/writing/revise-english-writing
     - zawa-kyo/skills/writing/edit-existing-document
+    - zawa-kyo/skills/writing/revise-english-writing
+    - zawa-kyo/skills/writing/revise-japanese-writing
     - zawa-kyo/skills/writing/summarize-discussion-coherently
 ```
 
@@ -38,7 +40,8 @@ dependencies:
 
 | Skill                     | Description                                                                              |
 | ------------------------- | ---------------------------------------------------------------------------------------- |
-| `bootstrap-repo-docs`     | Set up bilingual README and AGENTS docs for a new or minimally scaffolded repository.   |
+| `bootstrap-repo-docs`     | Set up bilingual README and AGENTS docs for a new or minimally scaffolded repository.    |
+| `guide-unit-tests`        | Guide unit test design while coding or reviewing boundaries, assertions, and quality.    |
 | `review-essential-code`   | Review code changes for bugs, regressions, missing tests, and essential maintainability. |
 | `suggest-commit-messages` | Suggest concise English Conventional Commit messages from staged or unstaged Git diffs.  |
 
