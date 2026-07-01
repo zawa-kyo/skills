@@ -8,7 +8,7 @@
 2. その振る舞いは単体テストで守る価値があるか。
 3. テスト境界は、実装構造ではなく振る舞いに基づいているか。
 4. テストは意味のある結果を観測しているか。
-5. test double は、揮発性を下げるか、意味のある境界通信を検証するために使われているか。
+5. テストダブルは、揮発性を下げるか、意味のある境界通信を検証するために使われているか。
 6. テストは読みやすく、直線的で、保守コストが低いか。
 7. テストしにくいコードは設計変更を示していないか。
 
@@ -27,15 +27,15 @@
 
 | 症状                                         | 参照先                                               |
 | -------------------------------------------- | ---------------------------------------------------- |
-| helper call や call order を assert している | `observation-and-oracles.md`                         |
-| stub を検証している                          | `observation-and-oracles.md`                         |
-| テスト名が class や method name をなぞるだけ | `test-target-selection.md`, `test-construction.md`   |
-| private access が必要になっている            | `test-target-selection.md`, `design-feedback.md`     |
-| 本番 algorithm をテスト内に複製している      | `observation-and-oracles.md`, `test-construction.md` |
-| domain behavior に大量の mock が必要         | `test-target-selection.md`, `design-feedback.md`     |
-| 本番コードに test-only switch がある         | `design-feedback.md`                                 |
+| 補助メソッドの呼び出しや呼び出し順を検証している | `observation-and-oracles.md`                         |
+| スタブを検証している                            | `observation-and-oracles.md`                         |
+| テスト名がクラス名やメソッド名をなぞるだけ       | `test-target-selection.md`, `test-construction.md`   |
+| 非公開要素へのアクセスが必要になっている         | `test-target-selection.md`, `design-feedback.md`     |
+| 本番アルゴリズムをテスト内に複製している         | `observation-and-oracles.md`, `test-construction.md` |
+| ドメインの振る舞いに大量のモックが必要           | `test-target-selection.md`, `design-feedback.md`     |
+| 本番コードにテスト専用のスイッチがある           | `design-feedback.md`                                 |
 
 ## 問題がない場合
 
-blocking issue が見つからない場合は、その旨を明確に伝える。
+重大な問題が見つからない場合は、その旨を明確に伝える。
 不完全な文脈、未実行のテスト、不明確な本番契約など、信頼度に影響する場合だけ残るリスクに触れる。
