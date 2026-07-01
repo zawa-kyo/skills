@@ -6,7 +6,7 @@ zawa-kyo が管理する [apm](https://github.com/microsoft/apm) で配布する
 
 ## 🚀 インストール
 
-個別のスキルをグローバルにインストールする場合:
+個別のスキルをグローバルにインストールする場合は、次のコマンドを使います。
 
 ```sh
 apm install -g zawa-kyo/skills/dev/review-essential-code
