@@ -1,4 +1,7 @@
-# References
+# Ideas
+
+The core design was created by zawa-kyo.
+This file records external sources whose ideas were incorporated while creating or maintaining the skill.
 
 ## Japanese Technical Writing Skill
 
@@ -49,3 +52,36 @@ It treats surface markers such as dashes, excessive quotation marks, emoji, slog
 - Treat surface markers as review signals, not mechanical bans.
 - Remove meaningless quotation marks, emoji, inflated metaphors, and stacked intensifiers when they do not serve the document.
 - Replace generalized claims with the writer's concrete experience, observed behavior, or specific constraint.
+
+## Forest-Project-Lab Japanese Writing Skills
+
+- [`jp-style-check`](https://github.com/Forest-Project-Lab/jp-writing-skills/blob/main/plugin/skills/jp-style-check/SKILL.md)
+- [`logic-jp-check`](https://github.com/Forest-Project-Lab/jp-writing-skills/blob/main/plugin/skills/logic-jp-check/SKILL.md)
+
+License: MIT, copyright 2026 Forest-Project-Lab.
+
+### Summary
+
+These skills informed the defect-detection framing for Japanese prose review.
+`jp-style-check` focuses on clarity, consistency, calques, and translationese.
+`logic-jp-check` uses the same Japanese prose checks and adds argument checks for claims, grounds, induction, deduction, classification, and causality.
+
+The relevant ideas fit `revise-japanese-writing` as review criteria rather than as a separate output format.
+This skill already rewrites prose directly, so the incorporated guidance is phrased as internal judgment criteria and checklist items.
+
+### Incorporated Ideas
+
+- Treat style review as concrete defect detection, not aesthetic scoring.
+- Check whether a sentence has one plausible interpretation, rather than mechanically treating every long sentence as unclear.
+- Detect calques by asking whether the Japanese phrase traces an English idiom, metaphor, or marked construction.
+- Use one name for one concept; do not vary key terms merely to avoid repetition.
+- Treat rhythm-related issues as lower-confidence signals, not definitive defects.
+- Check that claims and grounds are both present, meaningfully connected, and scoped to the available evidence.
+- Distinguish causality from correlation, and make comparison dimensions or classification criteria explicit when they matter.
+
+### Boundaries
+
+- Do not copy the source skills' output format into this skill. `revise-japanese-writing` still reports edits and wording categories concisely.
+- Do not make all rhythm or taste observations mandatory findings.
+- Do not flag ordinary grammar, established loanwords, or locally accepted technical terms as calques.
+- Keep the English and Japanese skill files synchronized; this reference file records the source and maintenance rationale.

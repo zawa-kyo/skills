@@ -43,6 +43,7 @@ This skill is the source of truth for detailed Japanese prose style. Agent-level
 - Match the surrounding document's tone, especially polite style and plain style.
 - Match established terminology, notation, and symbol usage. Do not mix multiple forms for the same concept.
 - Use lint as a floor, not as the final arbiter. Mechanical checks help with recurring patterns, but natural term choice still requires contextual judgment.
+- Treat style review as defect detection, not aesthetic scoring. Point out concrete risks of ambiguity, inconsistency, translationese, or reader confusion; do not claim to judge beauty, taste, or elegance.
 
 ### Preserve Technical Artifacts
 
@@ -61,11 +62,14 @@ Preserve literal technical artifacts:
 - Do not force Japanese replacements for domain terms that are common in Japanese, lack a clear Japanese equivalent, or would become less precise when translated.
 - When several forms are possible, choose the one that reads most naturally in Japanese prose: full Japanese translation, katakana, or the original alphabetic form. Prefer established Japanese usage over literal translation. For example, keep `hexagonal architecture` as `ヘキサゴナルアーキテクチャ`, not `六角形アーキテクチャ`.
 - Watch for translationese: compound terms that are understandable but not actually used by Japanese readers, literal renderings of source-language wording, and abstract words chosen only because they map neatly to the source text.
+- For possible calques, test whether the Japanese phrase appears to trace an English idiom, metaphor, or marked construction. If it does, discard the English shape and choose the expression again in Japanese. Do not flag ordinary grammar or established loanwords as calques.
 - Use technical terms, loanwords, and abbreviations according to the reader and document purpose. Define or explain abbreviations on first use.
+- Preserve the part of speech that the sentence needs. Do not abbreviate English compound terms when shortening would make the meaning or part of speech ambiguous. For example, when referring to the `squash merge` method or a completed merge, use `スカッシュマージ`, `スカッシュマージ済み`, or a clear Japanese phrase instead of `スカッシュ`.
 
 ### Prose Noise
 
 - Use punctuation, brackets, question marks, exclamation points, and similar symbols consistently within a document, and avoid overusing them.
+- Keep one name for one concept. Do not vary key terms only to avoid repetition, and do not use one vague term for distinct concepts. Remove duplicated information instead of treating repeated key terms as a problem by themselves.
 - Avoid empty emphasis and posture words that make prose sound careful without adding information, such as broad claims of importance, depth, comprehensiveness, or significance.
 - Treat AI-like surface markers as signals, not mechanical bans. Remove meaningless quotation marks, emoji, grand metaphors, stacked intensifiers, or generic claims when they do not fit the document's purpose.
 - Avoid theatrical setup, rhetorical questions, and punch-line contrasts when a direct explanation is enough. Use emphasis only where it clarifies the argument.
@@ -110,12 +114,15 @@ Apply these checks when revising long-form prose, articles, guides, or explanati
 - Keep one paragraph focused on one topic or step in the reasoning. Split paragraphs that mix setup, investigation, result, and evaluation.
 - Make the first sentence of a paragraph show what role the paragraph plays. Use connective expressions when the relationship to the previous paragraph is not obvious.
 - Move the argument in one direction. Handle necessary objections, conditions, or reader doubts before stating the conclusion.
+- Keep each sentence interpretable in one way. A long sentence is not automatically unclear, but rewrite it when modifier scope, subject-predicate relation, or omitted subjects make multiple readings plausible.
 - When denying or narrowing a claim, write the denied claim clearly and give the reason. Do not rely on vague denials such as "not everything is solved."
 
 ### Argument Rigor
 
 - Match claim scope to the examples and evidence provided. If the examples support only part of a claim, narrow the claim.
+- Keep claims and grounds as separate, connected propositions. A claim without support, a list of facts without a claim, or two unrelated propositions placed side by side does not make a sound argument.
 - State causal mechanisms when claiming that one thing causes another. Do not leave the reader to infer why the result follows.
+- Distinguish causal claims from correlation. When comparing or decomposing topics, make the comparison dimension or classification criterion explicit enough that the reader can see why the split is valid.
 - Avoid promising detection, guarantee, or resolution without conditions. Use conditional wording when the result depends on context.
 - Preserve uncertainty when the source text has a reason to be uncertain, such as an unverified possibility, a reader's likely doubt, a character's perception, or a counterfactual. Tighten weak hedging only when the text already proves the claim.
 - Do not collapse distinct decisions, causes, or problem types into one vague category. Separate them and explain which example or tool supports which part of the claim.
@@ -159,12 +166,16 @@ Follow the surrounding document's format first. For Japanese articles, book-like
 - Are commands, paths, identifiers, config keys, and examples preserved exactly?
 - Did any wording change alter the technical meaning?
 - Are repeated terms consistent across the edited files?
+- Are key concepts named consistently, without unnecessary synonym rotation or one vague term covering multiple concepts?
+- Are English compound terms left unabbreviated when shortening them would make the meaning or part of speech ambiguous?
 - Did the cleanup avoid replacing proper nouns or code-like text by mistake?
 
 ### Long-Form Prose
 
 - For long-form prose, does each paragraph advance one clear step in the argument?
 - Are claims, examples, conditions, and causal explanations aligned?
+- Are the claim and its grounds both present, meaningfully connected, and scoped to the available evidence?
+- Are comparisons, classifications, and causal claims using explicit and appropriate criteria?
 - Did the edit preserve necessary uncertainty while removing unsupported hedging?
 - Are distinct causes, decisions, and problem types separated instead of being merged into a vague category?
 - Did the edit remove empty emphasis, theatrical setup, vague actors, and redundant summary sentences?
@@ -172,7 +183,7 @@ Follow the surrounding document's format first. For Japanese articles, book-like
 
 ## References
 
-Record materials used to create or maintain this skill, such as related skills or web pages, in `references/background.md`.
+Record external ideas incorporated into this skill, such as related skills or web pages, in `references/idea.md`.
 
 ## Output
 
