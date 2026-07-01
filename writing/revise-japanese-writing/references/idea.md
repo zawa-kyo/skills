@@ -1,4 +1,7 @@
-# References
+# Ideas
+
+The core design was created by zawa-kyo.
+This file records external sources whose ideas were incorporated while creating or maintaining the skill.
 
 ## Japanese Technical Writing Skill
 

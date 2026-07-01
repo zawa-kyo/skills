@@ -183,7 +183,7 @@ Follow the surrounding document's format first. For Japanese articles, book-like
 
 ## References
 
-Record materials used to create or maintain this skill, such as related skills or web pages, in `references/background.md`.
+Record external ideas incorporated into this skill, such as related skills or web pages, in `references/idea.md`.
 
 ## Output
 
