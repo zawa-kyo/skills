@@ -41,7 +41,7 @@ dependencies:
 | Skill                     | Description                                                                                            |
 | ------------------------- | ------------------------------------------------------------------------------------------------------ |
 | `bootstrap-repo-docs`     | Set up bilingual README and AGENTS docs for a new or minimally scaffolded repository.                  |
-| `guide-unit-tests`        | Guide unit test design during implementation or review, including boundaries, assertions, and quality. |
+| `guide-unit-tests`        | Guide unit test strategy, implementation, and review from purpose and project context.                 |
 | `review-essential-code`   | Review code changes for bugs, regressions, missing tests, and essential maintainability.               |
 | `suggest-commit-messages` | Suggest concise English Conventional Commit messages from staged or unstaged Git diffs.                |
 

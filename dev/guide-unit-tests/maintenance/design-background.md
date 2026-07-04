@@ -14,16 +14,18 @@ This skill does not treat that book as the only source of truth. The skill shoul
 
 ## Design Choice
 
-Organize the skill by judgment layer, not by source chapter or testing school:
+Organize the skill by the thinking sequence used when designing, implementing, or reviewing unit tests, not by source chapter, testing school, or isolated use case:
 
-- `foundations.md` covers purpose, quality attributes, terminology, and priorities.
-- `test-target-selection.md` covers what should and should not be unit tested.
-- `observation-and-oracles.md` covers what a test observes and how it decides correctness.
-- `test-construction.md` covers the shape of test code.
-- `design-feedback.md` covers design problems revealed by hard-to-test code.
-- `review-heuristics.md` provides review-oriented navigation back to the rules.
+- `01-purpose.md` covers why the test should exist and what risk it protects.
+- `02-context.md` covers domain, architecture, dependency, and existing-test context.
+- `03-test-strategy.md` covers test level, unit boundary, dependency handling, and observation style.
+- `04-test-design.md` covers concrete cases, assertions, and test double roles.
+- `05-implementation.md` covers test code shape and safe testability refactors.
+- `06-self-review.md` covers self-review and compressed external review.
 
-This structure keeps the skill extensible. A new source should strengthen, refine, or challenge existing rules instead of creating a parallel chapter summary.
+This structure keeps the skill extensible. A new source should strengthen, refine, or challenge the relevant workflow step instead of creating a parallel chapter summary or a separate use-case silo.
+
+Review is not a separate branch of the skill. It uses the same workflow in compressed form: infer purpose, read enough context, check strategy, inspect concrete assertions, inspect implementation quality, then report findings.
 
 ## Runtime And Maintenance Files
 

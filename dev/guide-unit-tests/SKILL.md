@@ -1,42 +1,41 @@
 ---
 name: guide-unit-tests
-description: Guide unit test design while coding or reviewing. Use this skill when the user wants to write unit tests, improve existing tests, review test quality, choose test boundaries, decide what to assert, use mocks/stubs/test doubles, or interpret code that is hard to unit test. This skill focuses on unit tests and design feedback, not detailed integration, E2E, CI, or framework setup work.
+description: Guide unit test design while coding or reviewing. Use this skill when the user wants to write unit tests, improve existing tests, review test quality, choose test boundaries, decide what to assert, use mocks/stubs/test doubles, refactor hard-to-test code, or turn project context into a unit test strategy. This skill focuses on unit tests and design feedback, not detailed integration, E2E, CI, or framework setup work.
 ---
 
 # Guide Unit Tests
 
 ## Overview
 
-Use this skill while writing or reviewing unit tests. The goal is not to maximize test count or coverage. The goal is to keep the codebase safe to change by protecting important behavior at a reasonable maintenance cost.
+Use this skill while designing, implementing, or reviewing unit tests. The goal is not to maximize test count or coverage. The goal is to keep the codebase safe to change by protecting important behavior at a reasonable maintenance cost.
 
-Use this skill as a companion when creating unit tests, reviewing unit tests, deciding whether a behavior belongs in a unit test, or using test difficulty as design feedback.
+Treat this skill as a workflow, not a topic index. Move from abstract purpose to concrete implementation, then review the result against the original purpose.
 
 ## Scope
 
 Use this skill to:
 
-- select valuable unit test targets
-- decide what behavior to observe and assert
-- choose between output, state, and interaction checks
-- use test doubles, stubs, and mocks
-- write clear test names, setup, actions, and assertions
-- review brittle, over-specified, or low-value tests
-- identify design changes suggested by hard-to-test code
+- turn a testing request into a clear purpose and risk
+- read enough domain and architecture context to avoid generic tests
+- design the unit test strategy before writing code
+- choose concrete test cases, assertions, and test double roles
+- implement readable tests and refactor hard-to-test production code when needed
+- review tests by checking purpose, context, strategy, design, and implementation fit
 
 Do not use this skill as the source of truth for integration tests, E2E tests, database tests, CI, coverage tooling, or framework-specific setup details. Mention those topics only when they help define the unit test boundary.
 
-## Reference Selection
+## Runtime References
 
-`references/` contains runtime guidance for using this skill. Read only the files the task needs:
+`references/` contains runtime guidance for using this skill. Read the files in workflow order unless the task is small enough to skip directly to the relevant later step.
 
-| Situation                                                 | Read                                    |
-| --------------------------------------------------------- | --------------------------------------- |
-| Need the purpose, quality bar, priorities, or terminology | `references/foundations.md`             |
-| Need to decide what should be unit tested                 | `references/test-target-selection.md`   |
-| Need to decide what to assert or how to use mocks/stubs   | `references/observation-and-oracles.md` |
-| Need help writing or improving test code structure        | `references/test-construction.md`       |
-| Code is hard to unit test or suggests design problems     | `references/design-feedback.md`         |
-| User asks for a review of tests or testability            | `references/review-heuristics.md`       |
+| Step | Reference                          | Purpose                                      |
+| ---- | ---------------------------------- | -------------------------------------------- |
+| 1    | `references/01-purpose.md`         | Clarify why the test should exist.           |
+| 2    | `references/02-context.md`         | Read domain, architecture, and test context. |
+| 3    | `references/03-test-strategy.md`   | Choose test level, boundary, and observation. |
+| 4    | `references/04-test-design.md`     | Design concrete cases and assertions.        |
+| 5    | `references/05-implementation.md`  | Implement tests and safe testability refactors. |
+| 6    | `references/06-self-review.md`     | Review the result against purpose and design. |
 
 For Japanese output or Japanese documentation work, use the matching file under `references-ja/` when available.
 
@@ -47,26 +46,32 @@ When editing this skill, keep paired files aligned in meaning:
 - `references/` and `references-ja/` for runtime guidance
 - `maintenance/` and `maintenance-ja/` for maintainer guidance
 
-## Workflow
+## Core Workflow
 
-1. Classify the request as test creation, test review, boundary selection, assertion strategy, or design feedback.
-2. Read the relevant reference files before giving detailed guidance.
-3. Identify the behavior the user cares about before talking about classes, methods, mocks, or assertions.
-4. Prefer tests that observe externally meaningful behavior over tests coupled to implementation details.
-5. Treat low-value or high-maintenance tests as liabilities, not automatic assets.
-6. When a rule has exceptions, explain the applicability and trade-off instead of presenting it as universal.
-7. If the issue is broader than unit testing, say where the unit test boundary ends and what other test type or design work should cover the gap.
+1. Establish purpose: identify the behavior, risk, or maintenance goal. Translate coverage-driven requests into a concrete reason for the test to exist.
+2. Read context: inspect enough project domain, architecture, existing tests, and dependency structure to avoid tests that are locally correct but project-inappropriate.
+3. Design strategy: decide the test level, unit boundary, dependencies to keep real or replace, and observation style before writing code.
+4. Design cases: list the concrete cases, inputs, actions, expected observable results, and test double roles.
+5. Implement: write the tests using local conventions while preserving behavior-focused intent. If the code is hard to test, prefer production refactors that improve the model over test-only seams.
+6. Self-review: check whether the implemented tests still match the purpose, context, strategy, and design.
+
+## Review Mode
+
+When the user asks for a review, use the same workflow in compressed form instead of switching to a separate checklist:
+
+1. Infer the test purpose from the request, diff, code, or existing tests.
+2. Read enough production and test context to understand the behavior and boundary.
+3. Check whether the chosen strategy fits the behavior and risk.
+4. Check whether assertions observe behavior rather than implementation details.
+5. Check whether the implementation is readable, deterministic, and maintainable.
+6. Report findings first when there are real issues. Include the violated principle, risk, and smallest useful correction.
+
+If no blocking issue is found, say so clearly and mention only confidence-affecting gaps such as missing context, unclear production contracts, or unrun tests.
 
 ## Output
 
-For new tests, provide:
+For new or changed tests, provide the testing purpose, relevant project context, test strategy, concrete test cases, implementation changes, and review result. Keep the level of detail proportional to the task.
 
-- the behavior to test
-- the recommended test boundary
-- the preferred observation style
-- the test cases to write
-- any design change that would make the test simpler or more valuable
-
-For review, lead with findings when there are real issues. Include the rule being violated, the risk, and the smallest useful correction. If there is no blocking issue, say so and mention any remaining context or verification gap.
+For reviews, lead with findings ordered by severity. Do not present a stylistic preference as a defect unless it affects behavior, refactoring resistance, readability, determinism, or maintenance cost.
 
 Use the user's language unless they ask otherwise.

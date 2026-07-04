@@ -1,9 +1,28 @@
-# 設計フィードバック
+# 文脈の把握
+
+## ドメインとアーキテクチャを読む
+
+Priority: Essential
+Layer: Context
+Applicability: 既存プロジェクトのコードに対してテストを設計する前。
+Trade-offs: 小さな独立関数では、最小限の文脈で足りる場合がある。ドメイン上の振る舞いでは、文脈を飛ばすと誤ったテストになりやすい。
+Sources: ローカルプロジェクト構造、_Unit Testing: Principles, Practices, and Patterns_
+
+振る舞いがドメインの意味、アーキテクチャ境界、既存のテスト方針に依存する場合は、クラスやメソッドだけを見て単体テストを設計しない。
+
+次を答えられる程度にプロジェクトの文脈を確認する。
+
+- どのドメイン上の振る舞いや不変条件が関係しているか。
+- その判断は、ドメイン、アプリケーション、アダプタ、UI、インフラ、またはプロジェクト固有のどの層が持つべきか。
+- 安定したプロセス内の協力オブジェクトはどれか。
+- 共有依存、不安定な依存、プロセス外の依存はどれか。
+- 既存テストは、命名、フィクスチャ、ビルダー、テストダブルをどう使っているか。
+- 直接的な単体テストが不適切になるアーキテクチャ上の制約はあるか。
 
 ## テストしにくさを設計の手がかりにする
 
 Priority: Recommended
-Layer: Design Feedback
+Layer: Context
 Applicability: 価値のある振る舞いが単体テストしにくい場面。
 Trade-offs: インフラや並行処理には本質的な難しさがある。すべての難しいテストがドメインモデルの問題を示すわけではない。
 Sources: _Unit Testing: Principles, Practices, and Patterns_
@@ -15,7 +34,7 @@ Sources: _Unit Testing: Principles, Practices, and Patterns_
 ## 判断と副作用を分ける
 
 Priority: Recommended
-Layer: Design Feedback
+Layer: Context
 Applicability: ドメイン上の判断が、永続化やログ出力などの副作用と混ざっている場面。
 Trade-offs: 判断ロジックがほとんどない単純なコードを過剰に抽象化しない。
 Sources: _Unit Testing: Principles, Practices, and Patterns_
@@ -23,23 +42,22 @@ Sources: _Unit Testing: Principles, Practices, and Patterns_
 重要な判断は、可能な範囲で小さく決定的な中心へ移す。
 副作用は外側の層に置き、結合テストや境界を対象にした少数の単体テストで扱う。
 
-## テストのために本番コードを汚染しない
-
-Priority: Essential
-Layer: Design Feedback
-Applicability: テストしやすくする目的だけで本番コードを変えようとしている場面。
-Trade-offs: テストしやすさのために設計を改善することは妥当である。テスト専用のスイッチや、外から変更できる状態を追加するのは避ける。
-Sources: _Unit Testing: Principles, Practices, and Patterns_
-
-単体テストを通すためだけに、テスト専用の分岐、公開 setter、変更可能なグローバル状態、緩い契約を追加しない。
-本番モデルも改善する設計変更を優先する。
-
 ## 非公開メソッドではなく概念を抽出する
 
 Priority: Recommended
-Layer: Design Feedback
+Layer: Context
 Applicability: 非公開ロジックが直接テストしたいほど複雑な場面。
 Trade-offs: 抽出は、新しい概念に実際の責務と外から使える仕様がある場合にだけ有効である。
 Sources: _Unit Testing: Principles, Practices, and Patterns_
 
 非公開の振る舞いが重要で複雑なら、非公開メソッドを直接テストするのではなく、名前を付けられる概念として抽出する。
+
+## 文脈把握の出力
+
+テスト戦略へ進む前に、実務上必要な粒度で次をまとめる。
+
+- 振る舞いとドメイン上の意味
+- 振る舞いを持つ層または境界
+- 実物のまま使う依存関係
+- 制御、フェイク化、またはモック化する依存関係
+- テスト実装前または実装中に求められる設計改善

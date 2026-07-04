@@ -1,0 +1,72 @@
+# テスト設計
+
+## コードを書く前に具体的なケースへ落とす
+
+Priority: Essential
+Layer: Test Design
+Applicability: テストコードを書いたり変更したりする前。
+Trade-offs: ごく小さな純粋関数では、設計は短くてよい。それでも、アサーションを選ぶ前に振る舞いと期待結果を特定する。
+Sources: _Unit Testing: Principles, Practices, and Patterns_
+
+戦略を具体的なテストケースへ落とす。
+各ケースでは、振る舞い、重要な入力または前提、外から確認できる期待結果を明確にする。
+
+実装分岐を網羅的になぞるより、意味のある少数の例を優先する。
+
+## 外から確認できる結果を優先する
+
+Priority: Essential
+Layer: Test Design
+Applicability: 単体テストのアサーションを選ぶ場面。
+Trade-offs: システム境界では相互作用の検証が必要な場合もある。
+Sources: _Unit Testing: Principles, Practices, and Patterns_
+
+戻り値、外から見える状態、発行されたドメインイベントなど、振る舞いの意味を表す結果を優先して検証する。
+
+中間状態、非公開アルゴリズム、呼び出し順、補助メソッドの呼び出しを検証しない。
+ただし、それ自体が外部に見せている仕様である場合は例外である。
+
+## スタブを検証しない
+
+Priority: Essential
+Layer: Test Design
+Applicability: テスト対象に入力を与えるだけのテストダブルを使う場面。
+Trade-offs: 1つのテストダブルがスタブとモックの両方の役割を持つ場合もある。その場合でも、振る舞いとして重要な出力側だけを検証する。
+Sources: _Unit Testing: Principles, Practices, and Patterns_
+
+スタブとの相互作用をアサーションしない。
+スタブはテスト対象に入力を与えるものであり、どう問い合わせたかを検証すると実装詳細の検証になりやすい。
+
+## 重要な境界通信だけをモックする
+
+Priority: Essential
+Layer: Test Design
+Applicability: 依存先との相互作用を検証する場面。
+Trade-offs: アダプタコードでは、重いモックを使う単体テストより、結合テストで扱う選択もある。
+Sources: _Unit Testing: Principles, Practices, and Patterns_
+
+送信、イベント発行、管理外の依存先呼び出しなど、システム境界で意味を持つ通信を検証するときにモックを使う。
+
+普通のドメイン協力オブジェクトを、1クラスずつテストするためだけにモックしない。
+
+## 非公開の詳細を直接テストしない
+
+Priority: Recommended
+Layer: Test Design
+Applicability: ロジックをテストする方法が非公開メソッドや非公開状態しかないように見える場面。
+Trade-offs: 非公開ロジックが複雑で価値を持つなら、内部を公開しない。外から使える仕様を持つ概念として抽出する。
+Sources: _Unit Testing: Principles, Practices, and Patterns_
+
+非公開の振る舞いは、外から確認できる公開された振る舞いを通じてテストする。
+非公開要素を直接テストすると、実装詳細に結び付き、リファクタリングしにくくなりやすい。
+
+## ケース設計の出力
+
+各テストケースについて、次を示す。
+
+- 振る舞い名
+- 前提または入力
+- 実行する操作
+- 外から確認できる期待結果
+- テストダブルを使う場合の役割: スタブ、フェイク、スパイ、モック
+- そのケースに価値がある理由

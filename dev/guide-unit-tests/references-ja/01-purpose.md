@@ -1,10 +1,10 @@
-# 基礎
+# 目的
 
-## 目的
+## テストの目的を定める
 
 Priority: Essential
-Layer: Foundation
-Applicability: 単体テストの作成またはレビュー全般。
+Layer: Purpose
+Applicability: 単体テストを作成またはレビューするすべての場面。
 Trade-offs: 価値がはっきりしないテストは、改善するか、別のテスト種別へ移す。不要なら削除する。
 Sources: _Unit Testing: Principles, Practices, and Patterns_
 
@@ -16,10 +16,13 @@ Sources: _Unit Testing: Principles, Practices, and Patterns_
 読むこと、実行、調査、更新といった作業が必要になる。
 信頼できる状態に保つことも必要である。
 
+テストを設計またはレビューする前に、そのテストが何を守るためのものかを明確にする。
+目的が「カバレッジを上げる」「テストがないから追加する」だけなら、守るべき振る舞い、リスク、保守上の目的に言い換える。
+
 ## 品質特性
 
 Priority: Essential
-Layer: Foundation
+Layer: Purpose
 Applicability: 単体テストが良いかどうかを判断する場面。
 Trade-offs: すべての品質特性を最大化する単一のテストはない。振る舞いの重要度とリスクに応じて選ぶ。
 Sources: _Unit Testing: Principles, Practices, and Patterns_
@@ -31,10 +34,14 @@ Sources: _Unit Testing: Principles, Practices, and Patterns_
 - 迅速なフィードバック: 頻繁に実行できるほど軽い。
 - 保守性: 読みやすく、目的がはっきりしており、更新コストが低い。
 
+これらは合言葉ではなく、トレードオフを考えるための軸である。
+リスクの低いアクセサに専用の単体テストは要らないことがある。
+一方で、リグレッションの影響が大きい業務ルールには、カバレッジが十分でも複数の例が必要になることがある。
+
 ## カバレッジ指標
 
 Priority: Recommended
-Layer: Foundation
+Layer: Purpose
 Applicability: カバレッジ、不足テスト、テストスイートの健全性を扱う場面。
 Trade-offs: カバレッジは未テスト領域を示せるが、テスト品質は保証しない。
 Sources: _Unit Testing: Principles, Practices, and Patterns_
@@ -44,6 +51,16 @@ Sources: _Unit Testing: Principles, Practices, and Patterns_
 高いカバレッジは、振る舞いが正しく検証されていることを証明しない。
 
 カバレッジ数値を満たすためだけにテストを書かない。
+
+## 目的を確認する観点
+
+文脈や設計へ進む前に、次を確認する。
+
+- 守る価値がある振る舞い、ルール、リスクは何か。
+- 壊れたときに、ユーザー、ドメインエキスパート、保守者、依存システムの誰が困るか。
+- そのリスクは単体テストで扱うべきか、別のテスト種別で扱うべきか。
+- その振る舞いに許容できる保守コストはどの程度か。
+- そのテストが資産ではなく技術負債になる条件は何か。
 
 ## 優先度の用語
 
