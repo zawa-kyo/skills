@@ -14,6 +14,8 @@ Each skill contains:
 
 When you generate or edit text in this repository, check whether an English Markdown file and a corresponding Japanese `*-ja.md` file exist for the same content. When one exists, update both files in the same change so they stay aligned.
 
+Also check whether the content lives under paired directories where the Japanese side is expressed by adding a `-ja` suffix to the directory name, such as `references/`/`references-ja/` or `maintenance/`/`maintenance-ja/`. Treat those directory pairs as English/Japanese counterparts too. When editing content in one side, update the matching file in the paired directory in the same change when it represents the same content.
+
 Keep the versions equivalent in meaning, but write each one naturally in its own language. Do not make the Japanese file a mechanical line-by-line translation when a more natural Japanese expression preserves the same intent.
 
 This applies especially to:
@@ -21,6 +23,7 @@ This applies especially to:
 - `README.md` and `README-ja.md`
 - `AGENTS.md` and `AGENTS-ja.md`
 - each `dev/<skill>/SKILL.md`, `dev/<skill>/SKILL-ja.md`, `writing/<skill>/SKILL.md`, and `writing/<skill>/SKILL-ja.md`
+- matching files under paired directories such as `<dir>/...` and `<dir>-ja/...`
 
 ## Maintenance
 
