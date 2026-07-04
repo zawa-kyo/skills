@@ -6,34 +6,22 @@ Each directory under `dev/`, `thinking/`, or `writing/` is a standalone skill pa
 
 ## 🚀 Install
 
-Install one skill globally:
+Install one skill globally. For example:
 
 ```sh
-apm install -g zawa-kyo/skills/dev/bootstrap-repo-docs
 apm install -g zawa-kyo/skills/dev/guide-unit-tests
-apm install -g zawa-kyo/skills/dev/review-essential-code
-apm install -g zawa-kyo/skills/dev/suggest-commit-messages
 apm install -g zawa-kyo/skills/thinking/refine-reasoning-logic
-apm install -g zawa-kyo/skills/writing/edit-existing-document
-apm install -g zawa-kyo/skills/writing/revise-english-writing
 apm install -g zawa-kyo/skills/writing/revise-japanese-writing
-apm install -g zawa-kyo/skills/writing/summarize-discussion-coherently
 ```
 
-Or add one or more skills to `apm.yml`:
+Or add one or more skills to `apm.yml`. For example:
 
 ```yaml
 dependencies:
   apm:
-    - zawa-kyo/skills/dev/bootstrap-repo-docs
     - zawa-kyo/skills/dev/guide-unit-tests
-    - zawa-kyo/skills/dev/review-essential-code
-    - zawa-kyo/skills/dev/suggest-commit-messages
     - zawa-kyo/skills/thinking/refine-reasoning-logic
-    - zawa-kyo/skills/writing/edit-existing-document
-    - zawa-kyo/skills/writing/revise-english-writing
     - zawa-kyo/skills/writing/revise-japanese-writing
-    - zawa-kyo/skills/writing/summarize-discussion-coherently
 ```
 
 ## 🎒 Skill Details

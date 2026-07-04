@@ -6,18 +6,12 @@ zawa-kyo が管理し、[apm](https://github.com/microsoft/apm) 向けに公開�
 
 ## 🚀 インストール
 
-個別のスキルをグローバルにインストールするには、次のコマンドを使います。
+個別のスキルをグローバルにインストールするには、次のように指定します。
 
 ```sh
-apm install -g zawa-kyo/skills/dev/bootstrap-repo-docs
 apm install -g zawa-kyo/skills/dev/guide-unit-tests
-apm install -g zawa-kyo/skills/dev/review-essential-code
-apm install -g zawa-kyo/skills/dev/suggest-commit-messages
 apm install -g zawa-kyo/skills/thinking/refine-reasoning-logic
-apm install -g zawa-kyo/skills/writing/edit-existing-document
-apm install -g zawa-kyo/skills/writing/revise-english-writing
 apm install -g zawa-kyo/skills/writing/revise-japanese-writing
-apm install -g zawa-kyo/skills/writing/summarize-discussion-coherently
 ```
 
 または、必要なスキルを `apm.yml` に追加します。
@@ -25,15 +19,9 @@ apm install -g zawa-kyo/skills/writing/summarize-discussion-coherently
 ```yaml
 dependencies:
   apm:
-    - zawa-kyo/skills/dev/bootstrap-repo-docs
     - zawa-kyo/skills/dev/guide-unit-tests
-    - zawa-kyo/skills/dev/review-essential-code
-    - zawa-kyo/skills/dev/suggest-commit-messages
     - zawa-kyo/skills/thinking/refine-reasoning-logic
-    - zawa-kyo/skills/writing/edit-existing-document
-    - zawa-kyo/skills/writing/revise-english-writing
     - zawa-kyo/skills/writing/revise-japanese-writing
-    - zawa-kyo/skills/writing/summarize-discussion-coherently
 ```
 
 ## 🎒 スキルの詳細
