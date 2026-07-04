@@ -28,27 +28,30 @@ Use a more specific skill for copyediting, factual research, code review, or sim
 Use two complementary lenses.
 Do not require every output to show both lenses, but use them to decide what to ask and how to organize the result.
 
-### Proposal Lens
+### Fact-Analysis Lens
 
 Use this lens when the user is making or evaluating a positive claim, proposal, or improvement idea.
+Clarify what is happening, how serious it is, and which intervention would solve or reduce it.
+If one of these checks is missing, or if the claimed event may not be happening, call that out and ask about it.
 
-| Check            | Question                                                      |
-| ---------------- | ------------------------------------------------------------- |
-| Problem reality  | What is actually happening, and why is it a real problem now? |
-| Stakes           | How serious is the problem if left alone?                     |
-| Intervention fit | Why would this specific move solve or reduce the problem?     |
+| Check             | Meaning                                                  | Question                                                      |
+| ----------------- | -------------------------------------------------------- | ------------------------------------------------------------- |
+| Problem existence | Confirm the problem that is actually happening now.      | What is happening, and why should it be treated as a problem? |
+| Impact            | Assess the size of the problem and the cost of inaction. | How serious is the problem if left alone?                     |
+| Intervention fit  | Confirm how the proposed move would solve or reduce it.  | Which move would solve or reduce the problem, and why?        |
 
-### Preservation Lens
+### Critical Preservation Lens
 
 Use this lens when the user feels resistance, sees risk, or has not yet accounted for the value of the current state.
+Use it not only for objections, but also to clarify what a stronger proposal must preserve.
 
-| Check          | Question                                                       |
-| -------------- | -------------------------------------------------------------- |
-| Current value  | What good thing exists in the current state?                   |
-| Loss mechanism | How would the proposed change affect or remove that value?     |
-| Impact if lost | How much would it matter if that value changed or disappeared? |
+| Check          | Meaning                                                 | Question                                                       |
+| -------------- | ------------------------------------------------------- | -------------------------------------------------------------- |
+| Current value  | Identify the good thing or value in the current state.  | What good thing exists in the current state?                   |
+| Loss process   | Trace how that value would be affected or lost.         | How would the proposed change affect or remove that value?     |
+| Impact if lost | Assess the impact if that value changed or disappeared. | How much would it matter if that value changed or disappeared? |
 
-The preservation lens is not only for objections.
+The critical preservation lens is not only for objections.
 It helps identify the value that any stronger proposal must protect.
 
 ## Workflow
@@ -58,8 +61,8 @@ It helps identify the value that any stronger proposal must protect.
 3. If the user's intent is unclear enough that the response could miss the point, ask up to three concise questions. Otherwise continue with stated assumptions.
 4. Restate the current position in a compact form so the user can correct it.
 5. Split the reasoning into claim, grounds, assumptions, causal links, stakes, tradeoffs, and unresolved points.
-6. Use the proposal lens to test whether the problem, impact, and intervention fit are clear.
-7. Use the preservation lens to test what existing value might change and how much that would matter.
+6. Use the fact-analysis lens to test whether problem existence, impact, and intervention fit are clear.
+7. Use the critical preservation lens to test whether current value, loss process, and impact if lost are clear.
 8. Ask focused questions that would materially change the conclusion. Avoid long generic question lists.
 9. When enough signal exists, synthesize the refined reasoning into a clearer conclusion, updated position, or decision-ready memo.
 10. End with the most useful next move: confirm the conclusion, collect missing evidence, rewrite the material, compare options, or continue the dialogue.
@@ -112,16 +115,21 @@ Use when the material is complex enough to need structure.
 
 [The current best conclusion or claim.]
 
-## Reasoning Structure
+## Fact-Analysis Checks
 
-| Element          | Current State | Gap |
-| ---------------- | ------------- | --- |
-| Problem reality  | ...           | ... |
-| Stakes           | ...           | ... |
-| Intervention fit | ...           | ... |
-| Current value    | ...           | ... |
-| Loss mechanism   | ...           | ... |
-| Impact if lost   | ...           | ... |
+| Check             | Current State | Gap |
+| ----------------- | ------------- | --- |
+| Problem existence | ...           | ... |
+| Impact            | ...           | ... |
+| Intervention fit  | ...           | ... |
+
+## Critical Preservation Checks
+
+| Check          | Current State | Gap |
+| -------------- | ------------- | --- |
+| Current value  | ...           | ... |
+| Loss process   | ...           | ... |
+| Impact if lost | ...           | ... |
 
 ## Refined Version
 
