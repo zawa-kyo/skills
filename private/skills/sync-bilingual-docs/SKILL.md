@@ -1,6 +1,6 @@
 ---
 name: sync-bilingual-docs
-description: Sync paired English and Japanese documentation in repositories that maintain `*.md` and `*-ja.md` counterparts, including paired directories such as `references/` and `references-ja/`. Use when the user asks to keep bilingual docs aligned, when one side of a paired document changed, or after editing README, AGENTS, SKILL files, or related reference documents. In Codex, use this as the primary bilingual maintenance workflow. Invoke the companion `distill-japanese-edits` skill only when the user also wants to improve Japanese writing guidance from observed human edits or when recurring meaning-preserving naturalization patterns clearly appear in the diff.
+description: Sync paired English and Japanese documentation in repositories that maintain `*.md` and `*-ja.md` counterparts, including paired directories such as `references/` and `references-ja/`. Use when the user asks to keep bilingual docs aligned, when one side of a paired document changed, or after editing README, AGENTS, SKILL files, or related reference documents. In Codex, use this as the primary bilingual maintenance workflow. Invoke `distill-japanese-edits` only when the user also wants to improve Japanese writing guidance or when the diff shows recurring meaning-preserving Japanese naturalization patterns.
 ---
 
 # Sync Bilingual Docs
@@ -11,7 +11,6 @@ Maintain semantic alignment between English and Japanese documentation pairs in 
 
 - Keep bilingual document pairs aligned in meaning
 - Preserve natural prose in each language instead of producing line-by-line translations
-- Detect when a human Japanese rewrite may contain reusable style guidance
 - Leave commit decisions to the user
 
 ## Do Not Use This Skill For
@@ -62,8 +61,7 @@ If no counterpart exists, report that clearly and do not invent a new file unles
    - package names
    - proper nouns
 7. If the Japanese side contains clear, meaning-preserving human naturalization patterns, record them as improvement candidates.
-8. If the user asked to improve the Japanese writing guidance, invoke the companion `distill-japanese-edits` skill after the sync work or in the same turn when practical.
-   Do the same when at least two strong candidates appear across different sections or files.
+8. Invoke `distill-japanese-edits` only when the conditions in the next section are met.
 9. Do not commit, stage, or publish changes unless the user explicitly asked.
 
 ## When To Invoke `distill-japanese-edits`
@@ -101,7 +99,7 @@ Do not invoke it for:
 - Identify whether one side contains the more up-to-date structure
 - Avoid overwriting a valid human improvement just to restore symmetry
 
-## Improvement Candidate Capture
+## Improvement Candidate Notes
 
 When Japanese edits look reusable, capture a short note for each candidate:
 
@@ -112,7 +110,7 @@ When Japanese edits look reusable, capture a short note for each candidate:
 - tentative generalized rule
 - confidence: high, medium, or low
 
-These notes are inputs to `distill-japanese-edits`. They are not rule changes by themselves.
+These notes are inputs to `distill-japanese-edits`, not rule changes.
 
 ## Quality Checks
 

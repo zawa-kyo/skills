@@ -1,6 +1,6 @@
 ---
 name: distill-japanese-edits
-description: Distill reusable Japanese writing rules from human edits that make Japanese documentation more natural without changing technical meaning. Use when the user wants to improve the local `revise-japanese-writing` guidance, when bilingual sync work surfaced recurring Japanese naturalization patterns, or when a Git diff contains human rewrites worth abstracting into maintainable style rules. This skill can run on Git diffs or specific files by itself, and `sync-bilingual-docs` can invoke it after bilingual synchronization.
+description: Distill reusable Japanese writing rules from human edits that make Japanese documentation more natural without changing technical meaning. Use when the user wants to improve the local `revise-japanese-writing` guidance, when bilingual sync work surfaced recurring Japanese naturalization patterns, or when a Git diff contains human rewrites worth turning into maintainable style rules. This skill can run on Git diffs or specific files by itself, and `sync-bilingual-docs` can invoke it after bilingual synchronization.
 ---
 
 # Distill Japanese Edits
@@ -35,17 +35,11 @@ Use any combination that is available:
 - candidate notes from `sync-bilingual-docs`
 - current files under `writing/revise-japanese-writing/`
 
-## Core Rule
-
-Only generalize edits that are meaning-preserving and reusable.
-
-If you cannot explain both, do not turn the edit into a rule.
-
 ## Workflow
 
 1. Read the current `writing/revise-japanese-writing/SKILL.md`, `SKILL-ja.md`, and `references/idea.md` before proposing changes.
 2. Collect Japanese diff hunks or candidate notes.
-3. Filter out edits that are not suitable for rule extraction:
+3. Filter out edits that fail the evaluation questions below. Typical examples are:
    - semantic changes
    - factual fixes
    - structural rewrites with mixed motives
@@ -68,6 +62,8 @@ If you cannot explain both, do not turn the edit into a rule.
 
 ## Evaluation Questions
 
+Use these as the only generalization gate. If you cannot answer yes where required, do not turn the edit into a rule.
+
 For each candidate pattern, answer these questions:
 
 1. Did the human edit preserve technical meaning?
@@ -78,7 +74,7 @@ For each candidate pattern, answer these questions:
 
 If any answer is "no", prefer a note in your report over a skill edit.
 
-## Preferred Update Order
+## Update Order
 
 Prefer the smallest durable change:
 
@@ -101,14 +97,6 @@ For each rule candidate, keep a short evidence record:
 - chosen destination in `revise-japanese-writing`
 
 Do not dump large raw diffs into the final report. Summarize them instead.
-
-## Safety Boundaries
-
-- Do not treat every human preference as a universal rule
-- Do not let one document's local tone override repository-wide guidance without evidence
-- Do not duplicate an existing rule with slightly different wording
-- Do not bloat `SKILL.md`; move maintenance rationale to references when needed
-- Do not commit automatically
 
 ## Standalone Mode
 
