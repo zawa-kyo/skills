@@ -2,11 +2,8 @@
 
 ## Establish The Testing Purpose
 
-Priority: Essential
-Layer: Purpose
-Applicability: Any unit test creation or review task.
-Trade-offs: A test with no clear value should be improved, moved to another test type, or removed.
-Sources: _Unit Testing: Principles, Practices, and Patterns_
+Priority: Essential.
+Trade-off: A test with no clear value should be improved, moved to another test type, or removed.
 
 Unit tests should support sustainable change. They are valuable when they detect meaningful regressions, enable refactoring, run quickly, and remain easy to understand.
 
@@ -16,11 +13,8 @@ Before designing or reviewing tests, state what the tests are meant to protect. 
 
 ## Quality Attributes
 
-Priority: Essential
-Layer: Purpose
-Applicability: Any judgment about whether a unit test is good.
-Trade-offs: No single test maximizes every attribute; choose based on the behavior's importance and risk.
-Sources: _Unit Testing: Principles, Practices, and Patterns_
+Priority: Essential.
+Trade-off: No single test maximizes every attribute; choose based on the behavior's importance and risk.
 
 Evaluate unit tests with these attributes:
 
@@ -33,11 +27,8 @@ Use these attributes as trade-offs, not slogans. A low-risk accessor may not des
 
 ## Coverage Metrics
 
-Priority: Recommended
-Layer: Purpose
-Applicability: When discussing coverage, missing tests, or test suite health.
-Trade-offs: Coverage can expose untested areas, but it cannot prove test quality.
-Sources: _Unit Testing: Principles, Practices, and Patterns_
+Priority: Recommended.
+Trade-off: Coverage can expose untested areas, but it cannot prove test quality.
 
 Use coverage as a warning signal, not as a target by itself. Low coverage may reveal important untested code. High coverage does not prove that behavior is asserted correctly.
 
@@ -52,13 +43,3 @@ Use these questions before moving to context or design:
 - Is a unit test the right level, or should another test type cover this risk?
 - What maintenance cost is acceptable for this behavior?
 - What would make the proposed test a liability rather than an asset?
-
-## Priority Terms
-
-Use these priorities consistently:
-
-| Priority    | Meaning                                                           |
-| ----------- | ----------------------------------------------------------------- |
-| Essential   | Follow by default. Exceptions need an explicit reason.            |
-| Recommended | Strong default. Exceptions are acceptable with a clear trade-off. |
-| Suggested   | Consistency default. Other choices are acceptable when justified. |

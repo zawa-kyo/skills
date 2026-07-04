@@ -2,11 +2,8 @@
 
 ## 目的と設計に戻って確認する
 
-Priority: Essential
-Layer: Self-Review
-Applicability: テストを書いた後、または既存テストをレビューする場面。
-Trade-offs: 小さな変更では圧縮して確認してよい。ただし、目的と振る舞いの確認は省略しない。
-Sources: _Unit Testing: Principles, Practices, and Patterns_
+Priority: Essential。
+Trade-off: 小さな変更では圧縮して確認してよい。ただし、目的と振る舞いの確認は省略しない。
 
 セルフレビューは、設計プロセスから独立した作業ではない。
 目的、文脈、戦略、ケース設計、実装を逆順にたどり、合目的かを確認する。
@@ -15,6 +12,9 @@ Sources: _Unit Testing: Principles, Practices, and Patterns_
 行単位のスタイルから始めず、正しい振る舞いを正しいレベルで守っているかから確認する。
 
 ## レビュー順
+
+Priority: Essential。
+Trade-off: 振る舞い、リスク、境界を確認してから、行単位のスタイルを見る。
 
 次の順に確認する。
 
@@ -29,6 +29,9 @@ Sources: _Unit Testing: Principles, Practices, and Patterns_
 
 ## レビュー依頼時の圧縮フロー
 
+Priority: Essential。
+Trade-off: 依頼の大きさに合わせて圧縮してよい。ただし、目的、文脈、振る舞いの確認は省略しない。
+
 ユーザーがレビューだけを依頼した場合は、全工程を次のように圧縮する。
 
 1. 差分、コード、依頼内容から、そのテストの目的を推定する。
@@ -40,14 +43,15 @@ Sources: _Unit Testing: Principles, Practices, and Patterns_
 
 ## 指摘
 
+Priority: Recommended。
+Trade-off: 振る舞い、リファクタリング耐性、可読性、保守コストに影響しない限り、好みの問題を欠陥として扱わない。
+
 問題を報告するときは次を含める。
 
 - 違反しているルールまたは原則
 - 具体的な保守リスクまたはリグレッションリスク
 - 最小限の有効な修正方針
 - 適用条件に関する前提
-
-振る舞い、リファクタリング耐性、可読性、保守コストに影響しない限り、好みの問題を欠陥として扱わない。
 
 ## アンチパターン
 

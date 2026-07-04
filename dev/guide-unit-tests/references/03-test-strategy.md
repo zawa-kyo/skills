@@ -2,11 +2,8 @@
 
 ## Choose The Test Level And Boundary
 
-Priority: Essential
-Layer: Strategy
-Applicability: Before designing concrete test cases.
-Trade-offs: Some risks are better covered by integration, contract, or E2E tests. Keep this skill focused on unit tests and name the boundary when another test type is more appropriate.
-Sources: _Unit Testing: Principles, Practices, and Patterns_
+Priority: Essential.
+Trade-off: Some risks are better covered by integration, contract, or E2E tests. Keep this skill focused on unit tests and name the boundary when another test type is more appropriate.
 
 Design the test strategy before writing test code. Decide which behavior belongs in a unit test, where the unit boundary sits, and what the test should observe.
 
@@ -14,11 +11,8 @@ The unit is the behavior under test, not necessarily one class or one method. A 
 
 ## Prefer Valuable Behavior
 
-Priority: Essential
-Layer: Strategy
-Applicability: When deciding whether to write or keep a unit test.
-Trade-offs: Some low-complexity code may be covered indirectly by higher-value tests.
-Sources: _Unit Testing: Principles, Practices, and Patterns_
+Priority: Essential.
+Trade-off: Some low-complexity code may be covered indirectly by higher-value tests.
 
 Focus unit tests on behavior whose regression would matter. Business rules, domain logic, important calculations, parsing, validation, and non-trivial decisions are usually strong candidates.
 
@@ -26,11 +20,8 @@ Avoid writing dedicated unit tests for trivial code that has little logic and is
 
 ## Isolate Shared And Volatile Dependencies
 
-Priority: Essential
-Layer: Strategy
-Applicability: When dependencies can make tests slow, non-deterministic, order-dependent, or environment-dependent.
-Trade-offs: Stable in-process collaborators can often remain real objects.
-Sources: _Unit Testing: Principles, Practices, and Patterns_
+Priority: Essential.
+Trade-off: Stable in-process collaborators can often remain real objects.
 
 Replace or control shared and volatile dependencies in unit tests. Examples include current time, randomness, shared databases, file systems, remote services, global mutable state, and process-external messaging.
 
@@ -38,11 +29,8 @@ Do not replace stable in-process collaborators only because they are separate cl
 
 ## Choose The Observation Style
 
-Priority: Recommended
-Layer: Strategy
-Applicability: When a behavior can be checked several ways.
-Trade-offs: Output-based tests are usually easiest to maintain, but state-based tests are valid when state is the observable result.
-Sources: _Unit Testing: Principles, Practices, and Patterns_
+Priority: Recommended.
+Trade-off: Output-based tests are usually easiest to maintain, but state-based tests are valid when state is the observable result.
 
 Use this order as a default:
 

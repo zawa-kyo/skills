@@ -2,38 +2,29 @@
 
 ## テストレベルと境界を決める
 
-Priority: Essential
-Layer: Strategy
-Applicability: 具体的なテストケースを設計する前。
-Trade-offs: リスクによっては、結合テスト、契約テスト、E2E テストで扱うべき場合がある。このスキルは単体テストに集中し、別のテスト種別を選ぶ場合は境界を明示する。
-Sources: _Unit Testing: Principles, Practices, and Patterns_
+Priority: Essential。
+Trade-off: リスクによっては、結合テスト、契約テスト、E2E テストで扱うべき場合がある。このスキルは単体テストに集中し、別のテスト種別を選ぶ場合は境界を明示する。
 
 テストコードを書く前に、テスト戦略を決める。
 どの振る舞いを単体テストで扱うか、テスト対象の境界をどこに置くか、何を観測するかを決める。
 
-単位とは、必ずしも1つのクラスやメソッドではなく、テスト対象の振る舞いである。
+単位とは、必ずしも1つのクラスやメソッドではなく、テスト対象の振る舞いを指す。
 テストが高速で決定的に動き、共有依存や不安定な依存から切り離されているなら、1つの振る舞いが複数クラスにまたがっても単体テストになり得る。
 
 ## 価値のある振る舞いを優先する
 
-Priority: Essential
-Layer: Strategy
-Applicability: 単体テストを書くか、残すかを判断する場面。
-Trade-offs: 複雑でないコードは、より価値の高いテストから間接的に通れば十分な場合がある。
-Sources: _Unit Testing: Principles, Practices, and Patterns_
+Priority: Essential。
+Trade-off: 複雑でないコードは、より価値の高いテストから間接的に通れば十分な場合がある。
 
 単体テストでは、壊れたときの影響が大きい振る舞いを優先する。
-業務ルール、ドメインロジック、重要な計算、パース、バリデーション、重要な判断は、有力な候補である。
+業務ルール、ドメインロジック、重要な計算、パース、バリデーション、重要な判断は、有力な候補になる。
 
 ロジックが少なく、より価値の高い振る舞いを通じてすでに実行されるコードには、専用の単体テストを書かない。
 
 ## 共有依存と不安定な依存を切り離す
 
-Priority: Essential
-Layer: Strategy
-Applicability: 依存関係によってテストが遅い、不安定、順序依存、環境依存になる場面。
-Trade-offs: 安定したプロセス内の依存先は、実物のまま使える場合が多い。
-Sources: _Unit Testing: Principles, Practices, and Patterns_
+Priority: Essential。
+Trade-off: 安定したプロセス内の依存先は、実物のまま使える場合が多い。
 
 単体テストでは、共有依存や不安定な依存を置き換えるか制御する。
 現在時刻、乱数、共有データベース、ファイルシステム、リモートサービス、グローバルな可変状態、プロセス外メッセージングなどが対象になる。
@@ -42,11 +33,8 @@ Sources: _Unit Testing: Principles, Practices, and Patterns_
 
 ## 検証方法を選ぶ
 
-Priority: Recommended
-Layer: Strategy
-Applicability: 1つの振る舞いを複数の方法で確認できる場面。
-Trade-offs: 出力ベースのテストは保守しやすいことが多い。重要な結果が状態変化である場合は、状態ベースのテストも妥当である。
-Sources: _Unit Testing: Principles, Practices, and Patterns_
+Priority: Recommended。
+Trade-off: 出力ベースのテストは保守しやすいことが多い。重要な結果が状態変化である場合は、状態ベースのテストも妥当である。
 
 デフォルトでは次の順に選ぶ。
 

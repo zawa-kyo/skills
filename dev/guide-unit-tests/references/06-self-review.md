@@ -2,17 +2,17 @@
 
 ## Recheck The Work Against The Purpose
 
-Priority: Essential
-Layer: Self-Review
-Applicability: After writing tests or when reviewing existing tests.
-Trade-offs: Very small changes may use a compressed review, but do not skip the purpose and behavior checks.
-Sources: _Unit Testing: Principles, Practices, and Patterns_
+Priority: Essential.
+Trade-off: Very small changes may use a compressed review, but do not skip the purpose and behavior checks.
 
 Self-review is not a separate activity from the design process. It repeats the same reasoning in reverse: purpose, context, strategy, case design, implementation.
 
 For unit test reviews, use this same process as an external review. Do not start from line-level style. Start from whether the tests protect the right behavior at the right level.
 
 ## Review Flow
+
+Priority: Essential.
+Trade-off: Inspect line-level style only after behavior, risk, and boundary are clear.
 
 Inspect in this order:
 
@@ -27,6 +27,9 @@ Inspect in this order:
 
 ## Compressed Review Mode
 
+Priority: Essential.
+Trade-off: Keep the review proportional to the request, but do not skip purpose, context, and behavior checks.
+
 When the user asks only for a review, compress the full workflow:
 
 1. Infer the likely purpose of the test from the diff, code, or user request.
@@ -38,14 +41,15 @@ When the user asks only for a review, compress the full workflow:
 
 ## Findings
 
+Priority: Recommended.
+Trade-off: Do not present a stylistic preference as a defect unless it affects behavior, refactoring resistance, readability, or maintenance cost.
+
 When reporting a problem, include:
 
 - the rule or principle being violated
 - the concrete maintenance or regression risk
 - the smallest useful correction
 - any applicability assumption
-
-Do not present a stylistic preference as a defect unless it affects behavior, refactoring resistance, readability, or maintenance cost.
 
 ## Anti-Patterns
 

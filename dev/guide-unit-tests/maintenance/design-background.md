@@ -29,14 +29,14 @@ Review is not a separate branch of the skill. It uses the same workflow in compr
 
 ## Runtime And Maintenance Files
 
-`references/` and `references-ja/` contain runtime guidance. Agents should read those files while using the skill for unit test creation, review, boundary selection, assertion strategy, or design feedback.
+`references/` and `references-ja/` contain runtime guidance. Agents should read those files while using the skill for unit test creation, review, boundary selection, assertion strategy, or design feedback. Keep them focused on rules, checklists, priority, and trade-offs needed at execution time.
 
-`maintenance/` and `maintenance-ja/` contain maintainer guidance. Agents should not read those files during ordinary unit test guidance. Use them when editing this skill, changing its rule structure, tracing source mapping, or reviewing its design background.
+`maintenance/` and `maintenance-ja/` contain maintainer guidance. Agents should not read those files during ordinary unit test guidance. Use them when editing this skill, changing its rule structure, tracing source mapping, reviewing its design background, or discussing IDs and priorities.
 
-Files in each English/Japanese pair must stay aligned by filename and meaning. The English and Japanese versions do not need to be line-by-line translations, but they must express the same rules, priorities, applicability, and exceptions.
+Files in each English/Japanese pair must stay aligned by filename and meaning. The English and Japanese versions do not need to be line-by-line translations, but they must express the same runtime rules and maintainer metadata.
 
 When adding `references/example.md`, also add `references-ja/example.md` in the same change. When adding `maintenance/example.md`, also add `maintenance-ja/example.md` in the same change.
 
 ## Source Management
 
-Use `maintenance/sources.md` for source mapping, adopted ideas, rejected ideas, and pending questions. Do not turn runtime reference files into a book index.
+Use `maintenance/sources.md` for source mapping, rule IDs, adopted ideas, rejected ideas, and pending questions. Do not turn runtime reference files into a book index, source map, or rule ID ledger.

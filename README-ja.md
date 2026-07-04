@@ -41,7 +41,7 @@ dependencies:
 | Skill                     | Description                                                                                        |
 | ------------------------- | -------------------------------------------------------------------------------------------------- |
 | `bootstrap-repo-docs`     | 作成直後か、まだ最小構成のままのリポジトリに対して、README と AGENTS の日英対応文書を整備する。    |
-| `guide-unit-tests`        | 目的とプロジェクト文脈から、単体テストの戦略、実装、レビューを支援する。                            |
+| `guide-unit-tests`        | 目的とプロジェクト文脈から、単体テストの戦略、実装、レビューまでを支援する。                       |
 | `review-essential-code`   | バグ、リグレッション、テスト不足に加えて、本質的な保守しやすさの観点からコード変更をレビューする。 |
 | `suggest-commit-messages` | staged または unstaged の Git diff から、簡潔な英語の Conventional Commit メッセージを提案する。   |
 
