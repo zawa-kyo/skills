@@ -2,54 +2,62 @@
 
 zawa-kyo が管理し、[apm](https://github.com/microsoft/apm) 向けに公開している再利用可能なエージェントスキル集です。
 
-`dev/` または `writing/` 配下の各ディレクトリは、それぞれ独立したスキルパッケージです。
+## リポジトリの構成
 
-## 🚀 インストール
+スキルはカテゴリ別のディレクトリにまとめています。各スキルパッケージは `<category>/<skill>` に置いています。
 
-個別のスキルをグローバルにインストールするには、次のコマンドを使います。
+| カテゴリ   | 用途                                                       |
+| ---------- | ---------------------------------------------------------- |
+| `dev`      | 設計、実装、レビューなど、開発やコーディングに関わる作業。 |
+| `thinking` | 思考整理、意思決定支援、壁打ちなど、考える作業全般。       |
+| `writing`  | 文章編集、文書メンテナンス、要約など、文書に関わる作業。   |
 
-```sh
-apm install -g zawa-kyo/skills/dev/bootstrap-repo-docs
-apm install -g zawa-kyo/skills/dev/guide-unit-tests
-apm install -g zawa-kyo/skills/dev/review-essential-code
-apm install -g zawa-kyo/skills/dev/suggest-commit-messages
-apm install -g zawa-kyo/skills/writing/edit-existing-document
-apm install -g zawa-kyo/skills/writing/revise-english-writing
-apm install -g zawa-kyo/skills/writing/revise-japanese-writing
-apm install -g zawa-kyo/skills/writing/summarize-discussion-coherently
-```
+各スキルディレクトリには、英語版と日本語版のスキル定義、エージェント向けのメタデータを置いています。
 
-または、必要なスキルを `apm.yml` に追加します。
+## スキルの詳細
 
-```yaml
-dependencies:
-  apm:
-    - zawa-kyo/skills/dev/bootstrap-repo-docs
-    - zawa-kyo/skills/dev/guide-unit-tests
-    - zawa-kyo/skills/dev/review-essential-code
-    - zawa-kyo/skills/dev/suggest-commit-messages
-    - zawa-kyo/skills/writing/edit-existing-document
-    - zawa-kyo/skills/writing/revise-english-writing
-    - zawa-kyo/skills/writing/revise-japanese-writing
-    - zawa-kyo/skills/writing/summarize-discussion-coherently
-```
+## `dev`
 
-## 🎒 スキルの詳細
-
-## 👨‍💻 `dev`
-
-| Skill                     | Description                                                                                        |
+| スキル                    | 詳細                                                                                               |
 | ------------------------- | -------------------------------------------------------------------------------------------------- |
 | `bootstrap-repo-docs`     | 作成直後か、まだ最小構成のままのリポジトリに対して、README と AGENTS の日英対応文書を整備する。    |
 | `guide-unit-tests`        | 目的とプロジェクト文脈から、単体テストの戦略、実装、レビューまでを支援する。                       |
 | `review-essential-code`   | バグ、リグレッション、テスト不足に加えて、本質的な保守しやすさの観点からコード変更をレビューする。 |
 | `suggest-commit-messages` | staged または unstaged の Git diff から、簡潔な英語の Conventional Commit メッセージを提案する。   |
 
-## ✏️ `writing`
+## `thinking`
 
-| Skill                             | Description                                                                                    |
+| スキル                   | 詳細                                                           |
+| ------------------------ | -------------------------------------------------------------- |
+| `refine-reasoning-logic` | 未整理の考え、提案、違和感を構造化された壁打ちを通じて深める。 |
+
+## `writing`
+
+| スキル                            | 詳細                                                                                           |
 | --------------------------------- | ---------------------------------------------------------------------------------------------- |
 | `edit-existing-document`          | 既存文書の構成に合わせて編集し、重複や矛盾する説明を増やさないようにする。                     |
 | `revise-english-writing`          | コマンド、パス、識別子を保ったまま、英語の技術文書を直接的で自然な文章に整える。               |
 | `revise-japanese-writing`         | コマンド、パス、識別子を保ったまま、日本語の技術文書を確認し、自然で読みやすい日本語に整える。 |
 | `summarize-discussion-coherently` | 個人の対話ログを、整理フレームを選びつつ、未整理点も残した一貫した構造的な要約にまとめる。     |
+
+## インストール
+
+個別のスキルをグローバルにインストールするには、`zawa-kyo/skills/<category>/<skill>` の形で指定します。
+
+```sh
+apm install -g zawa-kyo/skills/dev/guide-unit-tests
+apm install -g zawa-kyo/skills/thinking/refine-reasoning-logic
+apm install -g zawa-kyo/skills/writing/revise-japanese-writing
+```
+
+上記は代表例です。ほかのスキルを使う場合は、上の一覧から必要なパスを選んでください。
+
+または、必要なスキルを `apm.yml` に追加します。
+
+```yaml
+dependencies:
+  apm:
+    - zawa-kyo/skills/dev/guide-unit-tests
+    - zawa-kyo/skills/thinking/refine-reasoning-logic
+    - zawa-kyo/skills/writing/revise-japanese-writing
+```
