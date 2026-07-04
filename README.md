@@ -38,12 +38,12 @@ dependencies:
 
 ## 👨‍💻 `dev`
 
-| Skill                     | Description                                                                              |
-| ------------------------- | ---------------------------------------------------------------------------------------- |
-| `bootstrap-repo-docs`     | Set up bilingual README and AGENTS docs for a new or minimally scaffolded repository.    |
+| Skill                     | Description                                                                                             |
+| ------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `bootstrap-repo-docs`     | Set up bilingual README and AGENTS docs for a new or minimally scaffolded repository.                   |
 | `guide-unit-tests`        | Guide unit test workflow from purpose and project context through strategy, implementation, and review. |
-| `review-essential-code`   | Review code changes for bugs, regressions, missing tests, and essential maintainability. |
-| `suggest-commit-messages` | Suggest concise English Conventional Commit messages from staged or unstaged Git diffs.  |
+| `review-essential-code`   | Review code changes for bugs, regressions, missing tests, and essential maintainability.                |
+| `suggest-commit-messages` | Suggest concise English Conventional Commit messages from staged or unstaged Git diffs.                 |
 
 ## ✏️ `writing`
 
