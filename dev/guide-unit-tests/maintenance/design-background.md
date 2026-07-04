@@ -25,12 +25,16 @@ Organize the skill by judgment layer, not by source chapter or testing school:
 
 This structure keeps the skill extensible. A new source should strengthen, refine, or challenge existing rules instead of creating a parallel chapter summary.
 
-## Bilingual References
+## Runtime And Maintenance Files
 
-Files in `references/` and `references-ja/` must stay aligned by filename and meaning. The English and Japanese versions do not need to be line-by-line translations, but they must express the same rules, priorities, applicability, and exceptions.
+`references/` and `references-ja/` contain runtime guidance. Agents should read those files while using the skill for unit test creation, review, boundary selection, assertion strategy, or design feedback.
 
-When adding `references/example.md`, also add `references-ja/example.md` in the same change.
+`maintenance/` and `maintenance-ja/` contain maintainer guidance. Agents should not read those files during ordinary unit test guidance. Use them when editing this skill, changing its rule structure, tracing source mapping, or reviewing its design background.
+
+Files in each English/Japanese pair must stay aligned by filename and meaning. The English and Japanese versions do not need to be line-by-line translations, but they must express the same rules, priorities, applicability, and exceptions.
+
+When adding `references/example.md`, also add `references-ja/example.md` in the same change. When adding `maintenance/example.md`, also add `maintenance-ja/example.md` in the same change.
 
 ## Source Management
 
-Use `maintenance/sources.md` for source mapping, adopted ideas, rejected ideas, and pending questions. Do not turn user-facing reference files into a book index.
+Use `maintenance/sources.md` for source mapping, adopted ideas, rejected ideas, and pending questions. Do not turn runtime reference files into a book index.

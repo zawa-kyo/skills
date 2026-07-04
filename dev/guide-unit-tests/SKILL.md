@@ -27,7 +27,7 @@ Do not use this skill as the source of truth for integration tests, E2E tests, d
 
 ## Reference Selection
 
-Read only the references the task needs:
+`references/` contains runtime guidance for using this skill. Read only the files the task needs:
 
 | Situation                                                 | Read                                    |
 | --------------------------------------------------------- | --------------------------------------- |
@@ -37,9 +37,15 @@ Read only the references the task needs:
 | Need help writing or improving test code structure        | `references/test-construction.md`       |
 | Code is hard to unit test or suggests design problems     | `references/design-feedback.md`         |
 | User asks for a review of tests or testability            | `references/review-heuristics.md`       |
-| Need to understand why this skill is structured this way  | `references/design-background.md`       |
 
-For Japanese output or Japanese documentation work, use the matching file under `references-ja/` when available. When editing this skill, keep `references/` and `references-ja/` aligned in meaning.
+For Japanese output or Japanese documentation work, use the matching file under `references-ja/` when available.
+
+`maintenance/` and `maintenance-ja/` contain maintainer notes for this skill. Do not read them during ordinary unit test guidance. Use them only when editing this skill, changing its rule structure, checking source mapping, or reviewing its design background.
+
+When editing this skill, keep paired files aligned in meaning:
+
+- `references/` and `references-ja/` for runtime guidance
+- `maintenance/` and `maintenance-ja/` for maintainer guidance
 
 ## Workflow
 

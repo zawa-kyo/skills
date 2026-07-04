@@ -1,6 +1,6 @@
 # Sources
 
-This file records how external and local sources are used. It is for maintainers, not for end-user guidance.
+This file records how external and local sources are used. It is for maintainers, not for runtime guidance.
 
 ## Unit Testing: Principles, Practices, and Patterns
 
@@ -27,7 +27,7 @@ Scoped or adapted ideas:
 Rejected or not yet adopted:
 
 - Framework-specific examples are not carried into the core references.
-- Long examples and historical explanations are not copied into user-facing references.
+- Long examples and historical explanations are not copied into runtime references.
 
 Open questions:
 

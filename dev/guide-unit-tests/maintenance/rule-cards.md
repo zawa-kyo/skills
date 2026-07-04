@@ -1,7 +1,7 @@
 # Rule Notes
 
 Use this file as the maintenance note for adding, revising, or removing rules.
-It is not end-user guidance. It helps maintainers decide which situation owns each rule.
+It is not runtime guidance. It helps maintainers decide which situation owns each rule.
 
 Keep source mapping and adoption rationale in `sources.md`.
 Do not carry source IDs or detailed bibliography links in this file.
