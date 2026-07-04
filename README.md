@@ -2,27 +2,17 @@
 
 Reusable agent skills maintained by zawa-kyo for [apm](https://github.com/microsoft/apm).
 
-Each directory under `dev/`, `thinking/`, or `writing/` is a standalone skill package.
+## Repository Layout
 
-## Install
+Skills are grouped under category directories. Each skill package lives at `<category>/<skill>`.
 
-Install one skill globally. For example:
+| Category   | Use for                                                                            |
+| ---------- | ---------------------------------------------------------------------------------- |
+| `dev`      | Development and coding work, including design, implementation, and review.         |
+| `thinking` | Thinking support, including reasoning, decision-making, and structured discussion. |
+| `writing`  | Writing support, including prose editing, document maintenance, and summaries.     |
 
-```sh
-apm install -g zawa-kyo/skills/dev/guide-unit-tests
-apm install -g zawa-kyo/skills/thinking/refine-reasoning-logic
-apm install -g zawa-kyo/skills/writing/revise-japanese-writing
-```
-
-Or add one or more skills to `apm.yml`. For example:
-
-```yaml
-dependencies:
-  apm:
-    - zawa-kyo/skills/dev/guide-unit-tests
-    - zawa-kyo/skills/thinking/refine-reasoning-logic
-    - zawa-kyo/skills/writing/revise-japanese-writing
-```
+Each skill directory contains the English and Japanese skill definitions plus agent metadata.
 
 ## Skill Details
 
@@ -49,3 +39,25 @@ dependencies:
 | `revise-english-writing`          | Make English technical prose direct and natural while preserving commands, paths, and identifiers.                                    |
 | `revise-japanese-writing`         | Review and revise Japanese technical prose while preserving commands, paths, and identifiers.                                         |
 | `summarize-discussion-coherently` | Turn personal discussion logs into coherent structured summaries with the right organizing framework and unresolved points preserved. |
+
+## Install
+
+Install one skill globally with `zawa-kyo/skills/<category>/<skill>`. For example:
+
+```sh
+apm install -g zawa-kyo/skills/dev/guide-unit-tests
+apm install -g zawa-kyo/skills/thinking/refine-reasoning-logic
+apm install -g zawa-kyo/skills/writing/revise-japanese-writing
+```
+
+The examples above are representative. Choose other skill paths from the tables above as needed.
+
+Or add one or more skills to `apm.yml`. For example:
+
+```yaml
+dependencies:
+  apm:
+    - zawa-kyo/skills/dev/guide-unit-tests
+    - zawa-kyo/skills/thinking/refine-reasoning-logic
+    - zawa-kyo/skills/writing/revise-japanese-writing
+```
