@@ -1,0 +1,4 @@
+interface:
+  display_name: "Refine Reasoning Logic"
+  short_description: "Deepen developing thinking through structured dialogue"
+  default_prompt: "Use $refine-reasoning-logic to help me refine this developing idea, proposal, or material through structured sounding-board dialogue: clarify the underlying claim, unstated assumptions, tradeoffs, preserved value, and the next questions or conclusion."

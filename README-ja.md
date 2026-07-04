@@ -2,7 +2,7 @@
 
 zawa-kyo が管理し、[apm](https://github.com/microsoft/apm) 向けに公開している再利用可能なエージェントスキル集です。
 
-`dev/` または `writing/` 配下の各ディレクトリは、それぞれ独立したスキルパッケージです。
+`dev/`、`thinking/`、`writing/` 配下の各ディレクトリは、それぞれ独立したスキルパッケージです。
 
 ## 🚀 インストール
 
@@ -13,6 +13,7 @@ apm install -g zawa-kyo/skills/dev/bootstrap-repo-docs
 apm install -g zawa-kyo/skills/dev/guide-unit-tests
 apm install -g zawa-kyo/skills/dev/review-essential-code
 apm install -g zawa-kyo/skills/dev/suggest-commit-messages
+apm install -g zawa-kyo/skills/thinking/refine-reasoning-logic
 apm install -g zawa-kyo/skills/writing/edit-existing-document
 apm install -g zawa-kyo/skills/writing/revise-english-writing
 apm install -g zawa-kyo/skills/writing/revise-japanese-writing
@@ -28,6 +29,7 @@ dependencies:
     - zawa-kyo/skills/dev/guide-unit-tests
     - zawa-kyo/skills/dev/review-essential-code
     - zawa-kyo/skills/dev/suggest-commit-messages
+    - zawa-kyo/skills/thinking/refine-reasoning-logic
     - zawa-kyo/skills/writing/edit-existing-document
     - zawa-kyo/skills/writing/revise-english-writing
     - zawa-kyo/skills/writing/revise-japanese-writing
@@ -44,6 +46,12 @@ dependencies:
 | `guide-unit-tests`        | 目的とプロジェクト文脈から、単体テストの戦略、実装、レビューまでを支援する。                       |
 | `review-essential-code`   | バグ、リグレッション、テスト不足に加えて、本質的な保守しやすさの観点からコード変更をレビューする。 |
 | `suggest-commit-messages` | staged または unstaged の Git diff から、簡潔な英語の Conventional Commit メッセージを提案する。   |
+
+## 🤔 `thinking`
+
+| Skill                    | Description                                                      |
+| ------------------------ | ---------------------------------------------------------------- |
+| `refine-reasoning-logic` | 未整理の考え、提案、違和感を、構造化された壁打ちを通じて深める。 |
 
 ## ✏️ `writing`
 

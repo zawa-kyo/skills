@@ -2,7 +2,7 @@
 
 Reusable agent skills maintained by zawa-kyo for [apm](https://github.com/microsoft/apm).
 
-Each directory under `dev/` or `writing/` is a standalone skill package.
+Each directory under `dev/`, `thinking/`, or `writing/` is a standalone skill package.
 
 ## 🚀 Install
 
@@ -13,6 +13,7 @@ apm install -g zawa-kyo/skills/dev/bootstrap-repo-docs
 apm install -g zawa-kyo/skills/dev/guide-unit-tests
 apm install -g zawa-kyo/skills/dev/review-essential-code
 apm install -g zawa-kyo/skills/dev/suggest-commit-messages
+apm install -g zawa-kyo/skills/thinking/refine-reasoning-logic
 apm install -g zawa-kyo/skills/writing/edit-existing-document
 apm install -g zawa-kyo/skills/writing/revise-english-writing
 apm install -g zawa-kyo/skills/writing/revise-japanese-writing
@@ -28,6 +29,7 @@ dependencies:
     - zawa-kyo/skills/dev/guide-unit-tests
     - zawa-kyo/skills/dev/review-essential-code
     - zawa-kyo/skills/dev/suggest-commit-messages
+    - zawa-kyo/skills/thinking/refine-reasoning-logic
     - zawa-kyo/skills/writing/edit-existing-document
     - zawa-kyo/skills/writing/revise-english-writing
     - zawa-kyo/skills/writing/revise-japanese-writing
@@ -44,6 +46,12 @@ dependencies:
 | `guide-unit-tests`        | Guide unit test workflow from purpose and project context through strategy, implementation, and review. |
 | `review-essential-code`   | Review code changes for bugs, regressions, missing tests, and essential maintainability.                |
 | `suggest-commit-messages` | Suggest concise English Conventional Commit messages from staged or unstaged Git diffs.                 |
+
+## 🤔 `thinking`
+
+| Skill                    | Description                                                                                  |
+| ------------------------ | -------------------------------------------------------------------------------------------- |
+| `refine-reasoning-logic` | Deepen developing thinking, proposals, or unease through structured sounding-board dialogue. |
 
 ## ✏️ `writing`
 
