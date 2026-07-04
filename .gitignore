@@ -3,3 +3,6 @@ apm_modules/
 
 # APM deployed skill outputs
 .agents/skills/
+
+# Chore
+.DS_Store

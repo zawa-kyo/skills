@@ -7,5 +7,6 @@ targets:
   - agent-skills
 devDependencies:
   apm:
+    - ./private
     - anthropics/skills/skills/skill-creator
     - vercel-labs/skills/skills/find-skills
