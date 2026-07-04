@@ -1,0 +1,7 @@
+name: private-skills
+version: 0.1.0
+description: Private local skills for Codex and related .agents-compatible runtimes.
+author: Kyohei Ozawa
+includes: auto
+targets:
+  - codex
