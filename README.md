@@ -4,7 +4,7 @@ Reusable agent skills maintained by zawa-kyo for [apm](https://github.com/micros
 
 Each directory under `dev/`, `thinking/`, or `writing/` is a standalone skill package.
 
-## 🚀 Install
+## Install
 
 Install one skill globally. For example:
 
@@ -24,9 +24,9 @@ dependencies:
     - zawa-kyo/skills/writing/revise-japanese-writing
 ```
 
-## 🎒 Skill Details
+## Skill Details
 
-## 👨‍💻 `dev`
+## `dev`
 
 | Skill                     | Description                                                                                             |
 | ------------------------- | ------------------------------------------------------------------------------------------------------- |
@@ -35,13 +35,13 @@ dependencies:
 | `review-essential-code`   | Review code changes for bugs, regressions, missing tests, and essential maintainability.                |
 | `suggest-commit-messages` | Suggest concise English Conventional Commit messages from staged or unstaged Git diffs.                 |
 
-## 🤔 `thinking`
+## `thinking`
 
 | Skill                    | Description                                                                                  |
 | ------------------------ | -------------------------------------------------------------------------------------------- |
 | `refine-reasoning-logic` | Deepen developing thinking, proposals, or unease through structured sounding-board dialogue. |
 
-## ✏️ `writing`
+## `writing`
 
 | Skill                             | Description                                                                                                                           |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
