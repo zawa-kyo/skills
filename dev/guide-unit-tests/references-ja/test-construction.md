@@ -23,7 +23,7 @@ Sources: _Unit Testing: Principles, Practices, and Patterns_
 
 - Arrange は入力、依存、開始状態を準備する。
 - Act は振る舞いを1回実行する。
-- Assert は観察可能な結果を確認する。
+- Assert は外から確認できる結果を確認する。
 
 1つのテストに複数の Arrange-Act-Assert の流れを入れない。
 多くの場合、それは複数の振る舞いを扱っている。
@@ -49,5 +49,5 @@ Applicability: セットアップコードの重複が増えてきた場面。
 Trade-offs: 共有しすぎたフィクスチャは、テストに必要な入力を隠し、テスト同士を結合する。
 Sources: _Unit Testing: Principles, Practices, and Patterns_
 
-各テストが、意味のある値を明示して呼び出せるファクトリ関数やビルダーを優先する。
+各テストが、重要な値を明示して呼び出せるファクトリ関数やビルダーを優先する。
 テストの前提条件が見えなくなる共有セットアップは避ける。
