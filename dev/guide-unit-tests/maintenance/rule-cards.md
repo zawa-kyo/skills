@@ -1,28 +1,62 @@
-# Rule Cards
+# Rule Notes
 
-Use this file as the working ledger when adding, revising, or removing rules.
+Use this file as the maintenance note for adding, revising, or removing rules.
+It is not end-user guidance. It helps maintainers decide which situation owns each rule.
 
-## Template
+Keep source mapping and adoption rationale in `sources.md`.
+Do not carry source IDs or detailed bibliography links in this file.
 
-| Field         | Description                                                                   |
-| ------------- | ----------------------------------------------------------------------------- |
-| Rule ID       | Stable identifier for the rule.                                               |
-| Summary       | One or two sentences stating the rule.                                        |
-| Layer         | Foundation / Target Selection / Observation / Construction / Design Feedback. |
-| Priority      | Essential / Recommended / Suggested.                                          |
-| Destination   | The reference file that owns the rule.                                        |
-| Applicability | When the rule applies.                                                        |
-| Trade-offs    | What the rule costs or when exceptions are valid.                             |
-| Sources       | Supporting sources or project experience.                                     |
-| Status        | Adopted / Pending / Rejected / Superseded.                                    |
-| Notes         | Duplicate candidates, open questions, or migration notes.                     |
+## Format
 
-## Initial Cards
+When adding a rule, record these points:
 
-| Rule ID    | Summary                                                                       | Layer            | Priority    | Destination                             | Applicability            | Trade-offs                                        | Sources  | Status  | Notes         |
-| ---------- | ----------------------------------------------------------------------------- | ---------------- | ----------- | --------------------------------------- | ------------------------ | ------------------------------------------------- | -------- | ------- | ------------- |
-| UT-FND-001 | Unit tests should support sustainable change rather than maximize test count. | Foundation       | Essential   | `references/foundations.md`             | Any unit test work.      | Low-value tests should be improved or removed.    | Khorikov | Adopted | Initial rule. |
-| UT-TGT-001 | Choose test units by behavior, not by class structure alone.                  | Target Selection | Essential   | `references/test-target-selection.md`   | Test boundary selection. | Some behaviors span several classes.              | Khorikov | Adopted | Initial rule. |
-| UT-OBS-001 | Prefer observable results over implementation details.                        | Observation      | Essential   | `references/observation-and-oracles.md` | Assertion selection.     | Boundary interactions may need mocks.             | Khorikov | Adopted | Initial rule. |
-| UT-CNS-001 | Keep tests structured around Arrange, Act, and Assert.                        | Construction     | Recommended | `references/test-construction.md`       | Most unit tests.         | Tiny tests may not need comments.                 | Khorikov | Adopted | Initial rule. |
-| UT-DFB-001 | Treat hard-to-test valuable behavior as design feedback.                      | Design Feedback  | Recommended | `references/design-feedback.md`         | Testability concerns.    | Not every hard test means domain design is wrong. | Khorikov | Adopted | Initial rule. |
+- Applicability: the situation where the rule is needed.
+- Destination: the reference file that should contain the rule.
+- Priority: Essential / Recommended / Suggested.
+- Rule: the rule the user should see.
+- Exceptions or notes: valid exceptions or common misuses.
+
+## General Unit Test Work
+
+Destination: `references/foundations.md`
+
+Priority: Essential
+
+Unit tests should support sustainable change rather than maximize test count.
+Low-value tests should be improved or removed.
+
+## Choosing Test Boundaries
+
+Destination: `references/test-target-selection.md`
+
+Priority: Essential
+
+Choose the unit under test by behavior, not by class structure alone.
+A single behavior can span multiple classes.
+
+## Choosing Verification Strategy
+
+Destination: `references/observation-and-oracles.md`
+
+Priority: Essential
+
+Prefer observable results over implementation details.
+Boundary interactions may need mocks.
+
+## Writing Test Code
+
+Destination: `references/test-construction.md`
+
+Priority: Recommended
+
+Keep tests structured around Arrange, Act, and Assert.
+Tiny tests may not need section comments when the structure is obvious.
+
+## Discussing Testability
+
+Destination: `references/design-feedback.md`
+
+Priority: Recommended
+
+Treat hard-to-test valuable behavior as design feedback.
+Not every hard test means the domain design is wrong.
