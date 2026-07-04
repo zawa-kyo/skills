@@ -1,6 +1,6 @@
 ---
 name: distill-japanese-edits
-description: Distill reusable Japanese writing rules from human edits that make Japanese documentation more natural without changing technical meaning. Use when the user wants to improve the local `revise-japanese-writing` guidance, when bilingual sync work surfaced recurring Japanese naturalization patterns, or when a Git diff contains human rewrites worth turning into maintainable style rules. This skill can run on Git diffs or specific files by itself, and `sync-bilingual-docs` can invoke it after bilingual synchronization.
+description: Distill reusable Japanese writing rules from human edits that make Japanese documentation more natural without changing technical meaning. Use when a Git diff contains meaning-preserving rewrites into more natural Japanese, when `sync-bilingual-docs` surfaces improvement ideas, or when you want evidence-backed updates to the local `revise-japanese-writing` guidance. This skill can run on Git diffs or specific files by itself, and `sync-bilingual-docs` can invoke it after bilingual synchronization.
 ---
 
 # Distill Japanese Edits
@@ -15,9 +15,8 @@ Improve `writing/revise-japanese-writing/` by learning from real human correctio
 
 Use this skill when:
 
-- the user asks to improve `revise-japanese-writing`
-- a recent diff contains Japanese rewrites that preserve meaning but improve naturalness
-- `sync-bilingual-docs` captured improvement candidates
+- a `git diff` contains Japanese rewrites that preserve meaning while making the prose more natural
+- `sync-bilingual-docs` surfaced improvement ideas
 - you want an evidence-based update instead of adding style rules from intuition alone
 
 Do not use this skill when:
@@ -37,13 +36,12 @@ Use any combination that is available:
 
 ## Workflow
 
-1. Read the current `writing/revise-japanese-writing/SKILL.md`, `SKILL-ja.md`, and `references/idea.md` before proposing changes.
+1. Read the current `writing/revise-japanese-writing/SKILL.md` and `SKILL-ja.md` before proposing changes.
 2. Collect Japanese diff hunks or candidate notes.
-3. Filter out edits that fail the evaluation questions below. Typical examples are:
-   - semantic changes
-   - factual fixes
-   - structural rewrites with mixed motives
-   - isolated taste preferences with no reusable pattern
+3. Filter out edits that fail the evaluation gate below.
+   - Reject changes that alter meaning or facts.
+   - Reject mixed structural rewrites whose motive is unclear.
+   - Reject one-off preferences with no reusable pattern.
 4. Classify the remaining edits by pattern, such as:
    - translationese or English-tracing phrasing
    - unnatural noun stacking
@@ -51,20 +49,18 @@ Use any combination that is available:
    - awkward term choice versus established usage
    - logic and paragraph flow improvement
    - empty emphasis or AI-like posture words
-5. For each pattern, write a candidate rule in abstract form.
+5. Reduce each pattern to an abstract rule.
 6. Check whether the current skill already covers that rule:
    - If it already exists, prefer tightening or clarifying the existing rule
    - If it is adjacent to an existing rule, integrate there instead of adding a new section
-   - If it introduces a genuinely new concept, add a small new bullet or subsection
+   - If it introduces a genuinely new concept, add a small update
+   - Keep the wording compact and avoid redundant prose
 7. Update both `SKILL.md` and `SKILL-ja.md` when changing runtime guidance.
-8. Update `references/idea.md` only when the change reflects a new external influence or a meaningful maintenance rationale worth recording.
-9. Leave the changes unstaged and uncommitted.
+8. Leave the changes unstaged and uncommitted.
 
-## Evaluation Questions
+## Evaluation Gate
 
-Use these as the only generalization gate. If you cannot answer yes where required, do not turn the edit into a rule.
-
-For each candidate pattern, answer these questions:
+Use this gate before turning an edit into a rule:
 
 1. Did the human edit preserve technical meaning?
 2. Is the improvement about language quality rather than content policy?
@@ -80,23 +76,9 @@ Prefer the smallest durable change:
 
 1. tighten an existing bullet
 2. add one short bullet to an existing section
-3. add a small subsection
-4. add a maintenance note to `references/idea.md`
+3. add a small update only when the pattern is truly new
 
 Avoid large expansions unless several distinct diffs support them.
-
-## Evidence Format
-
-For each rule candidate, keep a short evidence record:
-
-- source file
-- representative before wording
-- representative after wording
-- why the meaning stayed the same
-- generalized rule
-- chosen destination in `revise-japanese-writing`
-
-Do not dump large raw diffs into the final report. Summarize them instead.
 
 ## Standalone Mode
 
