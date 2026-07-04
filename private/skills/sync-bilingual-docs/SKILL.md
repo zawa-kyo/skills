@@ -1,11 +1,11 @@
 ---
 name: sync-bilingual-docs
-description: Sync paired English and Japanese documentation in repositories that maintain `*.md` and `*-ja.md` counterparts, including paired directories such as `references/` and `references-ja/`. Use when the user asks to keep bilingual docs aligned, when one side of a paired document changed, or after editing README, AGENTS, SKILL files, or related reference documents. In Codex, use this as the primary workflow for bilingual document maintenance; invoke the companion `distill-japanese-edits` skill only when the user also wants to improve Japanese writing guidance from observed human edits or when recurring meaning-preserving naturalization patterns clearly appear in the diff.
+description: Sync paired English and Japanese documentation in repositories that maintain `*.md` and `*-ja.md` counterparts, including paired directories such as `references/` and `references-ja/`. Use when the user asks to keep bilingual docs aligned, when one side of a paired document changed, or after editing README, AGENTS, SKILL files, or related reference documents. In Codex, use this as the primary bilingual maintenance workflow. Invoke the companion `distill-japanese-edits` skill only when the user also wants to improve Japanese writing guidance from observed human edits or when recurring meaning-preserving naturalization patterns clearly appear in the diff.
 ---
 
 # Sync Bilingual Docs
 
-Maintain semantic alignment between English and Japanese documentation pairs in a repository that uses filename pairs such as `README.md` and `README-ja.md`, `SKILL.md` and `SKILL-ja.md`, or directory pairs such as `references/` and `references-ja/`.
+Maintain semantic alignment between English and Japanese documentation pairs in repositories that use filename pairs such as `README.md` and `README-ja.md`, `SKILL.md` and `SKILL-ja.md`, or directory pairs such as `references/` and `references-ja/`.
 
 ## Goals
 
@@ -62,7 +62,8 @@ If no counterpart exists, report that clearly and do not invent a new file unles
    - package names
    - proper nouns
 7. If the Japanese side contains clear, meaning-preserving human naturalization patterns, record them as improvement candidates.
-8. If the user asked to improve the Japanese writing guidance, or if multiple strong candidates appear, invoke the companion `distill-japanese-edits` skill after the sync work or in the same turn if practical.
+8. If the user asked to improve the Japanese writing guidance, invoke the companion `distill-japanese-edits` skill after the sync work or in the same turn when practical.
+   Do the same when at least two strong candidates appear across different sections or files.
 9. Do not commit, stage, or publish changes unless the user explicitly asked.
 
 ## When To Invoke `distill-japanese-edits`
@@ -111,7 +112,7 @@ When Japanese edits look reusable, capture a short note for each candidate:
 - tentative generalized rule
 - confidence: high, medium, or low
 
-These notes are inputs to `distill-japanese-edits`. They are not final rule changes by themselves.
+These notes are inputs to `distill-japanese-edits`. They are not rule changes by themselves.
 
 ## Quality Checks
 

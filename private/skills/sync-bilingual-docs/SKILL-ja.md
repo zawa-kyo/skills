@@ -1,6 +1,6 @@
 ---
 name: sync-bilingual-docs
-description: `*.md` と `*-ja.md` の対応ファイルや、`references/` と `references-ja/` のような対応ディレクトリを持つリポジトリで、英語版と日本語版の文書を同期する。README、AGENTS、SKILL、関連する参照資料の片側だけが変わったときや、日英文書を揃えたいときに使う。Codex では、日英文書の保守における基本ワークフローとして使い、日本語の人手修正から書き方のルールを改善したい場合や、意味を保った自然化が差分に繰り返し現れている場合に限って、補助スキル `distill-japanese-edits` を呼ぶ。
+description: `*.md` と `*-ja.md` の対応ファイルや、`references/` と `references-ja/` のような対応ディレクトリを持つリポジトリで、英語版と日本語版の文書を同期する。README、AGENTS、SKILL、関連する参照資料の片側だけが変わったときや、日英文書を揃えたいときに使う。Codex では、日英文書の保守における基本ワークフローとして使う。日本語の人手修正から書き方のルールも改善したい場合や、意味を保った自然化が差分に繰り返し現れている場合に限って、補助スキル `distill-japanese-edits` を呼ぶ。
 ---
 
 # Sync Bilingual Docs
@@ -114,7 +114,7 @@ description: `*.md` と `*-ja.md` の対応ファイルや、`references/` と `
 - 暫定的な一般化ルール
 - 確信度。高、中、低
 
-これらのメモは `distill-japanese-edits` に渡す入力とする。
+これらのメモを `distill-japanese-edits` への入力として使う。
 この段階では、まだ確定ルールではない。
 
 ## 確認観点

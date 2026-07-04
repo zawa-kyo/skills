@@ -1,6 +1,6 @@
 ---
 name: distill-japanese-edits
-description: Distill reusable Japanese writing rules from human edits that make Japanese documentation more natural without changing technical meaning. Use when the user wants to improve the local `revise-japanese-writing` guidance, when bilingual sync work surfaced recurring Japanese naturalization patterns, or when a Git diff contains human rewrites that should be abstracted into maintainable style rules. This skill can run standalone from Git diffs or specific files, and it can also be invoked by `sync-bilingual-docs` after bilingual synchronization.
+description: Distill reusable Japanese writing rules from human edits that make Japanese documentation more natural without changing technical meaning. Use when the user wants to improve the local `revise-japanese-writing` guidance, when bilingual sync work surfaced recurring Japanese naturalization patterns, or when a Git diff contains human rewrites worth abstracting into maintainable style rules. This skill can run on Git diffs or specific files by itself, and `sync-bilingual-docs` can invoke it after bilingual synchronization.
 ---
 
 # Distill Japanese Edits
@@ -9,7 +9,7 @@ Extract reusable style guidance from human Japanese rewrites, then turn that gui
 
 ## Goal
 
-Improve `writing/revise-japanese-writing/` by learning from real human corrections while avoiding overfitting to one document or one person's incidental preference.
+Improve `writing/revise-japanese-writing/` by learning from real human corrections without overfitting to one document or one person's incidental preference.
 
 ## When To Use
 
@@ -73,7 +73,7 @@ For each candidate pattern, answer these questions:
 1. Did the human edit preserve technical meaning?
 2. Is the improvement about language quality rather than content policy?
 3. Would the rule help in multiple files, not only this one location?
-4. Is the rule absent or under-specified in the current skill?
+4. Is the rule absent from the current skill, or is the current wording too weak for this pattern?
 5. Can the rule be stated briefly enough to keep the skill maintainable?
 
 If any answer is "no", prefer a note in your report over a skill edit.
@@ -85,7 +85,7 @@ Prefer the smallest durable change:
 1. tighten an existing bullet
 2. add one short bullet to an existing section
 3. add a small subsection
-4. add maintenance rationale to `references/idea.md`
+4. add a maintenance note to `references/idea.md`
 
 Avoid large expansions unless several distinct diffs support them.
 
@@ -100,7 +100,7 @@ For each rule candidate, keep a short evidence record:
 - generalized rule
 - chosen destination in `revise-japanese-writing`
 
-Do not dump large raw diffs into the final report. Summarize them.
+Do not dump large raw diffs into the final report. Summarize them instead.
 
 ## Safety Boundaries
 
@@ -128,4 +128,4 @@ Report concisely:
 - which files were edited
 - any low-confidence candidates that should wait for more examples
 
-If no change is justified, say that clearly and explain the limiting factor.
+If no change is justified, say so clearly and explain the limiting factor.
