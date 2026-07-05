@@ -1,0 +1,9 @@
+name: review-essential-code
+version: 0.1.0
+description: Review code changes for correctness and essential maintainability.
+author: Kyohei Ozawa
+license: MIT
+includes: auto
+dependencies:
+  apm:
+    - zawa-kyo/skills/dev/guide-unit-tests
