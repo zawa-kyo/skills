@@ -15,6 +15,14 @@ Inspect enough project context to answer:
 - What conventions do existing tests use for naming, fixtures, builders, and test doubles?
 - Are there architecture rules that make a direct unit test inappropriate?
 
+Classify dependencies while reading context:
+
+- Shared dependency: state can leak between tests, such as a shared database or global mutable singleton.
+- Volatile dependency: behavior is nondeterministic or environment-specific, such as current time, randomness, or a remote service.
+- Stable in-process dependency: an ordinary domain object, value object, parser, calculator, or policy object owned by the same process.
+
+The default is to control shared and volatile dependencies while keeping stable in-process collaborators real. This keeps the test focused on behavior instead of the implementation shape of one class.
+
 ## Treat Test Difficulty As Design Feedback
 
 Priority: Recommended.
@@ -30,6 +38,16 @@ Priority: Recommended.
 Trade-off: Do not over-abstract simple code that has no meaningful decision logic.
 
 Move important decisions into a small, deterministic core when practical. Keep side effects in an outer layer that can be tested with integration tests or a small number of boundary-focused unit tests.
+
+Example: prefer passing the relevant time value into the domain decision over reading ambient time inside it.
+
+```typescript
+function canRenew(subscription: Subscription, now: Date): boolean {
+  return subscription.expiresAt > now && !subscription.cancelled;
+}
+```
+
+The surrounding application service can read the clock. The rule itself stays deterministic and easy to test with output-based assertions.
 
 ## Extract Concepts, Not Private Methods
 

@@ -54,7 +54,8 @@ Adapted ideas:
 ## Rejected or not yet adopted
 
 - Framework-specific examples are not carried into the core references.
-- Long examples and historical explanations are not copied into runtime references.
+- Verbose examples and background explanations are not reflected in the documentation.
+- Short examples such as sample code are allowed when they clarify a rule without limiting the skill's behavior to a specific framework.
 
 ## Open questions
 

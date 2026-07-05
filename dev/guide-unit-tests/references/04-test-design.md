@@ -18,12 +18,37 @@ Prefer assertions about observable results: returned values, externally visible 
 
 Avoid assertions about intermediate state, private algorithms, call order, or helper calls unless those details are themselves the public contract.
 
+Example of an observable result:
+
+```typescript
+const result = applyCoupon(cart, expiredCoupon, now);
+
+expect(result).toEqual({
+  accepted: false,
+  reason: "coupon_expired",
+  total: cart.total,
+});
+```
+
+The assertion describes the externally meaningful outcome. It does not care whether `applyCoupon` used one helper method or several.
+
 ## Do Not Verify Stubs
 
 Priority: Essential.
 Trade-off: A single test double can act as both a stub and a mock; only verify the output side that represents behavior.
 
 Do not assert interactions with stubs. A stub feeds the system under test; verifying how it was queried usually checks implementation details rather than behavior.
+
+```typescript
+const rates: ExchangeRateProvider = {
+  rateFor: () => 150,
+};
+
+const result = convertToJpy(Money.usd(10), rates);
+
+expect(result).toEqual(Money.jpy(1500));
+// Do not assert that rateFor was called once unless the call itself is the contract.
+```
 
 ## Mock Only Meaningful Boundary Communication
 
@@ -33,6 +58,19 @@ Trade-off: Some adapter code is better covered by integration tests instead of u
 Use mocks to verify communication that is meaningful at a system boundary, such as sending a message, publishing an event, or calling an unmanaged dependency.
 
 Avoid mocking ordinary domain collaborators only to force one-class-at-a-time tests.
+
+```typescript
+const emailGateway = { send: vi.fn() };
+
+completeSignup(user, emailGateway);
+
+expect(emailGateway.send).toHaveBeenCalledWith(
+  user.email,
+  expect.objectContaining({ template: "welcome" }),
+);
+```
+
+This kind of interaction check is useful only if sending the email is an externally observable side effect of the use case. Do not use the same style to verify ordinary calls between domain objects.
 
 ## Do Not Test Private Details Directly
 

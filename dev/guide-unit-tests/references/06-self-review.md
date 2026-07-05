@@ -25,6 +25,8 @@ Inspect in this order:
 7. Is the test readable, straight-line, and low-maintenance?
 8. Does hard-to-test code suggest a design change?
 
+Do not assume every weak test should be fixed in place. If a test protects no meaningful behavior, duplicates a stronger test, or mainly exists for coverage, the smallest useful correction may be removal or replacement by a better-scoped test.
+
 ## Compressed Review Mode
 
 Priority: Essential.
@@ -63,6 +65,8 @@ Treat these symptoms as review leads:
 - domain behavior needs many mocks
 - production code contains test-only switches
 - the test raises coverage but does not protect a meaningful behavior
+
+Also watch for tests whose failure report would not help a maintainer decide what behavior broke. A readable failure should point to a scenario and expected result, not merely to a method name or a mocked call count.
 
 ## No Findings
 

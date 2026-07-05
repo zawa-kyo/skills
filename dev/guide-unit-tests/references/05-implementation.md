@@ -16,6 +16,16 @@ Trade-off: Follow local naming conventions when they already communicate behavio
 
 Name tests so a reader can understand the behavior and expected outcome. Avoid names that only repeat method names or implementation structure.
 
+Prefer names that read like a scenario:
+
+```typescript
+it("rejects an expired coupon without changing the cart total", () => {
+  // ...
+});
+```
+
+Avoid names that only mirror code shape, such as `applyCoupon_returns_false`.
+
 ## Use Arrange Act Assert
 
 Priority: Recommended.
@@ -29,6 +39,23 @@ Structure tests as Arrange, Act, and Assert:
 
 Avoid multiple Arrange-Act-Assert flows in one test. That usually means the test covers multiple behaviors.
 
+```typescript
+it("rejects an expired coupon without changing the cart total", () => {
+  const cart = aCart({ total: Money.usd(40) });
+  const coupon = aCoupon({ expiresAt: new Date("2026-01-01") });
+
+  const result = applyCoupon(cart, coupon, new Date("2026-02-01"));
+
+  expect(result).toEqual({
+    accepted: false,
+    reason: "coupon_expired",
+    total: Money.usd(40),
+  });
+});
+```
+
+The test has one behavior execution and asserts the externally meaningful result.
+
 ## Keep Tests Straight-Line
 
 Priority: Recommended.
@@ -38,12 +65,39 @@ Keep unit tests simple and mostly linear. Avoid `if`, `switch`, loops, or produc
 
 If a test calculates the expected value with logic similar to production code, it may be duplicating the bug instead of detecting it.
 
+Parameterized tests are useful when only the examples vary:
+
+```typescript
+it.each([
+  [0, false],
+  [5, false],
+  [6, true],
+])("treats length %i as long: %s", (length, expected) => {
+  expect(isLong("x".repeat(length))).toBe(expected);
+});
+```
+
+Avoid parameterized tests when each row needs different branching, mocks, or expectation logic. Split those into named scenarios.
+
 ## Reuse Setup Explicitly
 
 Priority: Suggested.
 Trade-off: Over-shared fixtures hide relevant inputs and couple tests together.
 
 Prefer explicit factory functions or builders that each test calls with the values that matter. Avoid shared setup that makes a test's preconditions invisible.
+
+```typescript
+function aCoupon(overrides: Partial<Coupon> = {}): Coupon {
+  return {
+    code: "SAVE10",
+    discountPercent: 10,
+    expiresAt: new Date("2026-12-31"),
+    ...overrides,
+  };
+}
+```
+
+The test should pass the values that matter for the scenario. Defaults should be valid but uninteresting.
 
 ## Avoid Test-Induced Code Pollution
 
