@@ -5,6 +5,17 @@ author: Kyohei Ozawa
 includes: auto
 targets:
   - agent-skills
+dependencies:
+  apm:
+    - ./dev/bootstrap-repo-docs
+    - ./dev/guide-unit-tests
+    - ./dev/review-essential-code
+    - ./dev/suggest-commit-messages
+    - ./thinking/refine-reasoning-logic
+    - ./writing/edit-existing-document
+    - ./writing/revise-english-writing
+    - ./writing/revise-japanese-writing
+    - ./writing/summarize-discussion-coherently
 devDependencies:
   apm:
     - ./private
