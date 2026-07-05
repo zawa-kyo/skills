@@ -63,7 +63,7 @@ it("rejects an expired coupon without changing the cart total", () => {
 ## テストを直線的に保つ
 
 Priority: Recommended。
-Trade-off: パラメータ化テストは、各ケースの入力と期待結果が明確なら妥当である。
+Trade-off: パラメータ化テストは、各テストケースの入力と期待結果が明確なら妥当である。
 
 単体テストは、単純で直線的に保つ。
 テストのアサーションに `if`、`switch`、ループ、本番コードのようなロジックを入れない。

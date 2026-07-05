@@ -5,18 +5,26 @@
 Priority: Essential.
 Trade-off: A test with no clear value should be improved, moved to another test type, or removed.
 
-Unit tests should support sustainable change. They are valuable when they detect meaningful regressions, enable refactoring, run quickly, and remain easy to understand.
+Automated tests as a whole support sustainable product growth. Unit tests contribute by checking small behaviors quickly, deterministically, and in a way that supports refactoring.
 
-Do not treat tests as free assets. Test code has ownership cost: it must be read, run, debugged, updated, and trusted.
+Integration tests check whether components or external boundaries work together correctly. E2E tests check whether representative user journeys work through the whole system. Do not ask unit tests to provide every guarantee; choose the test type that matches the risk.
 
-Before designing or reviewing tests, state what the tests are meant to protect. If the purpose is only "increase coverage" or "add tests because tests are missing", translate it into a behavior, risk, or maintenance goal.
+Unit tests are valuable when they detect meaningful regressions, enable refactoring, run quickly, and remain easy to understand.
 
-Good purpose statements are specific enough to choose cases and assertions:
+Do not treat tests as free assets. Like production code, test code has ownership cost:
 
-- Weak: "Add coverage for `DiscountService`."
-- Better: "Protect the rule that expired coupons are rejected without changing the cart total."
-- Weak: "Test the user repository."
-- Better: "Protect the application behavior when an existing email address is registered again."
+- Tests must be read, run, debugged, and updated as behavior changes.
+- Tests that are not kept trustworthy slow down maintainer judgment.
+- Tests with no explainable value tend to become liabilities rather than assets.
+
+Before designing or reviewing tests, state what the tests are meant to protect. "Increase coverage" or "add tests because tests are missing" is not enough reason to add a test. Add a test only when you can name the behavior, regression risk, or maintenance benefit it protects.
+
+Good purpose statements are specific enough to choose test cases and assertions:
+
+- BAD: Add coverage for `DiscountService`.
+- GOOD: Protect the rule that expired coupons are rejected without changing the cart total.
+- BAD: Test the user repository.
+- GOOD: Protect the application behavior when an existing email address is registered again.
 
 If you cannot name the failure that would matter, pause before writing tests. The next useful step may be reading domain context, moving the check to another test type, or deciding that the code does not need a dedicated unit test.
 
