@@ -9,7 +9,7 @@ Turn the strategy into concrete cases before writing test code. Each case should
 
 Prefer a small set of meaningful examples over many cases that only enumerate implementation branches.
 
-## Prefer Observable Results
+## Prefer Externally Observable Results
 
 Priority: Essential.
 Trade-off: Interaction checks are sometimes necessary at system boundaries.
@@ -81,7 +81,7 @@ Test private behavior through observable public behavior. Direct private tests u
 
 ## Case Design Output
 
-For each test case, specify:
+For each test case, specify the following. Omit items that are irrelevant or redundant for the task.
 
 - behavior name
 - given state or input

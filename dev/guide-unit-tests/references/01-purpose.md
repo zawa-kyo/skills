@@ -53,11 +53,11 @@ Use the four attributes to explain trade-offs in concrete terms:
 Priority: Recommended.
 Trade-off: Coverage can expose untested areas, but it cannot prove test quality.
 
-Use coverage as a warning signal, not as a target by itself. Low coverage may reveal important untested code. High coverage does not prove that behavior is asserted correctly.
+Use coverage as a warning signal, not as a target by itself. Low coverage may indicate that important code is not tested. High coverage does not prove that behavior is asserted correctly.
 
 Do not write tests only to satisfy a coverage number.
 
-When a user asks for coverage, use coverage to find candidates, then choose tests by behavior. A test that executes a branch without asserting its observable result has increased coverage but has not protected a behavior.
+When a user asks for coverage, use coverage to find candidates, then choose tests by behavior. A test that executes a branch without verifying its observable result has increased coverage but has not protected a behavior.
 
 ## Purpose Checklist
 

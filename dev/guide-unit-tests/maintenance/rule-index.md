@@ -1,6 +1,6 @@
 # Rule Index
 
-Use this file as a compact index from stable rule IDs to the runtime reference files that contain those rules.
+Use this file as a compact index from rule IDs to the runtime reference files that contain those rules.
 It is not runtime guidance and should not become a second explanation of the skill's design.
 
 Keep the actual guidance in `references/`.
@@ -11,7 +11,7 @@ Keep design intent in `design.md`.
 
 When adding a rule, record only the fields needed to keep the runtime references traceable:
 
-- Rule ID: a stable identifier used in source mapping and maintenance discussions.
+- Rule ID: an identifier used in source mapping and maintenance discussions.
 - Destination: the runtime reference file that should contain the rule.
 - Priority: Essential / Recommended / Suggested.
 - Source group: the source section that owns the rule's origin or adaptation.
@@ -161,7 +161,7 @@ Rule: Structure tests as Arrange, Act, Assert.
 
 Priority: Recommended
 Source group: `khorikov-core`
-Rule: Keep tests straight-line and avoid production-like logic in assertions.
+Rule: Keep tests straight-line and avoid production-code-like logic in assertions.
 
 ### UT-IMP-005
 
@@ -173,7 +173,7 @@ Rule: Reuse setup explicitly through builders or factories instead of opaque sha
 
 Priority: Essential
 Source group: `khorikov-core`
-Rule: Avoid test-induced production code pollution; prefer design improvements that help production too.
+Rule: Avoid polluting production code only for tests; prefer design changes that also improve the production model.
 
 ## Self-Review (`references/06-self-review.md`)
 

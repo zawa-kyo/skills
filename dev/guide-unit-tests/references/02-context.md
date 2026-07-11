@@ -65,7 +65,7 @@ Do not test private methods directly. If private behavior is important and compl
 
 ## Context Output
 
-Before moving to test strategy, summarize the context in practical terms:
+Before moving to test strategy, summarize the context in practical terms. Omit items that are irrelevant or redundant for the task.
 
 - the behavior and domain meaning
 - the owning layer or boundary

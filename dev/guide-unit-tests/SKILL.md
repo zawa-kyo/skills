@@ -28,7 +28,7 @@ Do not use this skill as the source of truth for integration tests, E2E tests, d
 
 Run the workflow in order unless the user asks for a narrow review or a small local change. Even when compressing the workflow, do not skip the purpose, behavior, and boundary checks.
 
-1. Establish purpose: identify the behavior, risk, or maintenance goal. Translate coverage-driven requests into a concrete reason for the test to exist.
+1. Establish purpose: identify the behavior to protect, risk, or maintenance goal. Translate coverage-driven requests into a concrete reason for the test to exist.
 2. Read context: inspect enough project domain, architecture, existing tests, and dependency structure to avoid tests that are locally correct but project-inappropriate.
 3. Design strategy: decide the test level, unit boundary, dependencies to keep real or replace, and observation style before writing code.
 4. Design cases: list the concrete cases, inputs, actions, expected observable results, and test double roles.

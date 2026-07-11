@@ -31,11 +31,11 @@ Replace or control shared and volatile dependencies in unit tests. Examples incl
 
 Do not replace stable in-process collaborators only because they are separate classes.
 
-Example strategy:
+Examples:
 
-- Keep real: `Money`, `Coupon`, and `DiscountPolicy` value/domain objects.
-- Control: `Clock` or the `now` value used by the rule.
-- Replace or move out of the unit test: shared database, payment gateway, email sender.
+- Use real `Money`, `Coupon`, and `DiscountPolicy` value/domain objects.
+- Inject `Clock` or the `now` value.
+- Replace shared databases, payment gateways, and email sending, or move them out of the unit test.
 
 ## Choose The Observation Style
 
@@ -52,7 +52,7 @@ Choose interaction-based testing only when the communication itself is the behav
 
 ## Strategy Output
 
-Produce a short strategy before implementation:
+Before implementation, present the strategy essentials to the user. Omit items that are irrelevant or redundant for the task.
 
 - behavior to protect
 - chosen unit boundary

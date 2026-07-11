@@ -2,28 +2,26 @@
 
 ## Motivation
 
-Automated tests are not automatically assets. A test becomes a liability when it protects behavior that does not matter, locks onto implementation details, duplicates production logic, or makes ordinary refactoring expensive. In that state, more tests or higher coverage can make the codebase harder to change and the test suite harder to trust.
+Automated tests are not automatically assets. A test becomes a liability when it protects low-value behavior, locks onto implementation details, or duplicates production logic. In that state, more tests or higher coverage can block product growth instead of supporting it.
 
-This skill exists to keep test writing from becoming the goal. Start by asking why the test should exist, then decide the behavior, risk, unit boundary, and observation style before choosing test code shape or test double usage. That sequence gives agents and humans a guardrail for treating unit tests as a design and maintenance practice rather than a coverage exercise.
+This skill exists to help agents and humans write the right tests instead of making test writing itself the goal. Start by asking why the test should exist, then decide the behavior to protect, risk, unit boundary, and observation style before choosing test code shape or test double usage. That sequence gives agents and humans a guardrail for treating unit tests as a design and maintenance practice rather than a coverage exercise.
 
 ## Primary Source
 
-The primary source is Vladimir Khorikov's _Unit Testing: Principles, Practices, and Patterns_. The book is useful because it gives a coherent vocabulary for test value, refactoring resistance, observable behavior, test doubles, and the trade-offs between output, state, and interaction testing.
-
-This skill does not treat that book as the only source of truth. The skill should remain open to other books, local team practices, language constraints, and lessons learned from real projects.
+The primary source is Vladimir Khorikov's _Unit Testing: Principles, Practices, and Patterns_. This skill does not treat that book as the only source of truth. It should remain open to other books, local team practices, language constraints, and lessons learned from real projects.
 
 ## Design Approach
 
 Organize the skill by the thinking sequence used when designing, implementing, or reviewing unit tests, not by source chapter, testing school, or isolated use case.
 
-| Step | File | Role |
-| ---- | ---- | ---- |
-| Purpose | `01-purpose.md` | Covers why the test should exist and what risk it protects. |
-| Context | `02-context.md` | Covers domain, architecture, dependency, and existing-test context. |
-| Test strategy | `03-test-strategy.md` | Covers test level, unit boundary, dependency handling, and observation style. |
-| Test design | `04-test-design.md` | Covers concrete cases, assertions, and test double roles. |
-| Implementation | `05-implementation.md` | Covers test code shape and safe testability refactors. |
-| Self-review | `06-self-review.md` | Covers self-review and compressed external review. |
+| Step           | File                   | Role                                                                          |
+| -------------- | ---------------------- | ----------------------------------------------------------------------------- |
+| Purpose        | `01-purpose.md`        | Covers why the test should exist and what risk it protects.                   |
+| Context        | `02-context.md`        | Covers domain, architecture, dependency, and existing-test context.           |
+| Test strategy  | `03-test-strategy.md`  | Covers test level, unit boundary, dependency handling, and observation style. |
+| Test design    | `04-test-design.md`    | Covers concrete cases, assertions, and test double roles.                     |
+| Implementation | `05-implementation.md` | Covers test code shape and safe testability refactors.                        |
+| Self-review    | `06-self-review.md`    | Covers self-review and compressed external review.                            |
 
 This structure keeps the skill extensible. A new source should strengthen, refine, or challenge the relevant workflow step instead of creating a parallel chapter summary or a separate use-case silo.
 
