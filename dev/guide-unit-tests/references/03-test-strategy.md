@@ -9,6 +9,8 @@ Design the test strategy before writing test code. Decide which behavior belongs
 
 The unit is the behavior under test, not necessarily one class or one method. A single behavior may span several classes when the test remains fast, deterministic, and isolated from shared or volatile dependencies.
 
+Use the classical style as the default starting point for domain-heavy code: isolate tests from each other, not every object from every collaborator. Switch to narrower one-class tests only when the local architecture, framework constraints, or failure diagnosis needs justify the extra mocking.
+
 ## Prefer Valuable Behavior
 
 Priority: Essential.
@@ -18,6 +20,8 @@ Focus unit tests on behavior whose regression would matter. Business rules, doma
 
 Avoid writing dedicated unit tests for trivial code that has little logic and is already exercised through more valuable behavior.
 
+When prioritizing, look for the combination of domain importance, complexity, and few volatile collaborators. A discount rule, parser, eligibility policy, or state transition usually deserves more attention than a thin controller or a getter.
+
 ## Isolate Shared And Volatile Dependencies
 
 Priority: Essential.
@@ -26,6 +30,12 @@ Trade-off: Stable in-process collaborators can often remain real objects.
 Replace or control shared and volatile dependencies in unit tests. Examples include current time, randomness, shared databases, file systems, remote services, global mutable state, and process-external messaging.
 
 Do not replace stable in-process collaborators only because they are separate classes.
+
+Examples:
+
+- Use real `Money`, `Coupon`, and `DiscountPolicy` value/domain objects.
+- Inject `Clock` or the `now` value.
+- Replace shared databases, payment gateways, and email sending, or move them out of the unit test.
 
 ## Choose The Observation Style
 
@@ -38,9 +48,11 @@ Use this order as a default:
 2. State-based testing when the meaningful result is an observable state change.
 3. Interaction-based testing when the meaningful result is communication with a boundary dependency.
 
+Choose interaction-based testing only when the communication itself is the behavior. If a final state or returned result expresses the same contract, prefer asserting that result.
+
 ## Strategy Output
 
-Produce a short strategy before implementation:
+Before implementation, present the strategy essentials to the user. Omit items that are irrelevant or redundant for the task.
 
 - behavior to protect
 - chosen unit boundary
