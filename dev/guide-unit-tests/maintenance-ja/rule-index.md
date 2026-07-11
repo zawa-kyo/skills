@@ -5,7 +5,7 @@
 
 実際のガイドは `references-ja/` に置く。
 参照元との対応や採用理由は `sources.md` に置く。
-設計背景は `design-background.md` に置く。
+設計意図は `design.md` に置く。
 
 ## 書き方
 

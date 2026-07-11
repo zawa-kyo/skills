@@ -5,7 +5,7 @@ It is not runtime guidance and should not become a second explanation of the ski
 
 Keep the actual guidance in `references/`.
 Keep source mapping and adoption rationale in `sources.md`.
-Keep design background in `design-background.md`.
+Keep design intent in `design.md`.
 
 ## Format
 

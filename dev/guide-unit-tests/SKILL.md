@@ -65,7 +65,7 @@ If no blocking issue is found, say so clearly and mention only confidence-affect
 
 ## Maintenance Files
 
-`maintenance/` and `maintenance-ja/` contain maintainer notes for this skill. Do not read them during ordinary unit test guidance. Use them only when editing this skill, changing its rule structure, checking source mapping, or reviewing its design background.
+`maintenance/` and `maintenance-ja/` contain maintainer notes for this skill. Do not read them during ordinary unit test guidance. Use them only when editing this skill, changing its rule structure, checking source mapping, or reviewing its design.
 
 When editing this skill, keep paired files aligned in meaning:
 
