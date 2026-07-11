@@ -96,6 +96,7 @@ Prefer fluent Japanese for ordinary prose.
 | `user scope`         | `ユーザー単位`                             |
 | `project scope`      | `プロジェクト単位`                         |
 | `dependency`         | `依存関係`                                 |
+| `production code`    | `プロダクションコード`                     |
 | `package`            | `パッケージ`                               |
 | `tag`                | `タグ`                                     |
 | `commit`             | `コミット`                                 |

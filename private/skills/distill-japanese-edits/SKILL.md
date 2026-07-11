@@ -38,16 +38,17 @@ Use any combination that is available:
 
 1. Read the current `writing/revise-japanese-writing/SKILL.md` and `SKILL-ja.md` before proposing changes.
 2. Collect Japanese diff hunks or candidate notes.
-3. Filter out edits that fail the following checks:
-   - Did the human edit preserve technical meaning?
-   - Is the improvement about Japanese quality rather than content policy?
-   - Would the rule help in multiple files, not only this one location?
-   - Is the rule absent from the current skill, or is the current wording too weak for this pattern?
-   - Can the rule stay brief enough to keep the skill maintainable?
-   Typical rejects are:
-   - meaning or factual corrections
-   - mixed structural rewrites
-   - one-off preferences with no reusable pattern
+3. Filter out edits that fail the criteria below.
+   - Criteria:
+     1. The human edit preserves technical meaning.
+     2. The improvement is about Japanese quality rather than content policy.
+     3. The rule would help in multiple files, not only this one location.
+     4. The current skill is missing the rule, or its wording is too weak for this pattern.
+     5. The rule can stay brief enough to keep the skill maintainable.
+   - Reject examples:
+     - meaning or factual corrections
+     - mixed structural rewrites
+     - one-off preferences with no reusable pattern
 4. Classify the remaining edits by pattern, such as:
    - translationese or English-tracing phrasing
    - unnatural noun stacking

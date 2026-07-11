@@ -8,7 +8,7 @@ Use source groups to map runtime rules back to their origin without putting cita
 
 ### `khorikov-core`
 
-Primary source: Vladimir Khorikov, _Unit Testing: Principles, Practices, and Patterns_
+Author: Vladimir Khorikov.
 
 Rules:
 
@@ -20,7 +20,7 @@ Rules:
 
 Role: Initial source for the skill's core vocabulary and default rule set.
 
-Adopted ideas:
+## Overall Policy
 
 - Unit tests should support sustainable project growth.
 - Good tests balance regression protection, refactoring resistance, fast feedback, and maintainability.
@@ -43,20 +43,11 @@ Rules:
 
 Role: Local adaptation that turns topic guidance into a purpose-to-review workflow for agents and maintainers.
 
-Adapted ideas:
+## Adapted Policy
 
 - The classical school is treated as a useful default for many domain-heavy systems, not as the only valid approach.
 - Domain logic is treated as a high-value target, not as the only unit-testable target.
 - Integration and database testing material is used only to clarify unit test boundaries.
 - Project context is read before strategy so agents do not generate locally correct but repo-inappropriate tests.
 - Review is modeled as a compressed pass over the same workflow, not as a separate heuristic tree.
-
-## Rejected or not yet adopted
-
-- Framework-specific examples are not carried into the core references.
-- Long examples and historical explanations are not copied into runtime references.
-
-## Open questions
-
-- Whether to add references from _xUnit Test Patterns_ for fixture and test data patterns.
-- Whether to add language-specific notes later without weakening the framework-neutral core.
+- Short examples such as sample code are allowed when they clarify a rule without limiting the skill's behavior to a specific framework.

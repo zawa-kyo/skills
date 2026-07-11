@@ -15,15 +15,16 @@ Review changes with the normal code-review lens first: correctness, regressions,
 2. Read enough surrounding code to understand the existing design, invariants, public contracts, and local style. Do not judge simplicity without context.
 3. Do not modify the worktree or index while reviewing unless the user explicitly asks for fixes. In particular, do not run `git add`, `git restore --staged`, formatting, or other commands that stage, unstage, rewrite, or normalize the reviewed diff.
 4. Conduct a risk review first: bugs, regressions, missing edge cases, broken API contracts, data loss, security issues, performance problems, missing or weak tests, style, and similar concerns.
-5. Review for essential design next:
+5. When the review involves unit tests, testability refactors, mocks, stubs, test doubles, or whether the missing test coverage is appropriate, use `guide-unit-tests` as the supporting skill. Apply its purpose, boundary, strategy, assertion, and maintainability checks instead of treating unit tests as a shallow coverage checklist.
+6. Review for essential design next:
    - Does the change address the root cause, or is it only suppressing the observed failure?
    - Does it preserve existing invariants, or does it add scattered exceptions?
    - Does it remove accidental complexity, or is it merely forcing tests green by adding flags, branches, retries, catches, sleeps, casts, globals, or duplicated logic?
    - Is the abstraction justified by real reuse or complexity reduction?
    - Is the behavior clear at the call site and easy for developers or maintainers other than the implementer to reason about?
-6. Prefer findings that cite specific code locations and explain why they are problems. Avoid style nits unless they affect maintainability or hide a real risk.
-7. When a finding depends on an implied contract, state the assumption explicitly after the findings. If the assumption is weak enough that the risk is only hypothetical, downgrade it to an open question instead of presenting it as a finding.
-8. If the implementation is simple and sound, say so clearly. Do not invent findings to satisfy the review format.
+7. Prefer findings that cite specific code locations and explain why they are problems. Avoid style nits unless they affect maintainability or hide a real risk.
+8. When a finding depends on an implied contract, state the assumption explicitly after the findings. If the assumption is weak enough that the risk is only hypothetical, downgrade it to an open question instead of presenting it as a finding.
+9. If the implementation is simple and sound, say so clearly. Do not invent findings to satisfy the review format.
 
 ## Severity and Confidence
 
@@ -49,6 +50,7 @@ Use the standard code-review shape:
 
 - Lead with findings, ordered by severity.
 - For each finding, include file and line reference, severity, the concrete risk, and the smallest directionally correct fix.
+- For unit-test findings, use the `guide-unit-tests` vocabulary where it clarifies the issue: purpose, behavior under test, unit boundary, dependency handling, assertion quality, determinism, and maintenance cost.
 - Separate "correctness findings" from "simplicity/design findings" only when that makes the review easier to scan.
 - Include open questions or assumptions after findings.
 - State any verification that was not run when it affects confidence in the review.

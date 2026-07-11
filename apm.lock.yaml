@@ -1,9 +1,27 @@
 lockfile_version: '1'
-generated_at: '2026-07-04T09:30:11.346093+00:00'
+generated_at: '2026-07-05T02:30:00.637153+00:00'
 apm_version: 0.22.0
 dependencies:
+- repo_url: _local/bootstrap-repo-docs
+  name: bootstrap-repo-docs
+  version: 0.0.0
+  package_type: claude_skill
+  source: local
+  local_path: ./dev/bootstrap-repo-docs
+- repo_url: _local/edit-existing-document
+  name: edit-existing-document
+  version: 0.1.0
+  package_type: hybrid
+  source: local
+  local_path: ./writing/edit-existing-document
+- repo_url: _local/guide-unit-tests
+  name: guide-unit-tests
+  version: 0.0.0
+  package_type: claude_skill
+  source: local
+  local_path: ./dev/guide-unit-tests
 - repo_url: _local/private
-  name: zawa-kyo-private-skills
+  name: private-skills
   version: 0.1.0
   package_type: skill_bundle
   deployed_files:
@@ -14,13 +32,50 @@ dependencies:
   - .agents/skills/sync-bilingual-docs/SKILL-ja.md
   - .agents/skills/sync-bilingual-docs/SKILL.md
   deployed_file_hashes:
-    .agents/skills/distill-japanese-edits/SKILL-ja.md: sha256:d21868c8f63da0716cd975c53e8bc6b13918d1274a8e0bb654bd6dd1c74b333d
-    .agents/skills/distill-japanese-edits/SKILL.md: sha256:b1378c3ca44aabc48138faa6780bc005cc1e406dbd56acd08404b6ea03dbc1f0
-    .agents/skills/sync-bilingual-docs/SKILL-ja.md: sha256:376c6593676806c61eacd8435619f8f2d028ec61fa4ff17816abace89d257e07
-    .agents/skills/sync-bilingual-docs/SKILL.md: sha256:9b60b60c3b9bdeec9ef7e056636535664a0ee89b9630c31f15d36c8d4d6d6430
+    .agents/skills/distill-japanese-edits/SKILL-ja.md: sha256:9af418f8050c2fcbda47ae5c5448547dc24ea00003b236f803e5146cabb5be48
+    .agents/skills/distill-japanese-edits/SKILL.md: sha256:a6110cb83c4f2500312c903633a82f9805b152b7bc1d597320cac8f9a2e5d913
+    .agents/skills/sync-bilingual-docs/SKILL-ja.md: sha256:cea02ed578f80d2c5103b449f4693fe60d35d4306de3917aedeb305aec440b06
+    .agents/skills/sync-bilingual-docs/SKILL.md: sha256:377efd302e8c5454b6d8aafbcb435745c59dfeb8b9745272210eebe6546eaa2f
   source: local
   local_path: ./private
   is_dev: true
+- repo_url: _local/refine-reasoning-logic
+  name: refine-reasoning-logic
+  version: 0.0.0
+  package_type: claude_skill
+  source: local
+  local_path: ./thinking/refine-reasoning-logic
+- repo_url: _local/review-essential-code
+  name: review-essential-code
+  version: 0.1.0
+  package_type: hybrid
+  source: local
+  local_path: ./dev/review-essential-code
+  declared_license: MIT
+- repo_url: _local/revise-english-writing
+  name: revise-english-writing
+  version: 0.1.0
+  package_type: hybrid
+  source: local
+  local_path: ./writing/revise-english-writing
+- repo_url: _local/revise-japanese-writing
+  name: revise-japanese-writing
+  version: 0.0.0
+  package_type: claude_skill
+  source: local
+  local_path: ./writing/revise-japanese-writing
+- repo_url: _local/suggest-commit-messages
+  name: suggest-commit-messages
+  version: 0.0.0
+  package_type: claude_skill
+  source: local
+  local_path: ./dev/suggest-commit-messages
+- repo_url: _local/summarize-discussion-coherently
+  name: summarize-discussion-coherently
+  version: 0.0.0
+  package_type: claude_skill
+  source: local
+  local_path: ./writing/summarize-discussion-coherently
 - repo_url: anthropics/skills
   name: skills
   host: github.com
