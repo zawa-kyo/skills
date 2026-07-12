@@ -61,3 +61,17 @@ dependencies:
     - zawa-kyo/skills/thinking/refine-reasoning-logic
     - zawa-kyo/skills/writing/revise-japanese-writing
 ```
+
+公開しているスキル一式をまとめて入れる場合は、`zawa-kyo/skills` を指定します。
+
+```sh
+apm install -g zawa-kyo/skills
+```
+
+または、`apm.yml` にコレクション全体を追加します。
+
+```yaml
+dependencies:
+  apm:
+    - zawa-kyo/skills
+```
