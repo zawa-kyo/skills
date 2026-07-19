@@ -59,7 +59,6 @@ apm install -g zawa-kyo/skills/writing/revise-japanese-writing
 dependencies:
   apm:
     - zawa-kyo/skills/dev/guide-unit-tests
-    - zawa-kyo/skills/thinking/apply-adversarial-verification
     - zawa-kyo/skills/thinking/refine-reasoning-logic
     - zawa-kyo/skills/writing/revise-japanese-writing
 ```
