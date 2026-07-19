@@ -62,3 +62,17 @@ dependencies:
     - zawa-kyo/skills/thinking/refine-reasoning-logic
     - zawa-kyo/skills/writing/revise-japanese-writing
 ```
+
+If you want the full public skill collection, use `zawa-kyo/skills` instead:
+
+```sh
+apm install -g zawa-kyo/skills
+```
+
+Or add the collection to `apm.yml`:
+
+```yaml
+dependencies:
+  apm:
+    - zawa-kyo/skills
+```
