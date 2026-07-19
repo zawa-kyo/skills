@@ -27,9 +27,10 @@ zawa-kyo が管理し、[apm](https://github.com/microsoft/apm) 向けに公開�
 
 ## `thinking`
 
-| スキル                   | 詳細                                                           |
-| ------------------------ | -------------------------------------------------------------- |
-| `refine-reasoning-logic` | 未整理の考え、提案、違和感を構造化された壁打ちを通じて深める。 |
+| スキル                             | 詳細                                                                 |
+| ---------------------------------- | -------------------------------------------------------------------- |
+| `apply-adversarial-verification`   | 計画、設計、差分、文書、スキルを新鮮で懐疑的な観点から確認する。     |
+| `refine-reasoning-logic`           | 未整理の考え、提案、違和感を構造化された壁打ちを通じて深める。       |
 
 ## `writing`
 
@@ -58,6 +59,7 @@ apm install -g zawa-kyo/skills/writing/revise-japanese-writing
 dependencies:
   apm:
     - zawa-kyo/skills/dev/guide-unit-tests
+    - zawa-kyo/skills/thinking/apply-adversarial-verification
     - zawa-kyo/skills/thinking/refine-reasoning-logic
     - zawa-kyo/skills/writing/revise-japanese-writing
 ```

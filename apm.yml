@@ -11,6 +11,7 @@ dependencies:
     - ./dev/guide-unit-tests
     - ./dev/review-essential-code
     - ./dev/suggest-commit-messages
+    - ./thinking/apply-adversarial-verification
     - ./thinking/refine-reasoning-logic
     - ./writing/edit-existing-document
     - ./writing/revise-english-writing
