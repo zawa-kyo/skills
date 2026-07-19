@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apply Adversarial Verification"
+  short_description: "Review work from a fresh skeptical context"
+  default_prompt: "Use $apply-adversarial-verification to review the current work against the stated goal, assumptions, scope, verification gaps, and evaluation quality before treating it as done."

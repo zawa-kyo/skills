@@ -7,11 +7,11 @@ targets:
   - agent-skills
 dependencies:
   apm:
-    - ./dev/adversarial-skill-review
     - ./dev/bootstrap-repo-docs
     - ./dev/guide-unit-tests
     - ./dev/review-essential-code
     - ./dev/suggest-commit-messages
+    - ./thinking/apply-adversarial-verification
     - ./thinking/refine-reasoning-logic
     - ./writing/edit-existing-document
     - ./writing/revise-english-writing

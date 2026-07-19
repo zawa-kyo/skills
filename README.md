@@ -20,7 +20,6 @@ Each skill directory contains the English and Japanese skill definitions plus ag
 
 | Skill                     | Description                                                                                             |
 | ------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `adversarial-skill-review` | Add a fresh skeptical review loop to skill creation or improvement before treating the work as done.     |
 | `bootstrap-repo-docs`     | Set up bilingual README and AGENTS docs for a new or minimally scaffolded repository.                   |
 | `guide-unit-tests`        | Guide unit test workflow from purpose and project context through strategy, implementation, and review. |
 | `review-essential-code`   | Review code changes for bugs, regressions, missing tests, and essential maintainability.                |
@@ -28,9 +27,10 @@ Each skill directory contains the English and Japanese skill definitions plus ag
 
 ## `thinking`
 
-| Skill                    | Description                                                                                  |
-| ------------------------ | -------------------------------------------------------------------------------------------- |
-| `refine-reasoning-logic` | Deepen developing thinking, proposals, or unease through structured sounding-board dialogue. |
+| Skill                              | Description                                                                                  |
+| ---------------------------------- | -------------------------------------------------------------------------------------------- |
+| `apply-adversarial-verification`   | Review plans, designs, diffs, documents, or skills from a fresh skeptical context.            |
+| `refine-reasoning-logic`           | Deepen developing thinking, proposals, or unease through structured sounding-board dialogue. |
 
 ## `writing`
 
@@ -58,7 +58,6 @@ Or add one or more skills to `apm.yml`. For example:
 ```yaml
 dependencies:
   apm:
-    - zawa-kyo/skills/dev/adversarial-skill-review
     - zawa-kyo/skills/dev/guide-unit-tests
     - zawa-kyo/skills/thinking/refine-reasoning-logic
     - zawa-kyo/skills/writing/revise-japanese-writing
