@@ -20,6 +20,7 @@ zawa-kyo が管理し、[apm](https://github.com/microsoft/apm) 向けに公開�
 
 | スキル                    | 詳細                                                                                               |
 | ------------------------- | -------------------------------------------------------------------------------------------------- |
+| `adversarial-skill-review` | スキル作成や改善を完了扱いにする前に、新鮮で懐疑的な観点からレビューするループを加える。           |
 | `bootstrap-repo-docs`     | 作成直後か、まだ最小構成のままのリポジトリに対して、README と AGENTS の日英対応文書を整備する。    |
 | `guide-unit-tests`        | 目的とプロジェクト文脈から、単体テストの戦略、実装、レビューまでを支援する。                       |
 | `review-essential-code`   | バグ、リグレッション、テスト不足に加えて、本質的な保守しやすさの観点からコード変更をレビューする。 |
@@ -57,6 +58,7 @@ apm install -g zawa-kyo/skills/writing/revise-japanese-writing
 ```yaml
 dependencies:
   apm:
+    - zawa-kyo/skills/dev/adversarial-skill-review
     - zawa-kyo/skills/dev/guide-unit-tests
     - zawa-kyo/skills/thinking/refine-reasoning-logic
     - zawa-kyo/skills/writing/revise-japanese-writing

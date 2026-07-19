@@ -7,6 +7,7 @@ targets:
   - agent-skills
 dependencies:
   apm:
+    - ./dev/adversarial-skill-review
     - ./dev/bootstrap-repo-docs
     - ./dev/guide-unit-tests
     - ./dev/review-essential-code

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Adversarial Skill Review"
+  short_description: "Review skill changes from a fresh skeptical context"
+  default_prompt: "Use $adversarial-skill-review to review the current skill diff against the stated goal, trigger conditions, bilingual sync requirements, and evaluation quality before treating the work as done."
