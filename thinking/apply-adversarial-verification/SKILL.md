@@ -1,13 +1,13 @@
 ---
 name: apply-adversarial-verification
-description: Add an adversarial review loop before treating a plan, design, document, code change, skill, or other deliverable as done. Use when the user wants a fresh skeptical check, asks for adversarial review or verification, wants to stress-test work against stated criteria, or has completed a long autonomous run and needs gaps reported without style preferences.
+description: Apply adversarial verification before treating a plan, design, document, code change, skill, or other deliverable as done. Use when the user wants a fresh skeptical check, asks for adversarial review or verification, wants to stress-test work against stated criteria, or has completed a long autonomous run and needs gaps reported without style preferences.
 ---
 
 # Apply Adversarial Verification
 
 ## Purpose
 
-Use adversarial review before treating important work as done. The reviewer should examine the result from a fresh, skeptical perspective and try to find correctness gaps, requirement misses, weak assumptions, unsafe scope creep, or evaluation holes. This is not a style review and not a prompt-expansion exercise.
+Apply adversarial verification before treating important work as done. In this skill, adversarial verification means a fresh-context review that tries to disprove the result against the stated goal. The reviewer should examine the result from a skeptical perspective and look for correctness gaps, requirement misses, weak assumptions, unsafe scope creep, or evaluation holes. This is not a style review and not a prompt-expansion exercise.
 
 The goal is to make the conclusion or deliverable stronger by testing whether it satisfies the stated goal, not by adding defensive work for every imaginable case.
 
@@ -34,22 +34,25 @@ Collect the smallest set of inputs that lets the reviewer judge the result on it
 - eval prompts, assertions, or acceptance criteria when they exist
 - constraints such as repository rules, bilingual sync requirements, safety requirements, budgets, or scope boundaries
 
+If the artifact, diff, stated goal, or acceptance criteria are missing, do not claim the work is verified. Report the missing input as a blocking verification gap and ask for the smallest missing material needed to continue.
+
 Do not give the reviewer the implementation reasoning unless it is part of the acceptance criteria. A fresh review is valuable because it sees the artifact, not the path that produced it.
 
 ## Workflow
 
 1. State what work is being reviewed.
 2. State the criteria that count as findings.
-3. Run an independent review, preferably in a fresh subagent context if available.
-4. Ask the reviewer to report only gaps that affect correctness, stated requirements, assumptions, safety, maintainability, or evaluation quality.
-5. Treat style preferences, speculative edge cases, and broader redesign ideas as optional unless they affect the stated goal.
-6. Fix actionable findings that are within scope.
-7. Re-run the adversarial review after meaningful fixes.
-8. Report any remaining accepted risks or unverified checks.
+3. Check that the review inputs are sufficient. If the artifact or criteria are missing, report a blocking verification gap instead of continuing with a shallow review.
+4. Run an independent review, preferably in a fresh subagent context when subagents are available and the active tool or user instructions allow delegation.
+5. Ask the reviewer to report only gaps that affect correctness, stated requirements, assumptions, safety, maintainability, or evaluation quality.
+6. Treat style preferences, speculative edge cases, and broader redesign ideas as optional unless they affect the stated goal.
+7. If the current task includes making changes, fix actionable findings that are within scope. If the user asked only for review, report them without editing.
+8. Re-run the adversarial review after meaningful fixes.
+9. Report any remaining accepted risks or unverified checks.
 
 ## Reviewer Prompt Template
 
-Use a prompt like this for a fresh subagent or independent reviewer:
+Use a prompt like this for a fresh subagent or independent reviewer when delegation is available and allowed:
 
 ```text
 Review the work below from a fresh context.
@@ -110,4 +113,4 @@ Report the review result in the user's language:
 - optional ideas not implemented
 - checks run, including whether a fresh subagent review was actually used
 
-If no fresh subagent or independent reviewer is available, say that the review was an inline adversarial pass and lower confidence accordingly.
+If no fresh subagent or independent reviewer is available or allowed, say that the review was an inline adversarial pass and lower confidence accordingly.
