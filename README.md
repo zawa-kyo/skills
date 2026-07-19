@@ -27,10 +27,10 @@ Each skill directory contains the English and Japanese skill definitions plus ag
 
 ## `thinking`
 
-| Skill                              | Description                                                                                  |
-| ---------------------------------- | -------------------------------------------------------------------------------------------- |
-| `apply-adversarial-verification`   | Review plans, designs, diffs, documents, or skills from a fresh skeptical context.            |
-| `refine-reasoning-logic`           | Deepen developing thinking, proposals, or unease through structured sounding-board dialogue. |
+| Skill                            | Description                                                                                  |
+| -------------------------------- | -------------------------------------------------------------------------------------------- |
+| `apply-adversarial-verification` | Review plans, designs, diffs, documents, or skills from a fresh skeptical context.           |
+| `refine-reasoning-logic`         | Deepen developing thinking, proposals, or unease through structured sounding-board dialogue. |
 
 ## `writing`
 
