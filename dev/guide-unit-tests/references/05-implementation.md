@@ -7,7 +7,7 @@ Trade-off: Follow local framework conventions when they preserve the same behavi
 
 Implement the cases produced by the design step. Do not let framework convenience or mocking tools redefine what the test is meant to protect.
 
-If the code is not testable, include refactoring in the options you consider. Do not make inessential changes such as adding test-only getters. Untestable code always indicates a design problem.
+If the code is not testable, include refactoring in the options you consider. Do not make inessential changes such as adding test-only getters. Untestable code can indicate a design problem, so examine the cause before adding test-only accommodations.
 
 ## Name Tests By Behavior
 
