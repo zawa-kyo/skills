@@ -3,10 +3,11 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "guide-automated-tests から UserRepository の結合テストが割り当てられました。本番環境では PostgreSQL を使っていますが、テストを速くするために SQLite のインメモリデータベースへ置き換え、UserRepository の各メソッドが呼ばれたこともモックで検証する方針です。設計をレビューしてください。",
+      "prompt": "UserRepository の結合テストを設計しています。本番環境では PostgreSQL を使っていますが、テストを速くするために SQLite のインメモリデータベースへ置き換え、UserRepository の各メソッドが呼ばれたこともモックで検証する方針です。設計をレビューしてください。",
       "expected_output": "PostgreSQL に固有のリスクを SQLite で隠さず、UserRepository 内部の呼び出しではなく、実際に永続化された結果を独立して観測する方針を示す。",
       "files": [],
       "expectations": [
+        "上位スキルからの割り当てがなくても、明確な結合テストの依頼として扱う",
         "PostgreSQL と SQLite の差によって保証できない範囲を指摘する",
         "実際の PostgreSQL、または本番環境の振る舞いを再現できる管理下の依存関係を推奨する",
         "UserRepository の内部メソッドが呼ばれたことではなく、永続化された結果を検証する",
@@ -15,7 +16,7 @@
     },
     {
       "id": 2,
-      "prompt": "guide-automated-tests から割り当てられた課題です。添付した UserRepository の実装状況を前提に、結合テストの境界、依存関係、データ分離、観測方法を設計してください。",
+      "prompt": "添付した UserRepository の実装状況を前提に、結合テストの境界、依存関係、データ分離、観測方法を設計してください。",
       "expected_output": "PostgreSQL に固有の、大文字と小文字を区別しない一意制約と ORM のマッピングを実際の PostgreSQL で確認する。並列実行でも衝突しないテスト固有のデータを使い、内部メソッドが呼ばれたことではなく、永続化された結果と重複時の失敗を観測する。",
       "files": ["evals/fixtures/user-repository.md"],
       "expectations": [

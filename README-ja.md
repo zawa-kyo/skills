@@ -21,7 +21,10 @@ zawa-kyo が管理し、[apm](https://github.com/microsoft/apm) 向けに公開�
 | スキル                    | 詳細                                                                                               |
 | ------------------------- | -------------------------------------------------------------------------------------------------- |
 | `bootstrap-repo-docs`     | 作成直後か、まだ最小構成のままのリポジトリに対して、README と AGENTS の日英対応文書を整備する。    |
-| `guide-unit-tests`        | 目的とプロジェクト文脈から、単体テストの戦略、実装、レビューまでを支援する。                       |
+| `guide-automated-tests`   | テストレベルをまたいで検証方法を選び、明確な単体、結合、E2E テストの作業を専門スキルへ委ねる。     |
+| `guide-e2e-tests`         | 利用者から見える問題やシステム全体のリスクに対する E2E テストを設計、実装、レビューする。          |
+| `guide-integration-tests` | 実際の連携やインフラに関するリスクに対する結合テストを設計、実装、レビューする。                   |
+| `guide-unit-tests`        | 明確な振る舞いとリスクに対する単体テストを設計、実装、レビューする。                               |
 | `review-essential-code`   | バグ、リグレッション、テスト不足に加えて、本質的な保守しやすさの観点からコード変更をレビューする。 |
 | `suggest-commit-messages` | staged または unstaged の Git diff から、簡潔な英語の Conventional Commit メッセージを提案する。   |
 
@@ -46,19 +49,21 @@ zawa-kyo が管理し、[apm](https://github.com/microsoft/apm) 向けに公開�
 個別のスキルをグローバルにインストールするには、`zawa-kyo/skills/<category>/<skill>` の形で指定します。
 
 ```sh
-apm install -g zawa-kyo/skills/dev/guide-unit-tests
+apm install -g zawa-kyo/skills/dev/guide-automated-tests
 apm install -g zawa-kyo/skills/thinking/refine-reasoning-logic
 apm install -g zawa-kyo/skills/writing/revise-japanese-writing
 ```
 
 上記は代表例です。ほかのスキルを使う場合は、上の一覧から必要なパスを選んでください。
+テストレベルをまたぐ戦略と三つの専門スキルをまとめて使う場合は、`guide-automated-tests` をインストールします。
+単体、結合、E2E のいずれかに限定された明確な作業だけが必要な場合は、対応する専門スキルを直接インストールできます。
 
 または、必要なスキルを `apm.yml` に追加します。
 
 ```yaml
 dependencies:
   apm:
-    - zawa-kyo/skills/dev/guide-unit-tests
+    - zawa-kyo/skills/dev/guide-automated-tests
     - zawa-kyo/skills/thinking/refine-reasoning-logic
     - zawa-kyo/skills/writing/revise-japanese-writing
 ```

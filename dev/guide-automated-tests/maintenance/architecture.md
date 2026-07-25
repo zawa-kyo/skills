@@ -4,66 +4,57 @@
 
 Testing guidance is split between:
 
-- shared strategy: why to test, which risk matters, and which boundary should carry it
-- level-specific practice: how to design, implement, and review an assigned unit, integration, or E2E responsibility
+- cross-level strategy: which risk matters, what evidence is needed, and which verification approach should provide it
+- level-specific practice: how to design, implement, and review unit, integration, or E2E work
 
-This separation keeps the shared philosophy in one place without turning the head skill into a handbook for every test type.
+This separation keeps shared strategy in one place without making every level-specific request pass through the head skill.
 
 ## Skills
 
-`guide-automated-tests` is the head skill.
-Every automated testing request covered by this skill family starts here, including a request already framed as unit, integration, or E2E work.
-It applies general practices across test levels and inspects product behavior, production code, dependencies, existing tests, constraints, and failure history.
-It then builds a strategy with the user that can detect the relevant failures at an acceptable execution and maintenance cost, and delegates concrete assignments.
+`guide-automated-tests` handles cross-level or uncertain decisions.
+Use it when the appropriate verification approach is unclear, the work spans levels, the requested level may not exercise the mechanism at risk, or the user wants portfolio analysis.
+It may delegate a clear unit, integration, or E2E assignment or handle another outcome directly.
 
-The specialists are:
+The standalone specialists are:
 
-- `guide-unit-tests`: fast, deterministic behavior boundaries and unit-test-specific design
-- `guide-integration-tests`: real collaboration, infrastructure semantics, and controlled process-external dependencies
-- `guide-e2e-tests`: representative externally driven journeys through the project's E2E boundary
+- `guide-unit-tests`: unit-test boundaries, cases, assertions, test doubles, implementation, and review
+- `guide-integration-tests`: real collaboration, infrastructure semantics, controlled process-external dependencies, implementation, and review
+- `guide-e2e-tests`: representative externally driven journeys, environments, reliability, implementation, and review
 
-Each specialist confirms that its assigned boundary still contains the mechanism at risk.
-If not, it explains the gap and returns the cross-level decision to the head skill.
+Each specialist can start from a clear user request or an assignment from the head skill.
+It confirms that its boundary still contains the mechanism at risk.
+If not, it explains the gap and returns the cross-level decision to the caller.
 
 ## Interaction Flow
 
-Every in-scope automated testing request enters through the head skill:
+Requests can enter through the head or a specialist:
 
 ```mermaid
 flowchart TD
-    request[In-scope automated testing request] --> automated[guide-automated-tests]
-    automated --> unit[guide-unit-tests]
-    automated --> integration[guide-integration-tests]
-    automated --> e2e[guide-e2e-tests]
+    request[Automated verification request]
+    request -->|uncertain, cross-level, or portfolio work| automated[guide-automated-tests]
+    request -->|clear level-specific work| specialist[matching specialist]
+    automated -->|clear unit, integration, or E2E assignment| specialist
+    automated -->|another verification outcome| direct[reason from product context]
+    specialist -->|assigned boundary is credible| work[level-specific work]
+    specialist -->|boundary cannot detect the failure| reconsider[return cross-level decision]
 ```
-
-When the requested test level exercises the mechanism needed to detect the relevant failure, the head confirms the behavior, risk, and boundary briefly.
-It then delegates the assignment without forcing a full portfolio analysis.
 
 Delegation does not restart strategy design.
 The head supplies a test assignment, and the specialist applies its level-specific guidance to the same task context.
+A direct request requires only the specialist's scoped boundary check.
 
 ## Package Dependencies
 
-The `guide-automated-tests` package depends on all three specialists, so installing it makes them available.
-Specialist packages do not declare a reverse dependency on the head.
-This one-way relationship follows the interaction flow and avoids a dependency cycle.
+The `guide-automated-tests` package depends on all three specialists, so installing it provides the complete workflow.
+Specialist packages remain independently installable and do not declare a reverse dependency on the head.
+This one-way relationship avoids a dependency cycle while supporting direct specialist use.
 
 ## Shared Decision Contract
 
-The head passes:
-
-- behavior and failure risk
-- selected boundary and reason
-- entry point and included scope
-- dependency treatment
-- observable result
-- required scenarios
-- execution and maintenance constraints
-- risks assigned elsewhere
-
-Specialists own only the rules needed to implement and review that assignment at their level.
-They may repeat a short boundary check, but do not redefine testing purpose, quality criteria, coverage policy, or portfolio shape.
+The runtime handoff contract is defined only in `references/guidance.md`.
+The head creates that assignment before delegation.
+Specialists consume the supplied context without copying or redefining the contract.
 
 ## Extension
 
@@ -71,6 +62,6 @@ Unit, integration, and E2E are useful profiles over entry point, included scope,
 They are not an exhaustive taxonomy.
 
 Add another specialist only when it has distinct recurring design, implementation, and review guidance.
-Add another runtime reference only when agents can select it conditionally, such as for a framework or test domain.
+Do not add a specialist only to classify an occasional verification approach.
 
-Keep design ownership here, source rationale in each skill's `maintenance/sources.md`, and runtime guidance in each `SKILL.md` and its single general reference.
+Keep architecture ownership here, source rationale in each skill's `maintenance/sources.md`, the handoff contract in the head skill's `references/guidance.md`, and runtime level-specific guidance in each specialist.

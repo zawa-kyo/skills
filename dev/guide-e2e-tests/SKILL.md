@@ -1,15 +1,15 @@
 ---
 name: guide-e2e-tests
-description: Design, implement, and review E2E test responsibilities assigned by guide-automated-tests. Apply this specialist after the head skill selects an E2E boundary and passes the behavior, risk, constraints, and intended confidence. Use it for representative journeys, external API or UI entry points, deployment smoke checks, E2E environments and test data, or slow and flaky E2E tests within that assignment. Begin with guide-automated-tests before applying this specialist. This skill does not choose the overall strategy or cover CI configuration, load testing, security testing, or exhaustive UI coverage.
+description: Design, implement, and review E2E tests when the requested E2E boundary can detect the relevant system-wide or externally visible failure. Use it directly for representative journeys, external API or UI entry points, deployment smoke checks, E2E environments and test data, or slow and flaky E2E tests. It can also consume an assignment from guide-automated-tests. Use guide-automated-tests when the appropriate verification approach is unclear, the work spans test levels, or the requested E2E boundary may be wrong. This skill does not choose the overall strategy or cover CI configuration, load testing, security testing, or exhaustive UI coverage.
 ---
 
 # Guide E2E Tests
 
 ## Responsibility
 
-Turn an assigned system-wide or externally visible risk into a small, controlled, and trustworthy set of representative journeys.
+Turn a system-wide or externally visible risk into a small, controlled, and trustworthy set of representative journeys.
 Do not decide the overall test portfolio or repeat detailed cases already protected at narrower boundaries.
-Start from the assignment produced by `guide-automated-tests`.
+Start from a clear user request or an assignment produced by `guide-automated-tests`.
 
 Treat E2E as a project-defined confidence boundary.
 It may use a deployed environment, a separately started full system, or another externally driven arrangement.
@@ -25,8 +25,8 @@ State what is actually included instead of relying on the label.
 6. Implement through supported interfaces with owned state, observable completion, meaningful outcomes, and useful failure evidence.
 7. Review distinct confidence, fidelity, isolation, flakiness, diagnosis, runtime, and cleanup.
 
-When a narrower boundary can provide the same confidence at lower cost, explain the alternative.
-Return cross-level allocation to `guide-automated-tests`.
+When another boundary appears more valuable, explain why the requested E2E boundary is insufficient or wasteful.
+Return cross-level allocation to `guide-automated-tests` when it is available; otherwise state the decision that must be reconsidered.
 
 Read `references/guidance.md` for level-specific journey, environment, reliability, and review guidance.
 For Japanese output or Japanese documentation work, use `references-ja/guidance.md`.

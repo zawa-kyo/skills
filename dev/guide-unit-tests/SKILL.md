@@ -1,15 +1,15 @@
 ---
 name: guide-unit-tests
-description: Design, implement, and review unit test responsibilities assigned by guide-automated-tests. Apply this specialist after the head skill selects a unit-test boundary and passes the behavior, risk, constraints, and intended confidence. Use it to choose cases and assertions, handle test doubles, improve unit tests, or refactor hard-to-test behavior within that assignment. Begin with guide-automated-tests before applying this specialist. This skill does not choose the overall strategy or cover detailed integration, E2E, CI, or framework setup work.
+description: Design, implement, and review unit tests when a unit boundary can credibly protect the requested behavior and risk. Use it directly to choose cases and assertions, handle test doubles, improve unit tests, or refactor hard-to-test behavior. It can also consume an assignment from guide-automated-tests. Use guide-automated-tests when the appropriate verification approach is unclear, the work spans test levels, or controlling dependencies would remove the mechanism at risk. This skill does not choose the overall strategy or cover detailed integration, E2E, CI, or framework setup work.
 ---
 
 # Guide Unit Tests
 
 ## Responsibility
 
-Turn an assigned behavior and risk into a fast, deterministic, independently runnable test that protects observable behavior without unnecessary implementation coupling.
+Turn a behavior and risk into a fast, deterministic, independently runnable test that protects observable behavior without unnecessary implementation coupling.
 Do not decide the overall test portfolio here.
-Start from the assignment produced by `guide-automated-tests`.
+Start from a clear user request or an assignment produced by `guide-automated-tests`.
 
 ## Respect The Existing Design
 
@@ -35,7 +35,8 @@ Do not impose it as a rewrite when the current design is coherent or the test do
 5. Implement with local conventions, using test doubles only for clear roles.
 6. Review behavior coverage, refactoring resistance, determinism, readability, and maintenance cost.
 
-If controlling a dependency removes the mechanism whose failure matters, explain the gap and return the allocation decision to `guide-automated-tests`.
+If controlling a dependency removes the mechanism whose failure matters, explain the gap and return the cross-level decision to `guide-automated-tests` when it is available.
+Otherwise state the decision that must be reconsidered.
 
 Read `references/guidance.md` for unit-specific boundary, dependency, case, implementation, and review guidance.
 For Japanese output or Japanese documentation work, use `references-ja/guidance.md`.

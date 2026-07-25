@@ -8,7 +8,7 @@ targets:
 dependencies:
   apm:
     - ./dev/bootstrap-repo-docs
-    - ./dev/guide-unit-tests
+    - ./dev/guide-automated-tests
     - ./dev/review-essential-code
     - ./dev/suggest-commit-messages
     - ./thinking/apply-adversarial-verification

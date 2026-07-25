@@ -1,6 +1,6 @@
 name: guide-automated-tests
 version: 0.1.0
-description: Lead test strategy and delegate level-specific work.
+description: Choose verification across test levels and delegate clear specialist work.
 author: Kyohei Ozawa
 includes: auto
 dependencies:

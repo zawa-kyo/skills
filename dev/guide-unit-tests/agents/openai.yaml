@@ -1,4 +1,4 @@
 interface:
   display_name: "Guide Unit Tests"
-  short_description: "Handle assigned unit test responsibilities"
-  default_prompt: "Use $guide-unit-tests to turn an assigned behavior and risk into a focused unit boundary, cases, assertions, dependency handling, implementation, and self-review."
+  short_description: "Design and review focused unit tests"
+  default_prompt: "Use $guide-unit-tests to turn a clear behavior and risk into a focused unit boundary, cases, assertions, dependency handling, implementation, and self-review."

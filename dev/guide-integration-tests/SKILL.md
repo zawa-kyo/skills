@@ -1,15 +1,15 @@
 ---
 name: guide-integration-tests
-description: Design, implement, and review integration test responsibilities assigned by guide-automated-tests. Apply this specialist after the head skill selects an integration-test boundary and passes the behavior, risk, constraints, and intended confidence. Use it for real component collaboration, infrastructure, controlled process-external dependencies, test data, or slow and brittle integration tests within that assignment. Begin with guide-automated-tests before applying this specialist. This skill does not choose the overall strategy or cover full user journeys, CI configuration, or framework installation.
+description: Design, implement, and review integration tests when the requested boundary must exercise real collaboration, infrastructure, or a controlled process-external dependency. Use it directly for component collaboration, infrastructure semantics, test data, or slow and brittle integration tests. It can also consume an assignment from guide-automated-tests. Use guide-automated-tests when the appropriate verification approach is unclear, the work spans test levels, or the requested integration boundary may be wrong. This skill does not choose the overall strategy or cover full user journeys, CI configuration, or framework installation.
 ---
 
 # Guide Integration Tests
 
 ## Responsibility
 
-Turn an assigned integration risk into a test that includes the real collaboration needed for confidence while keeping the environment controlled and failures diagnosable.
+Turn an integration risk into a test that includes the real collaboration needed for confidence while keeping the environment controlled and failures diagnosable.
 Do not decide the overall test portfolio here.
-Start from the assignment produced by `guide-automated-tests`.
+Start from a clear user request or an assignment produced by `guide-automated-tests`.
 
 Describe the actual entry point, included components, process-external dependencies, and observations instead of defining integration testing by class count or a universal taxonomy.
 
@@ -22,7 +22,8 @@ Describe the actual entry point, included components, process-external dependenc
 5. Design representative scenarios, independent state, and meaningful observations.
 6. Implement with local conventions and verify confidence, fidelity, diagnosis, runtime, and maintenance cost.
 
-When the assigned boundary removes the mechanism at risk, explain the gap and return the allocation decision to `guide-automated-tests`.
+When the requested boundary removes the mechanism at risk, explain the gap and return the cross-level decision to `guide-automated-tests` when it is available.
+Otherwise state the decision that must be reconsidered.
 Do not simulate away the reason for the test.
 
 Read `references/guidance.md` for level-specific dependency, scenario, implementation, and review guidance.
