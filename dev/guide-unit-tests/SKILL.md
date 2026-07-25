@@ -1,6 +1,6 @@
 ---
 name: guide-unit-tests
-description: Design, implement, and review unit test responsibilities assigned by guide-automated-tests. Apply this specialist after the head skill selects a unit-test boundary and passes the behavior, risk, constraints, and intended confidence. Use it to choose cases and assertions, handle test doubles, improve unit tests, or refactor hard-to-test behavior within that assignment. Start all testing requests with guide-automated-tests. This skill does not choose the overall strategy or cover detailed integration, E2E, CI, or framework setup work.
+description: Design, implement, and review unit test responsibilities assigned by guide-automated-tests. Apply this specialist after the head skill selects a unit-test boundary and passes the behavior, risk, constraints, and intended confidence. Use it to choose cases and assertions, handle test doubles, improve unit tests, or refactor hard-to-test behavior within that assignment. Begin with guide-automated-tests before applying this specialist. This skill does not choose the overall strategy or cover detailed integration, E2E, CI, or framework setup work.
 ---
 
 # Guide Unit Tests

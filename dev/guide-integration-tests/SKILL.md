@@ -1,6 +1,6 @@
 ---
 name: guide-integration-tests
-description: Design, implement, and review integration test responsibilities assigned by guide-automated-tests. Apply this specialist after the head skill selects an integration-test boundary and passes the behavior, risk, constraints, and intended confidence. Use it for real component collaboration, infrastructure, controlled process-external dependencies, test data, or slow and brittle integration tests within that assignment. Start all testing requests with guide-automated-tests. This skill does not choose the overall strategy or cover full user journeys, CI configuration, or framework installation.
+description: Design, implement, and review integration test responsibilities assigned by guide-automated-tests. Apply this specialist after the head skill selects an integration-test boundary and passes the behavior, risk, constraints, and intended confidence. Use it for real component collaboration, infrastructure, controlled process-external dependencies, test data, or slow and brittle integration tests within that assignment. Begin with guide-automated-tests before applying this specialist. This skill does not choose the overall strategy or cover full user journeys, CI configuration, or framework installation.
 ---
 
 # Guide Integration Tests

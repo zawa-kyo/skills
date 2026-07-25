@@ -1,6 +1,6 @@
 ---
 name: guide-e2e-tests
-description: Design, implement, and review E2E test responsibilities assigned by guide-automated-tests. Apply this specialist after the head skill selects an E2E boundary and passes the behavior, risk, constraints, and intended confidence. Use it for representative journeys, external API or UI entry points, deployment smoke checks, E2E environments and test data, or slow and flaky E2E tests within that assignment. Start all testing requests with guide-automated-tests. This skill does not choose the overall strategy or cover CI configuration, load testing, security testing, or exhaustive UI coverage.
+description: Design, implement, and review E2E test responsibilities assigned by guide-automated-tests. Apply this specialist after the head skill selects an E2E boundary and passes the behavior, risk, constraints, and intended confidence. Use it for representative journeys, external API or UI entry points, deployment smoke checks, E2E environments and test data, or slow and flaky E2E tests within that assignment. Begin with guide-automated-tests before applying this specialist. This skill does not choose the overall strategy or cover CI configuration, load testing, security testing, or exhaustive UI coverage.
 ---
 
 # Guide E2E Tests
