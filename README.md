@@ -18,15 +18,15 @@ Each skill directory contains the English and Japanese skill definitions plus ag
 
 ## `dev`
 
-| Skill                     | Description                                                                                              |
-| ------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `bootstrap-repo-docs`     | Set up bilingual README and AGENTS docs for a new or minimally scaffolded repository.                    |
-| `guide-automated-tests`   | Choose verification across test levels and delegate clear unit, integration, or E2E work.                |
-| `guide-e2e-tests`         | Design, implement, and review focused E2E tests for externally visible or system-wide risks.             |
-| `guide-integration-tests` | Design, implement, and review focused integration tests for real collaboration and infrastructure risks. |
-| `guide-unit-tests`        | Design, implement, and review focused unit tests for a clear behavior and risk.                          |
-| `review-essential-code`   | Review code changes for bugs, regressions, missing tests, and essential maintainability.                 |
-| `suggest-commit-messages` | Suggest concise English Conventional Commit messages from staged or unstaged Git diffs.                  |
+| Skill                     | Description                                                                                          |
+| ------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `bootstrap-repo-docs`     | Set up bilingual README and AGENTS docs for a new or minimally scaffolded repository.                |
+| `guide-automated-tests`   | Choose verification across test levels and delegate clear unit, integration, or E2E work.            |
+| `guide-e2e-tests`         | Design, implement, and review E2E tests for externally visible behavior and system-wide operation.   |
+| `guide-integration-tests` | Design, implement, and review integration tests for behavior spanning multiple components or layers. |
+| `guide-unit-tests`        | Design, implement, and review unit tests focused on one behavior.                                    |
+| `review-essential-code`   | Review code changes for bugs, regressions, missing tests, and essential maintainability.             |
+| `suggest-commit-messages` | Suggest concise English Conventional Commit messages from staged or unstaged Git diffs.              |
 
 ## `thinking`
 
