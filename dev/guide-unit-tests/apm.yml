@@ -1,0 +1,5 @@
+name: guide-unit-tests
+version: 0.1.0
+description: Handle assigned unit test design, implementation, and review.
+author: Kyohei Ozawa
+includes: auto

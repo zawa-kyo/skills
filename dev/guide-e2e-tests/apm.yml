@@ -1,0 +1,5 @@
+name: guide-e2e-tests
+version: 0.1.0
+description: Handle assigned end-to-end test design, implementation, and review.
+author: Kyohei Ozawa
+includes: auto

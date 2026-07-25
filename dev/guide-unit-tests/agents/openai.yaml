@@ -1,4 +1,4 @@
 interface:
   display_name: "Guide Unit Tests"
-  short_description: "Guide unit test workflow from purpose to review"
-  default_prompt: "Use $guide-unit-tests to design, implement, or review unit tests from purpose and project context through strategy, cases, assertions, test doubles, implementation, and self-review."
+  short_description: "Handle assigned unit test responsibilities"
+  default_prompt: "Use $guide-unit-tests to turn an assigned behavior and risk into a focused unit boundary, cases, assertions, dependency handling, implementation, and self-review."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Guide Automated Tests"
+  short_description: "Lead testing requests from strategy to delegation"
+  default_prompt: "Use $guide-automated-tests to build an appropriate test strategy from general practices and the product context, then delegate assigned responsibilities to the matching specialist."
