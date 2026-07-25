@@ -2,7 +2,7 @@
 
 ## Boundary And Dependencies
 
-State what narrower tests cannot prove, then specify the entry point, included components, process-external dependencies, exclusions, and observations.
+State the integration behavior and risk, then specify the entry point, included components, process-external dependencies, exclusions, and observations.
 The confidence claim must not extend beyond that boundary.
 
 Classify dependencies by the role they play in the risk, not only by technology or organizational ownership:
@@ -12,7 +12,7 @@ Classify dependencies by the role they play in the risk, not only by technology 
 - Record the remaining gap when a substitute cannot reproduce relevant production behavior.
 
 Managed and unmanaged dependencies are useful vocabulary when the project uses it, not a required model.
-Prefer a production-faithful product and important configuration semantics when vendor, protocol, transaction, query, or persistence behavior is the risk.
+When vendor, protocol, transaction, query, or persistence behavior is at risk, preserve the relevant production product and configuration semantics.
 
 Verify interactions only when communication itself is externally meaningful.
 Observe the owned boundary closest to the external system instead of mocking internal collaborator chains.
@@ -36,6 +36,6 @@ Use helpers for technical setup without hiding the scenario.
 - Assert meaningful output, persisted state, or boundary contracts without reproducing production logic.
 - Use condition-based bounded waiting instead of fixed sleeps.
 - Distinguish environment, arrangement, product, and observation failures.
-- Ensure a maintainer can diagnose the affected boundary from the failure evidence.
+- Provide failure evidence that identifies the affected boundary.
 
 If the real dependency cannot be exercised, keep any useful narrower test and state what remains unverified.

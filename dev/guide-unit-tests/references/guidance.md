@@ -1,8 +1,8 @@
 # Unit Test Guidance
 
-## Assignment And Context
+## Behavior And Context
 
-State the behavior, regression risk, reason a unit test is credible, and risks assigned elsewhere.
+State the behavior, regression risk, reason a unit test is credible, and risks covered elsewhere.
 A unit test should run quickly enough for frequent feedback, remain independent from other tests, avoid uncontrolled shared or process-external state, and expose a meaningful result.
 
 Inspect enough context to identify:
@@ -23,19 +23,19 @@ If the intent remains ambiguous and affects production changes, discuss the inte
 ## Boundary And Dependencies
 
 The unit is the behavior under test, not necessarily one class or method.
-For domain-heavy code, keeping stable collaborators real is a useful default because it tests a coherent behavior.
+For domain-heavy code, keeping stable collaborators real can test a coherent behavior.
 Narrow one-class tests are also valid when local conventions, framework constraints, fault localization, or collaborator volatility justify them.
 
 Control shared and volatile dependencies such as current time, randomness, shared databases, filesystems, remote services, mutable global state, and process-external messaging.
 Do not replace stable in-process collaborators merely because they are separate classes.
 
-Treat these as defaults to test against project evidence, not rules that override a coherent local design.
+Treat these as options to test against project evidence, not rules that override a coherent local design.
 
-Prefer observation in this order when each option expresses the same contract:
+Choose the observation that expresses the contract without exposing irrelevant implementation details:
 
-1. returned output or pure result
-2. externally visible state
-3. communication with a meaningful boundary
+- returned output or pure result
+- externally visible state
+- communication with a meaningful boundary
 
 Use interaction assertions when communication itself is the behavior.
 Do not verify how a stub was queried unless that query is part of the contract.
@@ -68,7 +68,7 @@ Explain larger alternatives and choose a scoped compromise with the user when th
 
 Review in this order:
 
-1. Does the test protect the assigned behavior and risk?
+1. Does the test protect the target behavior and risk?
 2. Does the boundary fit the production responsibilities and confirmed design intent?
 3. Does controlling dependencies preserve the mechanism being tested?
 4. Do assertions observe meaningful behavior rather than implementation steps?

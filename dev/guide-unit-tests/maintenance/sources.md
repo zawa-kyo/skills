@@ -17,11 +17,11 @@ Adopted ideas:
 
 ## Adaptations
 
-- Classical unit testing is a useful default for many domain-heavy systems, not the only valid style.
-- Clean, layered, and onion-style separation is a starting hypothesis when no clearer architecture exists, not authority to rewrite a coherent design.
+- Classical unit testing is one useful option for many domain-heavy systems, not a default that overrides project evidence.
+- When design intent remains unclear, make dependencies and observable behavior explicit with the smallest justified change rather than introducing a preferred architecture.
 - Agents inspect existing architecture first and confirm ambiguous design intent with the user before consequential changes.
 - The specialist owns a scoped boundary check for a clear unit-test request; shared purpose, coverage policy, and cross-level allocation belong to `guide-automated-tests`.
 - Project context is read before strategy so guidance can adapt to local responsibilities and constraints.
-- Review is a compressed pass over assignment, context, boundary, cases, and implementation.
+- Review is a compressed pass over behavior, context, boundary, cases, and implementation.
 
 Add another source when it materially changes or challenges these rules. Do not create rule IDs or a second copy of runtime guidance only for traceability.

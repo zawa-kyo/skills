@@ -1,13 +1,13 @@
 ---
 name: guide-unit-tests
-description: Design, implement, and review unit tests when a unit boundary can credibly protect the requested behavior and risk. Use it directly to choose cases and assertions, handle test doubles, improve unit tests, or refactor hard-to-test behavior. It can also consume an assignment from guide-automated-tests. Use guide-automated-tests when the appropriate verification approach is unclear, the work spans test levels, or controlling dependencies would remove the mechanism at risk. This skill does not choose the overall strategy or cover detailed integration, E2E, CI, or framework setup work.
+description: Design, implement, or review unit tests when a unit boundary can protect the relevant behavior and risk. Use it to choose cases and assertions, handle test doubles, improve existing tests, or refactor hard-to-test behavior. It can work directly from the request or from a guide-automated-tests handoff. Use guide-automated-tests when the verification approach is unclear, the work spans test levels, or controlling dependencies would remove the mechanism at risk. This skill does not choose the overall strategy or cover detailed integration, E2E, CI, or framework setup.
 ---
 
 # Guide Unit Tests
 
 ## Responsibility
 
-Turn a behavior and risk into a fast, deterministic, independently runnable test that protects observable behavior without unnecessary implementation coupling.
+Turn a behavior and risk into a fast, deterministic, independently runnable test that avoids unnecessary implementation coupling.
 Do not decide the overall test portfolio here.
 Start from a clear user request or an assignment produced by `guide-automated-tests`.
 
@@ -23,8 +23,8 @@ If the architecture or its intent is unclear:
 3. Explain how different interpretations affect the test boundary or proposed refactor.
 4. Confirm consequential assumptions with the user.
 
-Clean, layered, or onion-style separation between decisions and effects is a reasonable starting hypothesis when no clearer design exists.
-Do not impose it as a rewrite when the current design is coherent or the test does not justify that scope.
+When design intent remains unclear, prefer the smallest production change that makes dependencies and observable behavior explicit.
+Do not use a test request to impose a new architecture on coherent code.
 
 ## Workflow
 
@@ -36,7 +36,7 @@ Do not impose it as a rewrite when the current design is coherent or the test do
 6. Review behavior coverage, refactoring resistance, determinism, readability, and maintenance cost.
 
 If controlling a dependency removes the mechanism whose failure matters, explain the gap and return the cross-level decision to `guide-automated-tests` when it is available.
-Otherwise state the decision that must be reconsidered.
+Otherwise state what must be reconsidered.
 
 Read `references/guidance.md` for unit-specific boundary, dependency, case, implementation, and review guidance.
 For Japanese output or Japanese documentation work, use `references-ja/guidance.md`.

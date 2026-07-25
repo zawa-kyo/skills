@@ -3,7 +3,7 @@
 ## Boundary And Journeys
 
 Use E2E when confidence depends on an external entry point, system-wide configuration or routing, identity across boundaries, communication across processes, or a critical externally visible outcome.
-Define the actual arrangement and reduce the confidence claim for every replaced, sandboxed, or unavailable dependency.
+Define the actual arrangement and limit the confidence claim to account for replaced, sandboxed, or unavailable dependencies.
 
 Choose a small set of journeys that protect high-impact outcomes and traverse important wiring.
 Keep validation combinations and domain edge cases at narrower levels when possible.
@@ -12,7 +12,7 @@ Distinguish deployment or availability smoke checks from business journeys so th
 ## Environment And State
 
 Record assumptions about version, configuration, endpoints, identity, permissions, data isolation, clocks, asynchronous work, external sandboxes, and observability.
-Fail clearly when a prerequisite is unavailable.
+When a prerequisite is unavailable, report that condition distinctly from a product failure.
 
 Arrange state through public or explicitly supported setup paths.
 Lower-level setup is acceptable when it creates valid reachable state and remains separate from the behavior under test.
@@ -29,7 +29,7 @@ Record real contracts left unverified.
 - Capture enough logs, responses, request identifiers, screenshots, or traces to identify the failing boundary.
 - Redact secrets and sensitive data.
 - Treat repeated flakiness as a defect. Use retries only where the external contract is explicitly retryable.
-- Keep temporary quarantine owned and give it an exit condition.
+- Give every temporary quarantine an owner and an exit condition.
 - Run cleanup after failures where possible without hiding the original failure.
 
 One journey may contain several actions when they form one business or deployment purpose.

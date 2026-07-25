@@ -2,8 +2,8 @@
 
 ## Define The Needed Evidence
 
-Start with the failure to detect and the evidence that would distinguish it from success.
-Do not assume that an automated example-based test or one of the three specialist levels is the answer.
+Start with the relevant failure and the evidence that would distinguish it from success.
+Do not assume that an automated example-based test or one of the three specialists is the answer.
 
 Describe each credible option by:
 
@@ -21,7 +21,7 @@ Use the project's terminology after making the actual boundary explicit.
 
 ## Select For Value
 
-Choose the option or combination that provides enough evidence for the important risk and the best overall value under the user's priorities.
+Choose an option or combination that provides enough evidence for the important risk and balances the user's priorities.
 A narrower boundary is useful when it preserves the mechanism at risk and improves feedback or diagnosis.
 A broader boundary is useful when it provides necessary fidelity or costs less overall than reproducing the same confidence through narrower tests.
 
@@ -53,7 +53,7 @@ They do not establish whether the protected risks are valuable.
 
 ## Prepare A Test Assignment
 
-This section is the definition of the handoff contract.
+Use this section as the sole definition of the handoff contract.
 Pass the specialist:
 
 - behavior and failure risk
@@ -65,4 +65,4 @@ Pass the specialist:
 - execution and maintenance constraints
 - risks assigned elsewhere
 
-Let the specialist inspect local code and framework conventions before implementing.
+The specialist inspects local code and framework conventions before implementing.
