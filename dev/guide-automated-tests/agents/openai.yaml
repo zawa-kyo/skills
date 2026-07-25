@@ -1,0 +1,4 @@
+interface:
+  display_name: "Guide Automated Tests"
+  short_description: "Choose verification across test levels and methods"
+  default_prompt: "Use $guide-automated-tests to choose a verification approach from product risks and constraints, delegate clear unit, integration, or E2E work, and handle other outcomes without forcing those labels."

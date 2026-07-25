@@ -1,0 +1,4 @@
+interface:
+  display_name: "Guide Integration Tests"
+  short_description: "Design and review focused integration tests"
+  default_prompt: "Use $guide-integration-tests to turn a clear integration risk into tests with explicit boundaries, dependency fidelity, test data, and observable outcomes."

@@ -1,0 +1,10 @@
+name: guide-automated-tests
+version: 0.1.0
+description: Choose verification across test levels and delegate clear specialist work.
+author: Kyohei Ozawa
+includes: auto
+dependencies:
+  apm:
+    - zawa-kyo/skills/dev/guide-e2e-tests
+    - zawa-kyo/skills/dev/guide-integration-tests
+    - zawa-kyo/skills/dev/guide-unit-tests

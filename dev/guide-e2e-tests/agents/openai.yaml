@@ -1,0 +1,4 @@
+interface:
+  display_name: "Guide E2E Tests"
+  short_description: "Design and review focused end-to-end tests"
+  default_prompt: "Use $guide-e2e-tests to turn a clear system-wide or externally visible risk into a small reliable set of journeys through the project's E2E boundary."

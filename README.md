@@ -18,12 +18,15 @@ Each skill directory contains the English and Japanese skill definitions plus ag
 
 ## `dev`
 
-| Skill                     | Description                                                                                             |
-| ------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `bootstrap-repo-docs`     | Set up bilingual README and AGENTS docs for a new or minimally scaffolded repository.                   |
-| `guide-unit-tests`        | Guide unit test workflow from purpose and project context through strategy, implementation, and review. |
-| `review-essential-code`   | Review code changes for bugs, regressions, missing tests, and essential maintainability.                |
-| `suggest-commit-messages` | Suggest concise English Conventional Commit messages from staged or unstaged Git diffs.                 |
+| Skill                     | Description                                                                                          |
+| ------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `bootstrap-repo-docs`     | Set up bilingual README and AGENTS docs for a new or minimally scaffolded repository.                |
+| `guide-automated-tests`   | Choose verification across test levels and delegate clear unit, integration, or E2E work.            |
+| `guide-e2e-tests`         | Design, implement, and review E2E tests for externally visible behavior and system-wide operation.   |
+| `guide-integration-tests` | Design, implement, and review integration tests for behavior spanning multiple components or layers. |
+| `guide-unit-tests`        | Design, implement, and review unit tests focused on one behavior.                                    |
+| `review-essential-code`   | Review code changes for bugs, regressions, missing tests, and essential maintainability.             |
+| `suggest-commit-messages` | Suggest concise English Conventional Commit messages from staged or unstaged Git diffs.              |
 
 ## `thinking`
 
@@ -46,19 +49,21 @@ Each skill directory contains the English and Japanese skill definitions plus ag
 Install one skill globally with `zawa-kyo/skills/<category>/<skill>`. For example:
 
 ```sh
-apm install -g zawa-kyo/skills/dev/guide-unit-tests
+apm install -g zawa-kyo/skills/dev/guide-automated-tests
 apm install -g zawa-kyo/skills/thinking/refine-reasoning-logic
 apm install -g zawa-kyo/skills/writing/revise-japanese-writing
 ```
 
 The examples above are representative. Choose other skill paths from the tables above as needed.
+Install `guide-automated-tests` for cross-level strategy and all three testing specialists.
+Install a specialist directly when you only need clear unit, integration, or E2E work.
 
 Or add one or more skills to `apm.yml`. For example:
 
 ```yaml
 dependencies:
   apm:
-    - zawa-kyo/skills/dev/guide-unit-tests
+    - zawa-kyo/skills/dev/guide-automated-tests
     - zawa-kyo/skills/thinking/refine-reasoning-logic
     - zawa-kyo/skills/writing/revise-japanese-writing
 ```

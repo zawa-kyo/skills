@@ -1,0 +1,5 @@
+name: guide-integration-tests
+version: 0.1.0
+description: Design, implement, and review focused integration tests.
+author: Kyohei Ozawa
+includes: auto
