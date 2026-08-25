@@ -33,6 +33,7 @@ zawa-kyo が管理し、[apm](https://github.com/microsoft/apm) 向けに公開�
 | スキル                           | 詳細                                                             |
 | -------------------------------- | ---------------------------------------------------------------- |
 | `apply-adversarial-verification` | 計画、設計、差分、文書、スキルを新鮮で懐疑的な観点から確認する。 |
+| `consider-alternatives-first`    | 前提を検証し、変更へ進む前に3つ以上の案を比較する。             |
 | `refine-reasoning-logic`         | 未整理の考え、提案、違和感を構造化された壁打ちを通じて深める。   |
 
 ## `writing`
@@ -51,6 +52,7 @@ zawa-kyo が管理し、[apm](https://github.com/microsoft/apm) 向けに公開�
 
 ```sh
 apm install -g zawa-kyo/skills/dev/guide-automated-tests
+apm install -g zawa-kyo/skills/thinking/consider-alternatives-first
 apm install -g zawa-kyo/skills/thinking/refine-reasoning-logic
 apm install -g zawa-kyo/skills/writing/revise-japanese-writing
 ```
@@ -65,6 +67,7 @@ apm install -g zawa-kyo/skills/writing/revise-japanese-writing
 dependencies:
   apm:
     - zawa-kyo/skills/dev/guide-automated-tests
+    - zawa-kyo/skills/thinking/consider-alternatives-first
     - zawa-kyo/skills/thinking/refine-reasoning-logic
     - zawa-kyo/skills/writing/revise-japanese-writing
 ```

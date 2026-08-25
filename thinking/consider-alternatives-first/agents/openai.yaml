@@ -1,0 +1,4 @@
+interface:
+  display_name: "Consider Alternatives First"
+  short_description: "Verify assumptions and compare at least three approaches"
+  default_prompt: "Use $consider-alternatives-first to verify assumptions from the conversation, compare at least three approaches, report the findings, and then proceed with the chosen one."

@@ -12,6 +12,7 @@ dependencies:
     - ./dev/review-essential-code
     - ./dev/suggest-commit-messages
     - ./thinking/apply-adversarial-verification
+    - ./thinking/consider-alternatives-first
     - ./thinking/refine-reasoning-logic
     - ./writing/edit-existing-document
     - ./writing/revise-english-writing
