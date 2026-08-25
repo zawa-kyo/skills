@@ -1,0 +1,14 @@
+[tools]
+node = "24"
+
+[tasks.install]
+description = "Install development dependencies"
+run = "npm ci"
+
+[tasks.format]
+description = "Format Markdown files"
+run = "npm run format"
+
+[tasks."format:check"]
+description = "Check Markdown formatting"
+run = "npm run format:check"

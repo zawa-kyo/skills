@@ -4,5 +4,8 @@ apm_modules/
 # APM deployed skill outputs
 .agents/skills/
 
+# Node.js dependencies
+node_modules/
+
 # Chore
 .DS_Store
