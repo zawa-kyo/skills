@@ -1,0 +1,11 @@
+{
+  "name": "agent-skills",
+  "private": true,
+  "scripts": {
+    "format": "prettier \"**/*.md\" --write",
+    "format:check": "prettier \"**/*.md\" --check"
+  },
+  "devDependencies": {
+    "prettier": "3.9.6"
+  }
+}
