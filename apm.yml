@@ -16,6 +16,7 @@ dependencies:
     - ./writing/edit-existing-document
     - ./writing/revise-english-writing
     - ./writing/revise-japanese-writing
+    - ./writing/rewrite-final-plan
     - ./writing/summarize-discussion-coherently
 devDependencies:
   apm:

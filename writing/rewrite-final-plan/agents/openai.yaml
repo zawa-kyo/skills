@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rewrite Final Plan"
+  short_description: "Rewrite revised plans as self-contained final designs"
+  default_prompt: "Use $rewrite-final-plan to rewrite the final design from scratch as if it had been planned that way from the beginning. Write for a new participant with no knowledge of the prior conversation."

@@ -42,6 +42,7 @@ Each skill directory contains the English and Japanese skill definitions plus ag
 | `edit-existing-document`          | Fit edits into an existing document structure without adding duplicate or conflicting guidance.                                       |
 | `revise-english-writing`          | Make English technical prose direct and natural while preserving commands, paths, and identifiers.                                    |
 | `revise-japanese-writing`         | Review and revise Japanese technical prose while preserving commands, paths, and identifiers.                                         |
+| `rewrite-final-plan`              | Rewrite an iteratively revised plan as a self-contained final design for readers without the preceding conversation.                  |
 | `summarize-discussion-coherently` | Turn personal discussion logs into coherent structured summaries with the right organizing framework and unresolved points preserved. |
 
 ## Install
