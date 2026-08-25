@@ -42,6 +42,7 @@ zawa-kyo が管理し、[apm](https://github.com/microsoft/apm) 向けに公開�
 | `edit-existing-document`          | 既存文書の構成に合わせて編集し、重複や矛盾する説明を増やさないようにする。                     |
 | `revise-english-writing`          | コマンド、パス、識別子を保ったまま、英語の技術文書を直接的で自然な文章に整える。               |
 | `revise-japanese-writing`         | コマンド、パス、識別子を保ったまま、日本語の技術文書を確認し、自然で読みやすい日本語に整える。 |
+| `rewrite-final-plan`              | 修正を重ねたプランを、会話の経緯を知らない読者にも伝わる最終設計として書き直す。               |
 | `summarize-discussion-coherently` | 個人の対話ログを、整理フレームを選びつつ、未整理点も残した一貫した構造的な要約にまとめる。     |
 
 ## インストール
