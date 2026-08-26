@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review from Multiple Perspectives"
+  short_description: "Coordinate independent multi-perspective reviews"
+  default_prompt: "Use $review-multi-perspective to coordinate independent reviewers across distinct perspectives and consolidate their findings."
