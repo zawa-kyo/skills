@@ -1,5 +1,5 @@
 lockfile_version: '1'
-generated_at: '2026-08-26T03:33:44.114313+00:00'
+generated_at: '2026-08-26T04:17:44.633501+00:00'
 apm_version: 0.28.0
 dependencies:
 - repo_url: _local/bootstrap-repo-docs
@@ -21,18 +21,45 @@ dependencies:
   name: challenge-completed-work
   version: 0.0.0
   package_type: claude_skill
+  deployed_files:
+  - .agents/skills/challenge-completed-work
+  - .agents/skills/challenge-completed-work/SKILL-ja.md
+  - .agents/skills/challenge-completed-work/SKILL.md
+  - .agents/skills/challenge-completed-work/agents/openai.yaml
+  deployed_file_hashes:
+    .agents/skills/challenge-completed-work/SKILL-ja.md: sha256:4bbd9def1780322baff6cf643fc81387c73ae620a090beb39397b2636f0b1a44
+    .agents/skills/challenge-completed-work/SKILL.md: sha256:20bf8bd05fd834ee96a482d4391bc7369cf2f5b957467f629307e9424bb18dbd
+    .agents/skills/challenge-completed-work/agents/openai.yaml: sha256:2e8cc9bdbe482e5b1d165e0514b904a990df24e53d58d800bf7e8ef67a355d8b
   source: local
   local_path: ./thinking/challenge-completed-work
 - repo_url: _local/compare-distinct-approaches
   name: compare-distinct-approaches
   version: 0.0.0
   package_type: claude_skill
+  deployed_files:
+  - .agents/skills/compare-distinct-approaches
+  - .agents/skills/compare-distinct-approaches/SKILL-ja.md
+  - .agents/skills/compare-distinct-approaches/SKILL.md
+  - .agents/skills/compare-distinct-approaches/agents/openai.yaml
+  deployed_file_hashes:
+    .agents/skills/compare-distinct-approaches/SKILL-ja.md: sha256:50060eeec3c55f67bbb6b61ee87765b35766ee4ada9dee60d907c7c25de8a7eb
+    .agents/skills/compare-distinct-approaches/SKILL.md: sha256:30486168b609691adff22df89eacc51ad2a78d455f676f94deec9e287418b434
+    .agents/skills/compare-distinct-approaches/agents/openai.yaml: sha256:23c8a21e7a5893407913bc7663c3a0f4db001cf4da66691ef3a09bc5a573fbb0
   source: local
   local_path: ./thinking/compare-distinct-approaches
 - repo_url: _local/coordinate-independent-reviews
   name: coordinate-independent-reviews
   version: 0.0.0
   package_type: claude_skill
+  deployed_files:
+  - .agents/skills/coordinate-independent-reviews
+  - .agents/skills/coordinate-independent-reviews/SKILL-ja.md
+  - .agents/skills/coordinate-independent-reviews/SKILL.md
+  - .agents/skills/coordinate-independent-reviews/agents/openai.yaml
+  deployed_file_hashes:
+    .agents/skills/coordinate-independent-reviews/SKILL-ja.md: sha256:7dd78d59582575cce8daebfa9633ac552a85ca491967dfb87684b1e833c8fe13
+    .agents/skills/coordinate-independent-reviews/SKILL.md: sha256:f5387492ec0ab08e14bd5ad5ea181a2b850eae03473884e9dc2a17e9b416e0f2
+    .agents/skills/coordinate-independent-reviews/agents/openai.yaml: sha256:4bba0df9b0eed2e07896f5b329e28b697319b90774cd95b91f66448011edda5d
   source: local
   local_path: ./thinking/coordinate-independent-reviews
 - repo_url: _local/edit-existing-document
@@ -62,18 +89,6 @@ dependencies:
   name: private-skills
   version: 0.1.0
   package_type: skill_bundle
-  deployed_files:
-  - .agents/skills/distill-japanese-edits
-  - .agents/skills/distill-japanese-edits/SKILL-ja.md
-  - .agents/skills/distill-japanese-edits/SKILL.md
-  - .agents/skills/sync-bilingual-docs
-  - .agents/skills/sync-bilingual-docs/SKILL-ja.md
-  - .agents/skills/sync-bilingual-docs/SKILL.md
-  deployed_file_hashes:
-    .agents/skills/distill-japanese-edits/SKILL-ja.md: sha256:9af418f8050c2fcbda47ae5c5448547dc24ea00003b236f803e5146cabb5be48
-    .agents/skills/distill-japanese-edits/SKILL.md: sha256:a6110cb83c4f2500312c903633a82f9805b152b7bc1d597320cac8f9a2e5d913
-    .agents/skills/sync-bilingual-docs/SKILL-ja.md: sha256:cea02ed578f80d2c5103b449f4693fe60d35d4306de3917aedeb305aec440b06
-    .agents/skills/sync-bilingual-docs/SKILL.md: sha256:377efd302e8c5454b6d8aafbcb435745c59dfeb8b9745272210eebe6546eaa2f
   source: local
   local_path: ./private
   is_dev: true
@@ -81,6 +96,15 @@ dependencies:
   name: refine-developing-reasoning
   version: 0.0.0
   package_type: claude_skill
+  deployed_files:
+  - .agents/skills/refine-developing-reasoning
+  - .agents/skills/refine-developing-reasoning/SKILL-ja.md
+  - .agents/skills/refine-developing-reasoning/SKILL.md
+  - .agents/skills/refine-developing-reasoning/agents/openai.yaml
+  deployed_file_hashes:
+    .agents/skills/refine-developing-reasoning/SKILL-ja.md: sha256:5312ac49e02168a6dff65923ea588b5eca861c591324a5bf90f6885dcf2f251e
+    .agents/skills/refine-developing-reasoning/SKILL.md: sha256:ad87963df90ebad99ea3aefec0818b43c74cccb95d390739f4bb006cfc42b606
+    .agents/skills/refine-developing-reasoning/agents/openai.yaml: sha256:ee430521763ff4c0dbb0ddbe30ef2c2549e9949ab358a8b5d1bee25a092eeefa
   source: local
   local_path: ./thinking/refine-developing-reasoning
 - repo_url: _local/review-essential-code
@@ -469,6 +493,114 @@ deployments:
   - ./dev/bootstrap-repo-docs
   active_owner: ./dev/bootstrap-repo-docs
   content_hash: sha256:5a2c53ae45e0a8902d5767933b059c5a9fb8eb9c9a906b89fb353a3e8df9cbfe
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/challenge-completed-work
+  runtime: null
+  scope: project
+  owners:
+  - ./thinking/challenge-completed-work
+  active_owner: ./thinking/challenge-completed-work
+  content_hash: null
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/challenge-completed-work/SKILL-ja.md
+  runtime: null
+  scope: project
+  owners:
+  - ./thinking/challenge-completed-work
+  active_owner: ./thinking/challenge-completed-work
+  content_hash: sha256:4bbd9def1780322baff6cf643fc81387c73ae620a090beb39397b2636f0b1a44
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/challenge-completed-work/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - ./thinking/challenge-completed-work
+  active_owner: ./thinking/challenge-completed-work
+  content_hash: sha256:20bf8bd05fd834ee96a482d4391bc7369cf2f5b957467f629307e9424bb18dbd
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/challenge-completed-work/agents/openai.yaml
+  runtime: null
+  scope: project
+  owners:
+  - ./thinking/challenge-completed-work
+  active_owner: ./thinking/challenge-completed-work
+  content_hash: sha256:2e8cc9bdbe482e5b1d165e0514b904a990df24e53d58d800bf7e8ef67a355d8b
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/compare-distinct-approaches
+  runtime: null
+  scope: project
+  owners:
+  - ./thinking/compare-distinct-approaches
+  active_owner: ./thinking/compare-distinct-approaches
+  content_hash: null
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/compare-distinct-approaches/SKILL-ja.md
+  runtime: null
+  scope: project
+  owners:
+  - ./thinking/compare-distinct-approaches
+  active_owner: ./thinking/compare-distinct-approaches
+  content_hash: sha256:50060eeec3c55f67bbb6b61ee87765b35766ee4ada9dee60d907c7c25de8a7eb
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/compare-distinct-approaches/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - ./thinking/compare-distinct-approaches
+  active_owner: ./thinking/compare-distinct-approaches
+  content_hash: sha256:30486168b609691adff22df89eacc51ad2a78d455f676f94deec9e287418b434
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/compare-distinct-approaches/agents/openai.yaml
+  runtime: null
+  scope: project
+  owners:
+  - ./thinking/compare-distinct-approaches
+  active_owner: ./thinking/compare-distinct-approaches
+  content_hash: sha256:23c8a21e7a5893407913bc7663c3a0f4db001cf4da66691ef3a09bc5a573fbb0
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/coordinate-independent-reviews
+  runtime: null
+  scope: project
+  owners:
+  - ./thinking/coordinate-independent-reviews
+  active_owner: ./thinking/coordinate-independent-reviews
+  content_hash: null
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/coordinate-independent-reviews/SKILL-ja.md
+  runtime: null
+  scope: project
+  owners:
+  - ./thinking/coordinate-independent-reviews
+  active_owner: ./thinking/coordinate-independent-reviews
+  content_hash: sha256:7dd78d59582575cce8daebfa9633ac552a85ca491967dfb87684b1e833c8fe13
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/coordinate-independent-reviews/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - ./thinking/coordinate-independent-reviews
+  active_owner: ./thinking/coordinate-independent-reviews
+  content_hash: sha256:f5387492ec0ab08e14bd5ad5ea181a2b850eae03473884e9dc2a17e9b416e0f2
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/coordinate-independent-reviews/agents/openai.yaml
+  runtime: null
+  scope: project
+  owners:
+  - ./thinking/coordinate-independent-reviews
+  active_owner: ./thinking/coordinate-independent-reviews
+  content_hash: sha256:4bba0df9b0eed2e07896f5b329e28b697319b90774cd95b91f66448011edda5d
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/edit-existing-document
@@ -946,6 +1078,42 @@ deployments:
   - zawa-kyo/skills/dev/guide-unit-tests
   active_owner: zawa-kyo/skills/dev/guide-unit-tests
   content_hash: sha256:4192b02d188ab4d0a18be2cd1e2cf83ffc672326a3e55d2b29304d181baf634d
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/refine-developing-reasoning
+  runtime: null
+  scope: project
+  owners:
+  - ./thinking/refine-developing-reasoning
+  active_owner: ./thinking/refine-developing-reasoning
+  content_hash: null
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/refine-developing-reasoning/SKILL-ja.md
+  runtime: null
+  scope: project
+  owners:
+  - ./thinking/refine-developing-reasoning
+  active_owner: ./thinking/refine-developing-reasoning
+  content_hash: sha256:5312ac49e02168a6dff65923ea588b5eca861c591324a5bf90f6885dcf2f251e
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/refine-developing-reasoning/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - ./thinking/refine-developing-reasoning
+  active_owner: ./thinking/refine-developing-reasoning
+  content_hash: sha256:ad87963df90ebad99ea3aefec0818b43c74cccb95d390739f4bb006cfc42b606
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/refine-developing-reasoning/agents/openai.yaml
+  runtime: null
+  scope: project
+  owners:
+  - ./thinking/refine-developing-reasoning
+  active_owner: ./thinking/refine-developing-reasoning
+  content_hash: sha256:ee430521763ff4c0dbb0ddbe30ef2c2549e9949ab358a8b5d1bee25a092eeefa
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/review-essential-code
@@ -1432,57 +1600,3 @@ deployments:
   - ./writing/summarize-discussion-coherently
   active_owner: ./writing/summarize-discussion-coherently
   content_hash: sha256:1d14c160d7fdeb8cd2d39864643d1bfca7c898963c50845da78c1cb377ada756
-- kind: project-relative
-  target: agents
-  value: .agents/skills/distill-japanese-edits
-  runtime: null
-  scope: project
-  owners:
-  - ./private
-  active_owner: ./private
-  content_hash: null
-- kind: project-relative
-  target: agents
-  value: .agents/skills/distill-japanese-edits/SKILL-ja.md
-  runtime: null
-  scope: project
-  owners:
-  - ./private
-  active_owner: ./private
-  content_hash: sha256:9af418f8050c2fcbda47ae5c5448547dc24ea00003b236f803e5146cabb5be48
-- kind: project-relative
-  target: agents
-  value: .agents/skills/distill-japanese-edits/SKILL.md
-  runtime: null
-  scope: project
-  owners:
-  - ./private
-  active_owner: ./private
-  content_hash: sha256:a6110cb83c4f2500312c903633a82f9805b152b7bc1d597320cac8f9a2e5d913
-- kind: project-relative
-  target: agents
-  value: .agents/skills/sync-bilingual-docs
-  runtime: null
-  scope: project
-  owners:
-  - ./private
-  active_owner: ./private
-  content_hash: null
-- kind: project-relative
-  target: agents
-  value: .agents/skills/sync-bilingual-docs/SKILL-ja.md
-  runtime: null
-  scope: project
-  owners:
-  - ./private
-  active_owner: ./private
-  content_hash: sha256:cea02ed578f80d2c5103b449f4693fe60d35d4306de3917aedeb305aec440b06
-- kind: project-relative
-  target: agents
-  value: .agents/skills/sync-bilingual-docs/SKILL.md
-  runtime: null
-  scope: project
-  owners:
-  - ./private
-  active_owner: ./private
-  content_hash: sha256:377efd302e8c5454b6d8aafbcb435745c59dfeb8b9745272210eebe6546eaa2f
