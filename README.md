@@ -32,10 +32,10 @@ Each skill directory contains the English and Japanese skill definitions plus ag
 
 | Skill                            | Description                                                                                   |
 | -------------------------------- | --------------------------------------------------------------------------------------------- |
-| `apply-adversarial-verification` | Review plans, designs, diffs, documents, or skills from a fresh skeptical context.            |
-| `consider-alternatives-first`    | Verify assumptions and compare at least three approaches before making changes.               |
-| `refine-reasoning-logic`         | Deepen developing thinking, proposals, or unease through structured sounding-board dialogue.  |
-| `review-multi-perspective`       | Coordinate independent reviewers across distinct perspectives and consolidate their findings. |
+| `challenge-completed-work`       | Challenge completed work against its stated goal before accepting it.                         |
+| `compare-distinct-approaches`    | Verify assumptions and compare at least three distinct approaches before making changes.      |
+| `coordinate-independent-reviews` | Coordinate independent reviewers across distinct perspectives and consolidate their findings. |
+| `refine-developing-reasoning`    | Deepen developing ideas and reasoning through structured sounding-board dialogue.             |
 
 ## `writing`
 
@@ -53,7 +53,7 @@ Install one skill globally with `zawa-kyo/skills/<category>/<skill>`. For exampl
 
 ```sh
 apm install -g zawa-kyo/skills/dev/guide-automated-tests
-apm install -g zawa-kyo/skills/thinking/refine-reasoning-logic
+apm install -g zawa-kyo/skills/thinking/refine-developing-reasoning
 apm install -g zawa-kyo/skills/writing/revise-japanese-writing
 ```
 
@@ -67,7 +67,7 @@ Or add one or more skills to `apm.yml`. For example:
 dependencies:
   apm:
     - zawa-kyo/skills/dev/guide-automated-tests
-    - zawa-kyo/skills/thinking/refine-reasoning-logic
+    - zawa-kyo/skills/thinking/refine-developing-reasoning
     - zawa-kyo/skills/writing/revise-japanese-writing
 ```
 

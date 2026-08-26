@@ -1,0 +1,4 @@
+interface:
+  display_name: "Compare Distinct Approaches"
+  short_description: "Verify assumptions and compare distinct approaches"
+  default_prompt: "Use $compare-distinct-approaches to verify assumptions from the conversation, compare at least three distinct approaches, report the findings, and then proceed with the chosen one."

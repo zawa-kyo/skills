@@ -1,9 +1,9 @@
 ---
-name: apply-adversarial-verification
-description: Apply adversarial verification before treating a plan, design, document, code change, skill, or other deliverable as done. Use when the user wants a fresh skeptical check, asks for adversarial review or verification, wants to stress-test work against stated criteria, or has completed a long autonomous run and needs gaps reported without style preferences.
+name: challenge-completed-work
+description: Challenge completed work from a fresh context before treating it as done. Use when the user wants a skeptical check, asks for adversarial review or verification, wants to stress-test a plan, design, document, code change, skill, or other deliverable against stated criteria, or needs gaps reported after a long autonomous run without style preferences.
 ---
 
-# Apply Adversarial Verification
+# Challenge Completed Work
 
 ## Purpose
 

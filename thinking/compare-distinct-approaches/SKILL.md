@@ -1,6 +1,6 @@
 ---
-name: consider-alternatives-first
-description: Challenge assumptions from the conversation before planning or making changes. Use for implementation, fixes, design, or revision work where Codex must verify the premise, develop at least three approaches, report the findings, and choose one before proceeding.
+name: compare-distinct-approaches
+description: Compare distinct approaches after challenging assumptions from the conversation and before planning or making changes. Use for implementation, fixes, design, or revision work where Codex must verify the premise, develop at least three approaches, report the findings, and choose one before proceeding.
 ---
 
 Do not move straight from the conversation's premise to implementation. Treat the proposed diagnosis and fix as assumptions until you check them.

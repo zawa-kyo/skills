@@ -1,22 +1,7 @@
 lockfile_version: '1'
-generated_at: '2026-08-25T07:32:22.940120+00:00'
+generated_at: '2026-08-26T03:33:44.114313+00:00'
 apm_version: 0.28.0
 dependencies:
-- repo_url: _local/apply-adversarial-verification
-  name: apply-adversarial-verification
-  version: 0.0.0
-  package_type: claude_skill
-  deployed_files:
-  - .agents/skills/apply-adversarial-verification
-  - .agents/skills/apply-adversarial-verification/SKILL-ja.md
-  - .agents/skills/apply-adversarial-verification/SKILL.md
-  - .agents/skills/apply-adversarial-verification/agents/openai.yaml
-  deployed_file_hashes:
-    .agents/skills/apply-adversarial-verification/SKILL-ja.md: sha256:49325fd56c80da5a28a1aa64a8d82c44410c45e20f80295bd758cad09dbbbc6d
-    .agents/skills/apply-adversarial-verification/SKILL.md: sha256:2aaba3f321c49e8a70773843ee5f45dfd9251adef1711b927c235ba56db956e0
-    .agents/skills/apply-adversarial-verification/agents/openai.yaml: sha256:5ac3ab5b68a6f4d390e95b42cb6a5c73d47339dc96855161c1ddd191f0cdb8c7
-  source: local
-  local_path: ./thinking/apply-adversarial-verification
 - repo_url: _local/bootstrap-repo-docs
   name: bootstrap-repo-docs
   version: 0.0.0
@@ -32,6 +17,24 @@ dependencies:
     .agents/skills/bootstrap-repo-docs/agents/openai.yaml: sha256:5a2c53ae45e0a8902d5767933b059c5a9fb8eb9c9a906b89fb353a3e8df9cbfe
   source: local
   local_path: ./dev/bootstrap-repo-docs
+- repo_url: _local/challenge-completed-work
+  name: challenge-completed-work
+  version: 0.0.0
+  package_type: claude_skill
+  source: local
+  local_path: ./thinking/challenge-completed-work
+- repo_url: _local/compare-distinct-approaches
+  name: compare-distinct-approaches
+  version: 0.0.0
+  package_type: claude_skill
+  source: local
+  local_path: ./thinking/compare-distinct-approaches
+- repo_url: _local/coordinate-independent-reviews
+  name: coordinate-independent-reviews
+  version: 0.0.0
+  package_type: claude_skill
+  source: local
+  local_path: ./thinking/coordinate-independent-reviews
 - repo_url: _local/edit-existing-document
   name: edit-existing-document
   version: 0.1.0
@@ -74,21 +77,12 @@ dependencies:
   source: local
   local_path: ./private
   is_dev: true
-- repo_url: _local/refine-reasoning-logic
-  name: refine-reasoning-logic
+- repo_url: _local/refine-developing-reasoning
+  name: refine-developing-reasoning
   version: 0.0.0
   package_type: claude_skill
-  deployed_files:
-  - .agents/skills/refine-reasoning-logic
-  - .agents/skills/refine-reasoning-logic/SKILL-ja.md
-  - .agents/skills/refine-reasoning-logic/SKILL.md
-  - .agents/skills/refine-reasoning-logic/agents/openai.yaml
-  deployed_file_hashes:
-    .agents/skills/refine-reasoning-logic/SKILL-ja.md: sha256:ef42d24295a56efd711e66495d309d5a534bf187e134a47c4f92714dfc5189dc
-    .agents/skills/refine-reasoning-logic/SKILL.md: sha256:2e0d160cdc0a4fbd58c5b9ecf573343e5ee133d58235bf76f351c306b2c5a381
-    .agents/skills/refine-reasoning-logic/agents/openai.yaml: sha256:0f02a4a783a6db60c9a3b8b45967eb9bfc0748870377bc571af120f03b970ad2
   source: local
-  local_path: ./thinking/refine-reasoning-logic
+  local_path: ./thinking/refine-developing-reasoning
 - repo_url: _local/review-essential-code
   name: review-essential-code
   version: 0.1.0
@@ -439,42 +433,6 @@ dependencies:
     .agents/skills/revise-japanese-writing/references/idea.md: sha256:7ad6a17514dbc3ba21c0483cf68af57e00256b26bf717a15e10108f66530f04a
   content_hash: sha256:0bb7d3e0afc3cda35d7a697bc0a7a98179fd4b664f856e642532061bcf346a25
 deployments:
-- kind: project-relative
-  target: agent-skills
-  value: .agents/skills/apply-adversarial-verification
-  runtime: null
-  scope: project
-  owners:
-  - ./thinking/apply-adversarial-verification
-  active_owner: ./thinking/apply-adversarial-verification
-  content_hash: null
-- kind: project-relative
-  target: agent-skills
-  value: .agents/skills/apply-adversarial-verification/SKILL-ja.md
-  runtime: null
-  scope: project
-  owners:
-  - ./thinking/apply-adversarial-verification
-  active_owner: ./thinking/apply-adversarial-verification
-  content_hash: sha256:49325fd56c80da5a28a1aa64a8d82c44410c45e20f80295bd758cad09dbbbc6d
-- kind: project-relative
-  target: agent-skills
-  value: .agents/skills/apply-adversarial-verification/SKILL.md
-  runtime: null
-  scope: project
-  owners:
-  - ./thinking/apply-adversarial-verification
-  active_owner: ./thinking/apply-adversarial-verification
-  content_hash: sha256:2aaba3f321c49e8a70773843ee5f45dfd9251adef1711b927c235ba56db956e0
-- kind: project-relative
-  target: agent-skills
-  value: .agents/skills/apply-adversarial-verification/agents/openai.yaml
-  runtime: null
-  scope: project
-  owners:
-  - ./thinking/apply-adversarial-verification
-  active_owner: ./thinking/apply-adversarial-verification
-  content_hash: sha256:5ac3ab5b68a6f4d390e95b42cb6a5c73d47339dc96855161c1ddd191f0cdb8c7
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/bootstrap-repo-docs
@@ -988,42 +946,6 @@ deployments:
   - zawa-kyo/skills/dev/guide-unit-tests
   active_owner: zawa-kyo/skills/dev/guide-unit-tests
   content_hash: sha256:4192b02d188ab4d0a18be2cd1e2cf83ffc672326a3e55d2b29304d181baf634d
-- kind: project-relative
-  target: agent-skills
-  value: .agents/skills/refine-reasoning-logic
-  runtime: null
-  scope: project
-  owners:
-  - ./thinking/refine-reasoning-logic
-  active_owner: ./thinking/refine-reasoning-logic
-  content_hash: null
-- kind: project-relative
-  target: agent-skills
-  value: .agents/skills/refine-reasoning-logic/SKILL-ja.md
-  runtime: null
-  scope: project
-  owners:
-  - ./thinking/refine-reasoning-logic
-  active_owner: ./thinking/refine-reasoning-logic
-  content_hash: sha256:ef42d24295a56efd711e66495d309d5a534bf187e134a47c4f92714dfc5189dc
-- kind: project-relative
-  target: agent-skills
-  value: .agents/skills/refine-reasoning-logic/SKILL.md
-  runtime: null
-  scope: project
-  owners:
-  - ./thinking/refine-reasoning-logic
-  active_owner: ./thinking/refine-reasoning-logic
-  content_hash: sha256:2e0d160cdc0a4fbd58c5b9ecf573343e5ee133d58235bf76f351c306b2c5a381
-- kind: project-relative
-  target: agent-skills
-  value: .agents/skills/refine-reasoning-logic/agents/openai.yaml
-  runtime: null
-  scope: project
-  owners:
-  - ./thinking/refine-reasoning-logic
-  active_owner: ./thinking/refine-reasoning-logic
-  content_hash: sha256:0f02a4a783a6db60c9a3b8b45967eb9bfc0748870377bc571af120f03b970ad2
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/review-essential-code

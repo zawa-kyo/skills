@@ -1,9 +1,9 @@
 ---
-name: review-multi-perspective
+name: coordinate-independent-reviews
 description: Coordinate independent reviews by multiple agents using distinct perspectives, then consolidate evidence-backed findings without hiding disagreements. Use when the user explicitly asks for multiple agents, independent reviewers, or a multi-perspective review. Do not use for an ordinary review.
 ---
 
-# Review from Multiple Perspectives
+# Coordinate Independent Reviews
 
 ## Workflow
 

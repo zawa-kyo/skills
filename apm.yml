@@ -11,10 +11,10 @@ dependencies:
     - ./dev/guide-automated-tests
     - ./dev/review-essential-code
     - ./dev/suggest-commit-messages
-    - ./thinking/apply-adversarial-verification
-    - ./thinking/consider-alternatives-first
-    - ./thinking/refine-reasoning-logic
-    - ./thinking/review-multi-perspective
+    - ./thinking/challenge-completed-work
+    - ./thinking/compare-distinct-approaches
+    - ./thinking/coordinate-independent-reviews
+    - ./thinking/refine-developing-reasoning
     - ./writing/edit-existing-document
     - ./writing/revise-english-writing
     - ./writing/revise-japanese-writing
