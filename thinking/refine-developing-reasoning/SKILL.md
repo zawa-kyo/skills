@@ -1,9 +1,9 @@
 ---
-name: refine-reasoning-logic
+name: refine-developing-reasoning
 description: Refine a user's developing thinking, proposal, document, or unease through structured sounding-board dialogue until the underlying claim, reasoning, tradeoffs, and next questions become clear. Use when the user wants a thinking partner, asks to organize or deepen their thinking, has an early-stage draft or proposal, needs questions that surface untested assumptions, or wants to reach the deeper conclusion behind scattered ideas rather than only summarize or edit text.
 ---
 
-# Refine Reasoning Logic
+# Refine Developing Reasoning
 
 ## Overview
 

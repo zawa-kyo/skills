@@ -1,0 +1,4 @@
+interface:
+  display_name: "Challenge Completed Work"
+  short_description: "Challenge completed work against its stated goals"
+  default_prompt: "Use $challenge-completed-work to challenge the current work against its stated goal, assumptions, scope, verification gaps, and evaluation quality before treating it as done."

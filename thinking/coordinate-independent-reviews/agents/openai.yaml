@@ -1,0 +1,4 @@
+interface:
+  display_name: "Coordinate Independent Reviews"
+  short_description: "Coordinate independent multi-perspective reviews"
+  default_prompt: "Use $coordinate-independent-reviews to coordinate independent reviewers across distinct perspectives and consolidate their findings."
