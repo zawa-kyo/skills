@@ -1,0 +1,20 @@
+{
+  "rules": {
+    "@textlint-ja/preset-ai-writing": {
+      "ai-tech-writing-guideline": false
+    },
+    "preset-ja-technical-writing": {
+      "arabic-kanji-numbers": false,
+      "max-comma": false,
+      "no-mix-dearu-desumasu": {
+        "preferInBody": "",
+        "preferInHeader": "",
+        "preferInList": "",
+        "strict": false
+      },
+      "no-doubled-conjunction": false,
+      "no-exclamation-question-mark": false,
+      "sentence-length": false
+    }
+  }
+}

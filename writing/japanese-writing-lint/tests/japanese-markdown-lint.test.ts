@@ -106,9 +106,11 @@ it("includes untracked files in the Git fallback", () => {
 
 it("runs textlint for Markdown changes and returns diagnostics", () => {
   const valid = runHook("tests/fixtures/valid.md");
+  const dearu = runHook("tests/fixtures/dearu.md");
   const invalid = runHook("tests/fixtures/invalid.md");
 
   expect(valid.status).toBe(0);
+  expect(dearu.status).toBe(0);
   expect(invalid.status).toBe(1);
   expect(invalid.stdout).toMatch(/ja-technical-writing\/no-mix-dearu-desumasu/);
 });
