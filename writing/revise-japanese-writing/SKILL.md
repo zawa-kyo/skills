@@ -17,22 +17,13 @@ This skill is the source of truth for detailed Japanese prose style. Agent-level
 2. Separate prose from literal technical artifacts.
    - Prose: sentences, headings, bullets, explanations, labels.
    - Technical artifacts: command names, file paths, config keys, code identifiers, package names, URLs, examples, and quoted values.
-3. Check whether Node.js and `npx` are available with `command -v node` and `command -v npx`.
-   - If both are available, run textlint through Node.js with `npx`; do not use the textlint MCP server for this skill.
-   - Run this only on Japanese files or on temporary files that contain only the Japanese text being revised.
-   - For file targets, use:
-     `npx --yes --package textlint --package @textlint-ja/textlint-rule-preset-ai-writing --package textlint-rule-preset-ja-technical-writing textlint --rule @textlint-ja/preset-ai-writing --rule preset-ja-technical-writing <target-file>`
-   - For prose that is not already in a file, place only the target text in a temporary Markdown file and run the same command against that file.
-   - Treat lint findings as input for the rewrite, not as automatic edits. Preserve technical meaning and local terminology even when a lint suggestion is too broad.
-   - Use lint to catch mechanical issues such as AI-like structure, redundancy, hype, or technical-writing basics. Do not assume lint can judge whether a translated term sounds natural in Japanese.
-   - If Node.js or `npx` is unavailable, tell the user that this lint check requires Node.js and `npx`, and ask them to make those available before running the lint-assisted pass.
-4. Reflect relevant lint findings, then rewrite prose into fluent Japanese.
-5. Preserve technical artifacts unless the user explicitly asks to rename them.
-6. Keep the repository's existing terminology and tone consistent.
-7. Avoid broad rewrites that change the document's structure or intent unless the user asks for a larger edit.
-8. For long-form prose, articles, guides, or explanatory drafts, review paragraph structure, argument flow, reader load, and unnecessary staging before making sentence-level changes.
-9. After editing, manually review term choice for translated compounds, established names, and unnatural literal renderings that lint may miss.
-10. After editing, search for the targeted awkward terms to confirm the intended cleanup is complete. When `npx` was available, rerun the lint command on the edited Japanese target and address any remaining relevant findings.
+3. Rewrite prose into fluent Japanese.
+4. Preserve technical artifacts unless the user explicitly asks to rename them.
+5. Keep the repository's existing terminology and tone consistent.
+6. Avoid broad rewrites that change the document's structure or intent unless the user asks for a larger edit.
+7. For long-form prose, articles, guides, or explanatory drafts, review paragraph structure, argument flow, reader load, and unnecessary staging before making sentence-level changes.
+8. After editing, manually review term choice for translated compounds, established names, and unnatural literal renderings.
+9. After editing, search for the targeted awkward terms to confirm the intended cleanup is complete.
 
 ## Prose Guidelines
 
@@ -42,7 +33,6 @@ This skill is the source of truth for detailed Japanese prose style. Agent-level
 - Japanese particles carry important meaning. Do not omit them except in intentional quotations, labels, or code-like fragments.
 - Match the surrounding document's tone, especially polite style and plain style.
 - Match established terminology, notation, and symbol usage. Do not mix multiple forms for the same concept.
-- Use lint as a floor, not as the final arbiter. Mechanical checks help with recurring patterns, but natural term choice still requires contextual judgment.
 - Treat style review as defect detection, not aesthetic scoring. Point out concrete risks of ambiguity, inconsistency, translationese, or reader confusion; do not claim to judge beauty, taste, or elegance.
 
 ### Preserve Technical Artifacts
@@ -161,8 +151,6 @@ Follow the surrounding document's format first. For Japanese articles, book-like
 - Are Japanese particles present where natural Japanese requires them?
 - Does the text match the surrounding tone, terminology, notation, and punctuation style?
 - Are abbreviations, loanwords, and technical terms appropriate for the reader and document purpose?
-- Was the documented `npx` lint command run on the Japanese target when Node.js was available, without using the textlint MCP server?
-- Were relevant lint findings reflected without accepting broad suggestions that would distort the document's intent?
 
 ### Terms and Technical Artifacts
 
