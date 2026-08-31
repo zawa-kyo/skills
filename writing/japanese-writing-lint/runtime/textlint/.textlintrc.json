@@ -3,6 +3,9 @@
     "@textlint-ja/preset-ai-writing": {
       "ai-tech-writing-guideline": false
     },
+    "ja-space-between-half-and-full-width": {
+      "space": ["alphabets"]
+    },
     "preset-ja-technical-writing": {
       "arabic-kanji-numbers": false,
       "max-comma": false,

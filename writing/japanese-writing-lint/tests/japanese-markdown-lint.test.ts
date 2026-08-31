@@ -108,9 +108,14 @@ it("runs textlint for Markdown changes and returns diagnostics", () => {
   const valid = runHook("tests/fixtures/valid.md");
   const dearu = runHook("tests/fixtures/dearu.md");
   const invalid = runHook("tests/fixtures/invalid.md");
+  const validSpacing = runHook("tests/fixtures/valid-spacing.md");
+  const invalidSpacing = runHook("tests/fixtures/invalid-spacing.md");
 
   expect(valid.status).toBe(0);
   expect(dearu.status).toBe(0);
   expect(invalid.status).toBe(1);
   expect(invalid.stdout).toMatch(/ja-technical-writing\/no-mix-dearu-desumasu/);
+  expect(validSpacing.status).toBe(0);
+  expect(invalidSpacing.status).toBe(1);
+  expect(invalidSpacing.stdout).toMatch(/ja-space-between-half-and-full-width/);
 });

@@ -12,7 +12,9 @@ The runner uses only Node.js standard-library APIs and invokes textlint as a CLI
 
 ## Rules
 
-The hook keeps the four AI-pattern rules from `@textlint-ja/preset-ai-writing` and reports only actual mixing of `です・ます調` and `である調`. It disables broad technical-writing rules for sentence length, commas, punctuation, and number style because they produced pervasive, context-dependent findings across this repository.
+The hook keeps the four AI-pattern rules from `@textlint-ja/preset-ai-writing` and reports only actual mixing of `です・ます調` and `である調`. It also requires spaces between Japanese text and half-width letters, as in `API で Node.js を使う`.
+
+It disables broad technical-writing rules for sentence length, commas, punctuation, and number style because they produced pervasive, context-dependent findings across this repository.
 
 `ai-tech-writing-guideline` is excluded from the hook. Although the preset configures it as `info`, the rule reports regular textlint errors, so it would still block a hook run. Use it separately when reviewing a document for optional writing suggestions.
 
