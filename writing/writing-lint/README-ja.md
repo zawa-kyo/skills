@@ -28,3 +28,9 @@ runtime/setup.ts               配置先の runtime をセットアップする�
 ```sh
 mise run test
 ```
+
+静的型チェックは次のコマンドで実行する。
+
+```sh
+mise run typecheck
+```

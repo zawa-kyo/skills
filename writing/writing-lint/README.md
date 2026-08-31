@@ -28,3 +28,9 @@ Run the package tests from the repository root:
 ```sh
 mise run test
 ```
+
+Run static type checks with:
+
+```sh
+mise run typecheck
+```
