@@ -134,6 +134,7 @@ Apply these checks when revising long-form prose, articles, guides, or explanati
 Follow the surrounding document's format first. For Japanese articles, book-like drafts, and explanatory Markdown without an existing house style, prefer these defaults:
 
 - Use one sentence per line when it improves reviewability and does not conflict with the project style.
+- Do not wrap prose at an arbitrary character count. Break lines only at sentence or semantic boundaries when doing so improves reviewability.
 - Put code, diffs, logs, and configuration fragments in fenced code blocks.
 - Use footnotes for side notes that would interrupt the main argument.
 - Use bold text mainly for first definitions or important logical distinctions; do not use it as decoration.
@@ -173,6 +174,7 @@ Follow the surrounding document's format first. For Japanese articles, book-like
 - Are distinct causes, decisions, and problem types separated instead of being merged into a vague category?
 - Did the edit remove empty emphasis, theatrical setup, vague actors, and redundant summary sentences?
 - Did formatting choices follow the local document style before applying long-form prose defaults?
+- Are prose line breaks at sentence or semantic boundaries rather than arbitrary character counts?
 
 ## References
 
