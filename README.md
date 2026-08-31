@@ -50,9 +50,9 @@ Hook packages use the same category directories but remain independent APM packa
 
 ## Hook Packages
 
-| Package        | Location               | Description                                                      |
-| -------------- | ---------------------- | ---------------------------------------------------------------- |
-| `writing-lint` | `writing/writing-lint` | Run textlint after Claude Code or Codex changes a Markdown file. |
+| Package                 | Location                        | Description                                                               |
+| ----------------------- | ------------------------------- | ------------------------------------------------------------------------- |
+| `japanese-writing-lint` | `writing/japanese-writing-lint` | Run Japanese textlint after Claude Code or Codex changes a Markdown file. |
 
 ## Install
 
@@ -80,17 +80,17 @@ dependencies:
 
 ### Markdown Lint Hook
 
-The `writing-lint` hook requires Node.js 22.18 or later. Install it into a project for the harnesses you use:
+The `japanese-writing-lint` hook requires Node.js 22.18 or later. Install it into a project for the harnesses you use:
 
 ```sh
-apm install zawa-kyo/skills/writing/writing-lint --target claude,codex
+apm install zawa-kyo/skills/writing/japanese-writing-lint --target claude,codex
 ```
 
 APM deploys one hook bundle for each target. Run the setup script in each deployed bundle to install the dependencies pinned by its lock file:
 
 ```sh
-node .claude/hooks/writing-lint/runtime/setup.ts
-node .codex/hooks/writing-lint/runtime/setup.ts
+node .claude/hooks/japanese-writing-lint/runtime/setup.ts
+node .codex/hooks/japanese-writing-lint/runtime/setup.ts
 ```
 
 Run only the setup command for each target you enabled. The hook reads `PostToolUse` payloads, lints changed `*.md` files, and returns diagnostics without applying fixes.

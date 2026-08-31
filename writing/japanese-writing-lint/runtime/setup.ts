@@ -62,7 +62,7 @@ function installManifest(lock: PackageLock): Record<string, unknown> {
 
 if (!supportsTypeStripping(process.versions.node)) {
   console.error(
-    `[markdown-lint] Node.js 22.18 or later is required; found ${process.versions.node}.`,
+    `[japanese-markdown-lint] Node.js 22.18 or later is required; found ${process.versions.node}.`,
   );
   process.exitCode = 1;
 } else {
@@ -88,7 +88,7 @@ if (!supportsTypeStripping(process.versions.node)) {
     status = result.status ?? 1;
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
-    console.error(`[markdown-lint] setup failed: ${message}`);
+    console.error(`[japanese-markdown-lint] setup failed: ${message}`);
   } finally {
     writeFileSync(packagePath, originalPackage);
   }

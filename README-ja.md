@@ -50,9 +50,9 @@ Hook は同じカテゴリの配下に、独立した APM パッケージとし�
 
 ## Hook パッケージ
 
-| パッケージ     | 配置                   | 用途                                                                      |
-| -------------- | ---------------------- | ------------------------------------------------------------------------- |
-| `writing-lint` | `writing/writing-lint` | Claude Code または Codex が Markdown を変更した後に textlint を実行する。 |
+| パッケージ              | 配置                            | 用途                                                                                    |
+| ----------------------- | ------------------------------- | --------------------------------------------------------------------------------------- |
+| `japanese-writing-lint` | `writing/japanese-writing-lint` | Claude Code または Codex が Markdown を変更した後に、日本語向けの textlint を実行する。 |
 
 ## インストール
 
@@ -82,17 +82,17 @@ dependencies:
 
 ### Markdown lint Hook
 
-`writing-lint` を使うには Node.js 22.18 以降が必要です。使用する実行環境を指定し、プロジェクトへインストールします。
+`japanese-writing-lint` を使うには Node.js 22.18 以降が必要です。使用する実行環境を指定し、プロジェクトへインストールします。
 
 ```sh
-apm install zawa-kyo/skills/writing/writing-lint --target claude,codex
+apm install zawa-kyo/skills/writing/japanese-writing-lint --target claude,codex
 ```
 
 APM は実行環境ごとに Hook を配置します。各 Hook の配置先でセットアップスクリプトを実行し、lock ファイルでバージョンを固定した依存関係をインストールします。
 
 ```sh
-node .claude/hooks/writing-lint/runtime/setup.ts
-node .codex/hooks/writing-lint/runtime/setup.ts
+node .claude/hooks/japanese-writing-lint/runtime/setup.ts
+node .codex/hooks/japanese-writing-lint/runtime/setup.ts
 ```
 
 有効化した実行環境で、対応するセットアップコマンドだけを実行してください。Hook は `PostToolUse` の payload を読み取り、変更された `*.md` を lint します。自動修正は行わず、違反内容をエージェントに返します。

@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"${PLUGIN_ROOT}/runtime/markdown-lint.ts\"",
+            "command": "node \"${PLUGIN_ROOT}/runtime/japanese-markdown-lint.ts\"",
             "timeout": 15
           }
         ]

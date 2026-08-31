@@ -12,12 +12,12 @@ import {
   getGitDiffFiles,
   isMarkdown,
   runTextlint,
-} from "../runtime/markdown-lint.ts";
+} from "../runtime/japanese-markdown-lint.ts";
 
 const packageRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
 function runHook(filePath: string) {
-  return spawnSync(process.execPath, ["runtime/markdown-lint.ts"], {
+  return spawnSync(process.execPath, ["runtime/japanese-markdown-lint.ts"], {
     cwd: packageRoot,
     encoding: "utf8",
     input: JSON.stringify({ cwd: packageRoot, tool_input: { file_path: filePath } }),
@@ -71,18 +71,18 @@ it("uses the payload cwd and recognizes only Markdown files", () => {
 });
 
 it("reports a missing textlint config as a runtime error", () => {
-  const result = runTextlint(["README.md"], process.cwd(), "/tmp/markdown-lint-without-config");
+  const result = runTextlint(["README.md"], process.cwd(), "/tmp/japanese-markdown-lint-without-config");
 
   expect(result).toEqual({
     kind: "runtime-error",
-    message: "[markdown-lint] textlint config was not found: /tmp/markdown-lint-without-config/textlint/.textlintrc.json",
+    message: "[japanese-markdown-lint] textlint config was not found: /tmp/japanese-markdown-lint-without-config/textlint/.textlintrc.json",
   });
 });
 
 it("distinguishes textlint runtime failures from lint diagnostics", () => {
   expect(classifyTextlintExit(1, "", "ConfigurationError")).toEqual({
     kind: "runtime-error",
-    message: "[markdown-lint] textlint failed: ConfigurationError",
+    message: "[japanese-markdown-lint] textlint failed: ConfigurationError",
   });
   expect(classifyTextlintExit(1, "README.md:1:1 error", "")).toEqual({
     kind: "lint-error",
@@ -91,7 +91,7 @@ it("distinguishes textlint runtime failures from lint diagnostics", () => {
 });
 
 it("includes untracked files in the Git fallback", () => {
-  const repository = mkdtempSync(resolve(tmpdir(), "markdown-lint-git-"));
+  const repository = mkdtempSync(resolve(tmpdir(), "japanese-markdown-lint-git-"));
 
   try {
     spawnSync("git", ["init", "--quiet"], { cwd: repository });

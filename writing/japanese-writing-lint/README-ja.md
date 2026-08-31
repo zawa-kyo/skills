@@ -1,6 +1,6 @@
-# writing-lint
+# japanese-writing-lint
 
-`writing-lint` は、Claude Code または Codex が Markdown ファイルを変更した後に、日本語向けの textlint を実行する APM の Hook パッケージである。
+`japanese-writing-lint` は、Claude Code または Codex が Markdown ファイルを変更した後に、日本語向けの textlint を実行する APM の Hook パッケージである。
 
 ## 設計
 
@@ -21,8 +21,8 @@ Hook では、`@textlint-ja/preset-ai-writing` の AI らしい表現を検出�
 runtime には Node.js 22.18 以降が必要である。`runtime/package-lock.json` で textlint と rule preset のバージョンを固定する。Hook を配置した後、配置先ごとに `runtime/setup.ts` を実行して runtime 依存関係をインストールする。このスクリプトは runtime 依存関係だけをインストールし、Vitest はパッケージのテストにだけ使う。
 
 ```text
-.apm/hooks/markdown-lint.json  Hook 定義
-runtime/markdown-lint.ts       payload 処理と textlint の実行
+.apm/hooks/japanese-markdown-lint.json  Hook 定義
+runtime/japanese-markdown-lint.ts       payload 処理と textlint の実行
 runtime/textlint/              パッケージ固有の textlint 設定
 runtime/setup.ts               配置先の runtime をセットアップするスクリプト
 ```

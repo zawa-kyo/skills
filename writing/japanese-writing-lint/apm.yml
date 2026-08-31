@@ -1,6 +1,6 @@
-name: writing-lint
+name: japanese-writing-lint
 version: 0.1.0
-description: Run textlint after Markdown edits in Claude Code and Codex.
+description: Run Japanese textlint after Markdown edits in Claude Code and Codex.
 author: Kyohei Ozawa
 license: MIT
 includes: auto

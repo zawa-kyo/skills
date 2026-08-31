@@ -182,12 +182,12 @@ dependencies:
     .agents/skills/summarize-discussion-coherently/agents/openai.yaml: sha256:1d14c160d7fdeb8cd2d39864643d1bfca7c898963c50845da78c1cb377ada756
   source: local
   local_path: ./writing/summarize-discussion-coherently
-- repo_url: _local/writing-lint
-  name: writing-lint
+- repo_url: _local/japanese-writing-lint
+  name: japanese-writing-lint
   version: 0.1.0
   package_type: apm_package
   source: local
-  local_path: ./writing/writing-lint
+  local_path: ./writing/japanese-writing-lint
   declared_license: MIT
 - repo_url: anthropics/skills
   name: skill-creator

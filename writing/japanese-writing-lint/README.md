@@ -1,6 +1,6 @@
-# writing-lint
+# japanese-writing-lint
 
-`writing-lint` is an APM hook package that runs Japanese textlint checks after Claude Code or Codex changes a Markdown file.
+`japanese-writing-lint` is an APM hook package that runs Japanese textlint checks after Claude Code or Codex changes a Markdown file.
 
 ## Design
 
@@ -21,8 +21,8 @@ The hook keeps the four AI-pattern rules from `@textlint-ja/preset-ai-writing` a
 The runtime requires Node.js 22.18 or later. `runtime/package-lock.json` pins textlint and its rule presets. Run `runtime/setup.ts` in each deployed hook bundle to install those runtime dependencies. The setup script installs only runtime dependencies; Vitest is used only for package tests.
 
 ```text
-.apm/hooks/markdown-lint.json  Hook definition
-runtime/markdown-lint.ts       Payload handling and textlint invocation
+.apm/hooks/japanese-markdown-lint.json  Hook definition
+runtime/japanese-markdown-lint.ts       Payload handling and textlint invocation
 runtime/textlint/              Package-owned textlint configuration
 runtime/setup.ts               Deployed runtime setup
 ```

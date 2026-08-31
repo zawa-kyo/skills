@@ -284,14 +284,14 @@ export function classifyTextlintExit(
   if (status === null) {
     return {
       kind: "runtime-error",
-      message: "[markdown-lint] textlint was terminated by a signal.",
+      message: "[japanese-markdown-lint] textlint was terminated by a signal.",
     };
   }
 
   if (stdout.trim().length === 0 && stderr.trim().length > 0) {
     return {
       kind: "runtime-error",
-      message: `[markdown-lint] textlint failed: ${stderr.trim()}`,
+      message: `[japanese-markdown-lint] textlint failed: ${stderr.trim()}`,
     };
   }
 
@@ -315,7 +315,7 @@ export function runTextlint(
   if (!existsSync(config)) {
     return {
       kind: "runtime-error",
-      message: `[markdown-lint] textlint config was not found: ${config}`,
+      message: `[japanese-markdown-lint] textlint config was not found: ${config}`,
     };
   }
 
@@ -330,7 +330,7 @@ export function runTextlint(
       return {
         kind: "runtime-error",
         message:
-          "[markdown-lint] textlint executable was not found. Run the deployed runtime/setup.ts script before using this hook.",
+          "[japanese-markdown-lint] textlint executable was not found. Run the deployed runtime/setup.ts script before using this hook.",
       };
     }
   }
@@ -344,7 +344,7 @@ export function runTextlint(
   if (result.error) {
     return {
       kind: "runtime-error",
-      message: `[markdown-lint] could not start textlint: ${result.error.message}`,
+      message: `[japanese-markdown-lint] could not start textlint: ${result.error.message}`,
     };
   }
 
@@ -386,7 +386,7 @@ export async function main(): Promise<number> {
     input = await readHookInput();
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
-    console.error(`[markdown-lint] ignoring invalid hook payload: ${message}`);
+    console.error(`[japanese-markdown-lint] ignoring invalid hook payload: ${message}`);
     return 0;
   }
 
