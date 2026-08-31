@@ -12,3 +12,8 @@ run = "npm run format"
 [tasks."format:check"]
 description = "Check Markdown formatting"
 run = "npm run format:check"
+
+[tasks.test]
+description = "Run automated tests"
+dir = "writing/writing-lint/runtime"
+run = "npm test"
