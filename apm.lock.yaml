@@ -1,5 +1,5 @@
 lockfile_version: '1'
-generated_at: '2026-08-26T04:17:44.633501+00:00'
+generated_at: '2026-08-30T14:52:38.804275+00:00'
 apm_version: 0.28.0
 dependencies:
 - repo_url: _local/bootstrap-repo-docs
@@ -182,6 +182,13 @@ dependencies:
     .agents/skills/summarize-discussion-coherently/agents/openai.yaml: sha256:1d14c160d7fdeb8cd2d39864643d1bfca7c898963c50845da78c1cb377ada756
   source: local
   local_path: ./writing/summarize-discussion-coherently
+- repo_url: _local/writing-lint
+  name: writing-lint
+  version: 0.1.0
+  package_type: apm_package
+  source: local
+  local_path: ./writing/writing-lint
+  declared_license: MIT
 - repo_url: anthropics/skills
   name: skill-creator
   host: github.com

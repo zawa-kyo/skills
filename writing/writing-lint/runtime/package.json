@@ -1,0 +1,16 @@
+{
+  "name": "writing-lint",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "test": "node --test ../tests/*.test.ts"
+  },
+  "dependencies": {
+    "@textlint-ja/textlint-rule-preset-ai-writing": "1.7.0",
+    "textlint": "15.8.0",
+    "textlint-rule-preset-ja-technical-writing": "12.0.2"
+  }
+}

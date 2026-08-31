@@ -20,6 +20,7 @@ dependencies:
     - ./writing/revise-japanese-writing
     - ./writing/rewrite-final-plan
     - ./writing/summarize-discussion-coherently
+    - ./writing/writing-lint
 devDependencies:
   apm:
     - ./private
