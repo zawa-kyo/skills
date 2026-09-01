@@ -90,15 +90,20 @@ it("distinguishes textlint runtime failures from lint diagnostics", () => {
   });
 });
 
-it("includes untracked files in the Git fallback", () => {
+it("includes staged and untracked files in the Git fallback", () => {
   const repository = mkdtempSync(resolve(tmpdir(), "japanese-markdown-lint-git-"));
 
   try {
     spawnSync("git", ["init", "--quiet"], { cwd: repository });
     mkdirSync(resolve(repository, "docs"));
+    writeFileSync(resolve(repository, "docs/staged.md"), "# Staged\n");
     writeFileSync(resolve(repository, "docs/new.md"), "# New\n");
+    spawnSync("git", ["add", "docs/staged.md"], { cwd: repository });
 
-    expect(getGitDiffFiles(repository)).toEqual(["docs/new.md"]);
+    expect(getGitDiffFiles(repository)).toEqual([
+      "docs/staged.md",
+      "docs/new.md",
+    ]);
   } finally {
     rmSync(repository, { force: true, recursive: true });
   }
@@ -113,11 +118,11 @@ it("runs textlint for Markdown changes and returns diagnostics", () => {
 
   expect(valid.status).toBe(0);
   expect(dearu.status).toBe(0);
-  expect(invalid.status).toBe(1);
-  expect(invalid.stdout).toMatch(/ja-technical-writing\/no-mix-dearu-desumasu/);
+  expect(invalid.status).toBe(2);
+  expect(invalid.stderr).toMatch(/ja-technical-writing\/no-mix-dearu-desumasu/);
   expect(validSpacing.status).toBe(0);
-  expect(invalidSpacing.status).toBe(1);
-  expect(invalidSpacing.stdout).toMatch(/ja-space-between-half-and-full-width/);
-  expect(invalidSpacing.stdout).toMatch(/ja-space-around-link/);
-  expect(invalidSpacing.stdout).toMatch(/ja-space-around-code/);
+  expect(invalidSpacing.status).toBe(2);
+  expect(invalidSpacing.stderr).toMatch(/ja-space-between-half-and-full-width/);
+  expect(invalidSpacing.stderr).toMatch(/ja-space-around-link/);
+  expect(invalidSpacing.stderr).toMatch(/ja-space-around-code/);
 });

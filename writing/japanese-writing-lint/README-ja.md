@@ -6,9 +6,9 @@
 
 Hook は `PostToolUse` で実行する。実行環境に共通の Hook 定義は TypeScript runner を起動するだけにし、Claude Code と Codex の payload の違いは runner で扱う。
 
-runner は Hook payload から変更されたパスを取り出し、存在する `*.md` だけを lint する。payload から利用できるパスを取得できない場合は、Git の変更ファイルと未追跡ファイルを fallback として使う。`*.mdx` は対象にせず、`textlint --fix` による自動書き換えもしない。
+runner は Hook payload から変更されたパスを取り出し、存在する `*.md` だけを lint する。payload から利用できるパスを取得できない場合は、Git のステージ済み、未ステージング、未追跡のファイルを fallback として使う。`*.mdx` は対象にせず、`textlint --fix` による自動書き換えもしない。
 
-runner は Node.js 標準ライブラリだけを使い、textlint を CLI として実行する。パッケージに含まれる設定を明示して使うため、対象プロジェクトの textlint 設定は結果へ影響しない。lint 違反では textlint の終了ステータスを維持し、セットアップや設定の不足といった runtime 障害は別の終了ステータスで返す。
+runner は Node.js 標準ライブラリだけを使い、textlint を CLI として実行する。パッケージに含まれる設定を明示して使うため、対象プロジェクトの textlint 設定は結果へ影響しない。lint 違反は `PostToolUse` のエラーとして返し、エージェントが指摘を読んで修正できるようにする。セットアップや設定の不足といった runtime 障害は、専用のメッセージで区別する。
 
 ## ルール
 

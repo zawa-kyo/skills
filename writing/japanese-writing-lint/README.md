@@ -6,9 +6,9 @@
 
 The hook runs on `PostToolUse`. Its harness-neutral definition only starts the TypeScript runner; the runner handles payload differences between Claude Code and Codex.
 
-The runner extracts changed paths from the hook payload and lints only existing `*.md` files. When the payload has no usable path, it falls back to Git's changed and untracked files. It does not lint `*.mdx` files or rewrite files with `textlint --fix`.
+The runner extracts changed paths from the hook payload and lints only existing `*.md` files. When the payload has no usable path, it falls back to Git's staged, unstaged, and untracked files. It does not lint `*.mdx` files or rewrite files with `textlint --fix`.
 
-The runner uses only Node.js standard-library APIs and invokes textlint as a CLI. It resolves the package's own configuration, so a target project's textlint configuration does not affect the result. Lint diagnostics preserve textlint's nonzero exit status; runtime failures, such as a missing setup or configuration, return a distinct error status.
+The runner uses only Node.js standard-library APIs and invokes textlint as a CLI. It resolves the package's own configuration, so a target project's textlint configuration does not affect the result. It reports lint violations as `PostToolUse` errors so the agent can read and fix them. Dedicated messages distinguish runtime failures such as a missing setup or configuration.
 
 ## Rules
 

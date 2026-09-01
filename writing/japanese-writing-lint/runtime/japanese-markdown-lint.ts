@@ -196,15 +196,23 @@ function existingMarkdownFiles(files: string[], cwd: string): string[] {
 }
 
 /**
- * Returns changed and untracked Git paths when a hook payload has no usable path.
+ * Returns staged, unstaged, and untracked Git paths when a hook payload has no usable path.
  *
  * @param cwd - Repository directory in which to run Git.
  * @returns Unique repository-relative paths, or an empty array when Git fails.
  */
 export function getGitDiffFiles(cwd: string): string[] {
-  const changed = spawnSync(
+  const unstaged = spawnSync(
     "git",
     ["diff", "--name-only", "--diff-filter=ACMR"],
+    {
+      cwd,
+      encoding: "utf8",
+    },
+  );
+  const staged = spawnSync(
+    "git",
+    ["diff", "--cached", "--name-only", "--diff-filter=ACMR"],
     {
       cwd,
       encoding: "utf8",
@@ -220,8 +228,10 @@ export function getGitDiffFiles(cwd: string): string[] {
   );
 
   if (
-    changed.error ||
-    changed.status !== 0 ||
+    unstaged.error ||
+    unstaged.status !== 0 ||
+    staged.error ||
+    staged.status !== 0 ||
     untracked.error ||
     untracked.status !== 0
   ) {
@@ -230,7 +240,9 @@ export function getGitDiffFiles(cwd: string): string[] {
 
   return [
     ...new Set(
-      `${changed.stdout}\n${untracked.stdout}`.split("\n").filter(Boolean),
+      `${unstaged.stdout}\n${staged.stdout}\n${untracked.stdout}`
+        .split("\n")
+        .filter(Boolean),
     ),
   ];
 }
@@ -354,7 +366,7 @@ export function runTextlint(
     result.stderr,
   );
   if (lintResult.kind === "lint-error") {
-    process.stdout.write(result.stdout);
+    process.stderr.write(result.stdout);
     process.stderr.write(result.stderr);
   }
 
@@ -378,7 +390,7 @@ async function readHookInput(): Promise<unknown> {
 /**
  * Executes the hook and returns the exit status expected by the harness.
  *
- * @returns Zero for success or skipped input, textlint's status for diagnostics, or two for runtime failures.
+ * @returns Zero for success or skipped input, or two for lint violations and runtime failures.
  */
 export async function main(): Promise<number> {
   let input: unknown;
@@ -407,7 +419,7 @@ export async function main(): Promise<number> {
     return 2;
   }
 
-  return result.status;
+  return result.kind === "lint-error" ? 2 : result.status;
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
