@@ -12,3 +12,13 @@ run = "npm run format"
 [tasks."format:check"]
 description = "Check Markdown formatting"
 run = "npm run format:check"
+
+[tasks.test]
+description = "Run automated tests"
+dir = "writing/japanese-writing-lint/runtime"
+run = "npm test"
+
+[tasks.typecheck]
+description = "Run TypeScript type checks"
+dir = "writing/japanese-writing-lint/runtime"
+run = "npm run typecheck"

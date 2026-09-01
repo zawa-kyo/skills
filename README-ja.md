@@ -1,18 +1,19 @@
 # 📚 skills
 
-zawa-kyo が管理し、[apm](https://github.com/microsoft/apm) 向けに公開している再利用可能なエージェントスキル集です。
+zawa-kyo が管理し、[apm](https://github.com/microsoft/apm) 向けに公開している再利用可能なエージェントスキルと Hook です。
 
 ## リポジトリの構成
 
 スキルはカテゴリ別のディレクトリにまとめています。各スキルパッケージは `<category>/<skill>` に置いています。
 
-| カテゴリ   | 用途                                                       |
-| ---------- | ---------------------------------------------------------- |
-| `dev`      | 設計、実装、レビューなど、開発やコーディングに関わる作業。 |
-| `thinking` | 思考整理、意思決定支援、壁打ちなど、考える作業全般。       |
-| `writing`  | 文章編集、文書メンテナンス、要約など、文書に関わる作業。   |
+| カテゴリ   | 用途                                                            |
+| ---------- | --------------------------------------------------------------- |
+| `dev`      | 設計、実装、レビューなど、開発やコーディングに関わる作業。      |
+| `thinking` | 思考整理、意思決定支援、壁打ちなど、考える作業全般。            |
+| `writing`  | 文章編集、文書メンテナンス、要約、lint など、文書に関わる作業。 |
 
 各スキルディレクトリには、英語版と日本語版のスキル定義、エージェント向けのメタデータを置いています。
+Hook は同じカテゴリの配下に、独立した APM パッケージとして置いています。
 
 ## スキルの詳細
 
@@ -47,6 +48,12 @@ zawa-kyo が管理し、[apm](https://github.com/microsoft/apm) 向けに公開�
 | `rewrite-final-plan`              | 修正を重ねたプランを、会話の経緯を知らない読者にも伝わる最終設計として書き直す。               |
 | `summarize-discussion-coherently` | 個人の対話ログを、整理フレームを選びつつ、未整理点も残した一貫した構造的な要約にまとめる。     |
 
+## Hook パッケージ
+
+| パッケージ              | 配置                            | 用途                                                                                    |
+| ----------------------- | ------------------------------- | --------------------------------------------------------------------------------------- |
+| `japanese-writing-lint` | `writing/japanese-writing-lint` | Claude Code または Codex が Markdown を変更した後に、日本語向けの textlint を実行する。 |
+
 ## インストール
 
 個別のスキルをグローバルにインストールするには、`zawa-kyo/skills/<category>/<skill>` の形で指定します。
@@ -59,7 +66,7 @@ apm install -g zawa-kyo/skills/writing/revise-japanese-writing
 ```
 
 上記は代表例です。ほかのスキルを使う場合は、上の一覧から必要なパスを選んでください。
-テストレベルをまたぐ戦略と三つの専門スキルをまとめて使う場合は、`guide-automated-tests` をインストールします。
+テストレベルをまたぐ戦略と 3 つの専門スキルをまとめて使う場合は、`guide-automated-tests` をインストールします。
 単体、結合、E2E のいずれかに限定された明確な作業だけが必要な場合は、対応する専門スキルを直接インストールできます。
 
 または、必要なスキルを `apm.yml` に追加します。
@@ -72,6 +79,23 @@ dependencies:
     - zawa-kyo/skills/thinking/refine-developing-reasoning
     - zawa-kyo/skills/writing/revise-japanese-writing
 ```
+
+### Markdown lint Hook
+
+`japanese-writing-lint` を使うには Node.js 22.18 以降が必要です。使用する実行環境を指定し、プロジェクトへインストールします。
+
+```sh
+apm install zawa-kyo/skills/writing/japanese-writing-lint --target claude,codex
+```
+
+APM は実行環境ごとに Hook を配置します。各 Hook の配置先でセットアップスクリプトを実行し、lock ファイルでバージョンを固定した依存関係をインストールします。
+
+```sh
+node .claude/hooks/japanese-writing-lint/runtime/setup.ts
+node .codex/hooks/japanese-writing-lint/runtime/setup.ts
+```
+
+有効化した実行環境で、対応するセットアップコマンドだけを実行してください。Hook は `PostToolUse` の payload を読み取り、変更された `*.md` を lint します。自動修正は行わず、違反内容をエージェントに返します。
 
 公開しているスキル一式をまとめて入れる場合は、`zawa-kyo/skills` を指定します。
 

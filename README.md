@@ -1,18 +1,19 @@
 # 📚 skills
 
-Reusable agent skills maintained by zawa-kyo for [apm](https://github.com/microsoft/apm).
+Reusable agent skills and hooks maintained by zawa-kyo for [apm](https://github.com/microsoft/apm).
 
 ## Repository Layout
 
 Skills are grouped under category directories. Each skill package lives at `<category>/<skill>`.
 
-| Category   | Use for                                                                            |
-| ---------- | ---------------------------------------------------------------------------------- |
-| `dev`      | Development and coding work, including design, implementation, and review.         |
-| `thinking` | Thinking support, including reasoning, decision-making, and structured discussion. |
-| `writing`  | Writing support, including prose editing, document maintenance, and summaries.     |
+| Category   | Use for                                                                                 |
+| ---------- | --------------------------------------------------------------------------------------- |
+| `dev`      | Development and coding work, including design, implementation, and review.              |
+| `thinking` | Thinking support, including reasoning, decision-making, and structured discussion.      |
+| `writing`  | Writing support, including prose editing, document maintenance, summaries, and linting. |
 
 Each skill directory contains the English and Japanese skill definitions plus agent metadata.
+Hook packages use the same category directories but remain independent APM packages.
 
 ## Skill Details
 
@@ -47,6 +48,12 @@ Each skill directory contains the English and Japanese skill definitions plus ag
 | `rewrite-final-plan`              | Rewrite an iteratively revised plan as a self-contained final design for readers without the preceding conversation.                  |
 | `summarize-discussion-coherently` | Turn personal discussion logs into coherent structured summaries with the right organizing framework and unresolved points preserved. |
 
+## Hook Packages
+
+| Package                 | Location                        | Description                                                               |
+| ----------------------- | ------------------------------- | ------------------------------------------------------------------------- |
+| `japanese-writing-lint` | `writing/japanese-writing-lint` | Run Japanese textlint after Claude Code or Codex changes a Markdown file. |
+
 ## Install
 
 Install one skill globally with `zawa-kyo/skills/<category>/<skill>`. For example:
@@ -70,6 +77,23 @@ dependencies:
     - zawa-kyo/skills/thinking/refine-developing-reasoning
     - zawa-kyo/skills/writing/revise-japanese-writing
 ```
+
+### Markdown Lint Hook
+
+The `japanese-writing-lint` hook requires Node.js 22.18 or later. Install it into a project for the harnesses you use:
+
+```sh
+apm install zawa-kyo/skills/writing/japanese-writing-lint --target claude,codex
+```
+
+APM deploys one hook bundle for each target. Run the setup script in each deployed bundle to install the dependencies pinned by its lock file:
+
+```sh
+node .claude/hooks/japanese-writing-lint/runtime/setup.ts
+node .codex/hooks/japanese-writing-lint/runtime/setup.ts
+```
+
+Run only the setup command for each target you enabled. The hook reads `PostToolUse` payloads, lints changed `*.md` files, and returns diagnostics without applying fixes.
 
 If you want the full public skill collection, use `zawa-kyo/skills` instead:
 
