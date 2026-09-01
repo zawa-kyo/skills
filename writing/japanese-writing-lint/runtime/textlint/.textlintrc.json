@@ -3,8 +3,26 @@
     "@textlint-ja/preset-ai-writing": {
       "ai-tech-writing-guideline": false
     },
-    "ja-space-between-half-and-full-width": {
-      "space": ["alphabets"]
+    "preset-ja-spacing": {
+      "ja-nakaguro-or-halfwidth-space-between-katakana": false,
+      "ja-no-space-around-parentheses": false,
+      "ja-no-space-around-slash": false,
+      "ja-no-space-between-full-width": false,
+      "ja-space-between-half-and-full-width": {
+        "space": ["alphabets"]
+      },
+      "ja-space-after-exclamation": false,
+      "ja-space-after-question": false,
+      "ja-space-around-code": {
+        "before": true,
+        "after": true
+      },
+      "ja-space-around-emphasis": false,
+      "ja-space-around-link": {
+        "before": true,
+        "after": true
+      },
+      "ja-space-around-strong": false
     },
     "preset-ja-technical-writing": {
       "arabic-kanji-numbers": false,

@@ -118,4 +118,6 @@ it("runs textlint for Markdown changes and returns diagnostics", () => {
   expect(validSpacing.status).toBe(0);
   expect(invalidSpacing.status).toBe(1);
   expect(invalidSpacing.stdout).toMatch(/ja-space-between-half-and-full-width/);
+  expect(invalidSpacing.stdout).toMatch(/ja-space-around-link/);
+  expect(invalidSpacing.stdout).toMatch(/ja-space-around-code/);
 });

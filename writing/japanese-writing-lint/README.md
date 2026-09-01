@@ -12,7 +12,7 @@ The runner uses only Node.js standard-library APIs and invokes textlint as a CLI
 
 ## Rules
 
-The hook keeps the four AI-pattern rules from `@textlint-ja/preset-ai-writing` and reports only actual mixing of `です・ます調` and `である調`. It also requires spaces between Japanese text and half-width letters, as in `API で Node.js を使う`.
+The hook keeps the four AI-pattern rules from `@textlint-ja/preset-ai-writing` and reports only actual mixing of `です・ます調` and `である調`. It also requires spaces between Japanese text and half-width letters, as in `API で Node.js を使う`, and around links and inline code. It does not check spaces between full-width characters.
 
 It disables broad technical-writing rules for sentence length, commas, punctuation, and number style because they produced pervasive, context-dependent findings across this repository.
 
