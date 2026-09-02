@@ -18,11 +18,11 @@ Use this skill as the source of truth for detailed Japanese prose style. Agent-l
    - Prose: sentences, headings, bullets, explanations, labels.
    - Technical artifacts: command names, file paths, config keys, code identifiers, package names, URLs, examples, and quoted values.
 3. Rewrite prose into fluent Japanese while preserving technical artifacts unless explicitly asked to rename them.
-5. Keep the repository's existing terminology and tone consistent.
-6. Avoid broad rewrites that change the document's structure or intent unless the user asks for a larger edit.
-7. For long-form prose, articles, guides, or explanatory drafts, review paragraph structure, argument flow, reader load, and unnecessary staging before making sentence-level changes.
-8. After editing, manually review term choice for translated compounds, established names, and unnatural literal renderings.
-9. After editing, search for the targeted awkward terms to confirm the intended cleanup is complete.
+4. Keep the repository's existing terminology and tone consistent.
+5. Avoid broad rewrites that change the document's structure or intent unless the user asks for a larger edit.
+6. For long-form prose, articles, guides, or explanatory drafts, review paragraph structure, argument flow, reader load, and unnecessary staging before making sentence-level changes.
+7. After editing, manually review term choice for translated compounds, established names, and unnatural literal renderings.
+8. After editing, search for the targeted awkward terms to confirm the intended cleanup is complete.
 
 ## Prose Guidelines
 

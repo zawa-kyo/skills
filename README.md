@@ -26,7 +26,7 @@ Hook packages use the same category directories but remain independent APM packa
 | `guide-e2e-tests`         | Design, implement, and review E2E tests for externally visible behavior and system-wide operation.   |
 | `guide-integration-tests` | Design, implement, and review integration tests for behavior spanning multiple components or layers. |
 | `guide-unit-tests`        | Design, implement, and review unit tests focused on one behavior.                                    |
-| `review-essential-code`   | Review code changes for bugs, regressions, missing tests, and essential maintainability.             |
+| `review-essential-code`   | Review AI-generated or ad hoc changes against root causes and existing ownership boundaries.         |
 | `suggest-commit-messages` | Suggest concise English Conventional Commit messages from staged or unstaged Git diffs.              |
 
 ## `thinking`
