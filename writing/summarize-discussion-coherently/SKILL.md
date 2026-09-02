@@ -1,13 +1,13 @@
 ---
 name: summarize-discussion-coherently
-description: Summarize a discussion into a coherent, structured summary that preserves the conclusion, background, intent, unresolved points, and next steps. Choose an appropriate organizing framework such as PREP, TAPS, SCQA, a chronological recap, an issue-structuring memo, or a decision memo based on the conversation itself. Use when the user asks to "summarize what we've discussed so far", organize a personal conversation log, turn rough dialogue into a structured summary, or wants the summary to clarify purpose and unresolved issues instead of only compressing text.
+description: Summarize a discussion into a coherent structure that preserves its conclusion, background, intent, unresolved points, and next steps. Choose a fitting organizing framework when the user wants more than a shorter version, such as a structured summary or clarified open issues.
 ---
 
 # Summarize Discussion Coherently
 
 ## Overview
 
-Turn a personal discussion log, rough back-and-forth, or scattered notes into a coherent structured summary. Do not merely shorten the text. Reconstruct the discussion so the reader can understand what the conversation was trying to achieve, what was concluded, what reasoning mattered, and what remains unresolved.
+Turn a personal discussion log, rough back-and-forth, or scattered notes into a coherent structured summary. Reconstruct its purpose, conclusion, reasoning, and unresolved points rather than merely shortening it.
 
 Write the summary so it can stand on its own. Do not assume the reader has the original chat, direct access to the referenced materials, or familiarity with local paths, personal shorthand, or thread-internal context.
 
@@ -22,7 +22,7 @@ Write the summary so it can stand on its own. Do not assume the reader has the o
 7. Normalize references that would be unclear to a third party. Replace thread-internal wording, raw local file paths, and overly specific document links with reader-oriented descriptions. Keep exact paths, URLs, IDs, or labels only when they are necessary for the decision, verification, reproduction, or next action.
 8. Omit or generalize details that are private, machine-specific, or irrelevant to the reader's understanding.
 9. Write the result as a clearly structured summary.
-10. At the end, quickly self-check whether the summary is coherent, self-contained, decision-useful, and faithful to the source discussion.
+10. Self-check that the summary is coherent, self-contained, decision-useful, and faithful to the source discussion.
 
 ## Framework Selection
 
@@ -73,71 +73,3 @@ The note must also satisfy these reader-facing constraints:
 ## Final Response
 
 Respond in the user's language unless they ask otherwise. Return the structured summary directly. If any important uncertainty remains, mark it explicitly inside the summary instead of burying it in side commentary.
-
-## Example Shapes
-
-### Example shape: PREP
-
-```md
-# Why we should create a wrapper skill
-
-Framework: PREP
-
-## Point
-
-The best path is to build a wrapper on top of an existing meeting-summary skill.
-
-## Reason
-
-Existing skills already handle structured summaries reasonably well, but they do not reliably reorganize personal discussions by purpose, rationale, and unresolved points.
-
-## Example
-
-The current discussion asked not only for a conclusion, but also for background and issue clarification. That is beyond a plain meeting-minutes output.
-
-## Restated point
-
-Build the wrapper and make framework selection part of the workflow.
-
-## Open questions
-
-- Which framework names should be exposed to the user?
-```
-
-### Example shape: Decision memo
-
-```md
-# Discussion summary for the new skill
-
-Framework: Decision memo
-
-## Current conclusion
-
-Use `summarize-discussion-coherently` as the skill name and keep the output contract fixed while letting the internal structure vary by framework.
-
-## Purpose
-
-Define a reusable skill that turns personal dialogue into a coherent structured summary.
-
-## Options considered
-
-### Fixed template
-
-Easy to standardize, but it undermines the value of choosing a framework.
-
-### Minimum contract plus framework-specific structure
-
-Preserves consistency while keeping the chosen framework meaningful.
-
-## Recommendation
-
-Adopt the minimum contract approach.
-
-## Unresolved points
-
-- How opinionated the default heading structure should be
-
-## Next steps
-
-- Draft `SKILL.md` and `SKILL-ja.md`
-```
