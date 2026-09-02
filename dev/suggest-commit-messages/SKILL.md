@@ -20,7 +20,7 @@ Draft a small set of concise English commit message candidates from the reposito
 7. Generate 3-6 commit message candidates in concise English, using Conventional Commit style by default.
 8. After listing candidates, recommend the single best message based on fit to the change content and natural English phrasing.
 9. Prefer generating one-line messages unless the user asks otherwise. Keep the subject concise and action-oriented, with no trailing period.
-10. If the selected changes contain unrelated work, group candidates by likely change area or mention that splitting the commit may be clearer.
+10. If the selected changes contain multiple independent semantic units, group them into logical commits and provide separate candidates and a recommendation for each commit. If splitting the commit is clearer, say so explicitly.
 
 ## Style
 
