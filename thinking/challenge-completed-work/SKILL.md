@@ -7,13 +7,11 @@ description: Challenge completed work from a fresh context before treating it as
 
 ## Purpose
 
-Apply adversarial verification before treating important work as done. In this skill, adversarial verification means a fresh-context review that tries to disprove the result against the stated goal. The reviewer should examine the result from a skeptical perspective and look for correctness gaps, requirement misses, weak assumptions, unsafe scope creep, or evaluation holes. This is not a style review and not a prompt-expansion exercise.
-
-The goal is to make the conclusion or deliverable stronger by testing whether it satisfies the stated goal, not by adding defensive work for every imaginable case.
+Apply skeptical verification from a fresh context before treating work as done. Look for correctness gaps, missed requirements, weak assumptions, unsafe scope creep, or evaluation holes against the stated goal. This is not a style review or a prompt-expansion exercise.
 
 ## When To Use This
 
-Use this skill when a result should be checked independently before being accepted, especially:
+Use this skill when a result should be checked independently before acceptance:
 
 - reviewing a plan against its stated success criteria
 - checking a design, architecture proposal, or decision memo for gaps
@@ -22,11 +20,11 @@ Use this skill when a result should be checked independently before being accept
 - reviewing a skill, prompt, eval set, or agent instruction before publishing it
 - finishing a long autonomous run where the implementing context may be biased toward its own result
 
-If the user asks for a domain-specific review, use the relevant skill as the primary lens and this skill as the independent gap-checking step. For example, use `review-essential-code` for code correctness and maintainability, `guide-unit-tests` for unit test design, and `skill-creator` for skill creation. This skill adds the skeptical verification loop around that work.
+For domain-specific reviews, use the relevant skill as the primary lens and this skill to check for gaps. Examples include `review-essential-code` for code, `guide-unit-tests` for unit tests, and `skill-creator` for skills.
 
 ## Review Inputs
 
-Collect the smallest set of inputs that lets the reviewer judge the result on its own terms:
+Collect the smallest set of inputs needed to judge the result independently:
 
 - the stated goal, plan, or acceptance criteria
 - the result to review, such as a diff, document, proposal, or generated artifact
@@ -34,21 +32,19 @@ Collect the smallest set of inputs that lets the reviewer judge the result on it
 - eval prompts, assertions, or acceptance criteria when they exist
 - constraints such as repository rules, bilingual sync requirements, safety requirements, budgets, or scope boundaries
 
-If the artifact, diff, stated goal, or acceptance criteria are missing, do not claim the work is verified. Report the missing input as a blocking verification gap and ask for the smallest missing material needed to continue.
+If the artifact, goal, or acceptance criteria are missing, do not claim verification. Report the gap and ask for the smallest missing material.
 
-Do not give the reviewer the implementation reasoning unless it is part of the acceptance criteria. A fresh review is valuable because it sees the artifact, not the path that produced it.
+Do not give the reviewer implementation reasoning unless it is part of the acceptance criteria. Judge the artifact independently of how it was produced.
 
 ## Workflow
 
-1. State what work is being reviewed.
-2. State the criteria that count as findings.
-3. Check that the review inputs are sufficient. If the artifact or criteria are missing, report a blocking verification gap instead of continuing with a shallow review.
-4. Run an independent review, preferably in a fresh subagent context when subagents are available and the active tool or user instructions allow delegation.
-5. Ask the reviewer to report only gaps that affect correctness, stated requirements, assumptions, safety, maintainability, or evaluation quality.
-6. Treat style preferences, speculative edge cases, and broader redesign ideas as optional unless they affect the stated goal.
-7. If the current task includes making changes, fix actionable findings that are within scope. If the user asked only for review, report them without editing.
-8. Re-run the adversarial review after meaningful fixes.
-9. Report any remaining accepted risks or unverified checks.
+1. State the work under review and the finding criteria.
+2. Check that the inputs are sufficient; report a verification gap if they are not.
+3. Run an independent review in a fresh subagent context when delegation is allowed.
+4. Report only gaps affecting correctness, requirements, assumptions, safety, maintainability, or evaluation quality.
+5. Treat style preferences, speculative edge cases, and broad redesigns as optional unless they affect the goal.
+6. Fix actionable findings within scope when the task includes changes; otherwise report them without editing.
+7. Re-run the review after meaningful fixes and report remaining risks or unverified checks.
 
 ## Reviewer Prompt Template
 
@@ -106,11 +102,6 @@ Do not chase every adversarial note. A good reviewer will sometimes find plausib
 
 ## Output
 
-Report the review result in the user's language:
-
-- findings fixed
-- findings accepted as remaining risk
-- optional ideas not implemented
-- checks run, including whether a fresh subagent review was actually used
+Report the review result in the user's language with fixed findings, remaining risks, unimplemented optional ideas, and checks run.
 
 If no fresh subagent or independent reviewer is available or allowed, say that the review was an inline adversarial pass and lower confidence accordingly.

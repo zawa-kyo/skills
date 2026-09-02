@@ -1,13 +1,13 @@
 ---
 name: coordinate-independent-reviews
-description: Coordinate independent reviews by multiple agents using distinct perspectives, then consolidate evidence-backed findings without hiding disagreements. Use when the user explicitly asks for multiple agents, independent reviewers, or a multi-perspective review. Do not use for an ordinary review.
+description: Coordinate independent reviews by multiple agents using distinct perspectives, then consolidate evidence-backed findings without hiding disagreements. Use when the user explicitly asks for multiple agents or perspectives. Do not use for an ordinary review.
 ---
 
 # Coordinate Independent Reviews
 
 ## Workflow
 
-1. Choose at least two review lenses that address different risks in the target. Use no more reviewers than those lenses require.
+1. Choose at least two review lenses for different risks. Use no more reviewers than those lenses require.
 2. Assign each lens to a separate subagent.
    - Give each reviewer the same target, goal, and constraints, but do not share other reviewers' findings.
    - Give each reviewer a distinct question or scope.
