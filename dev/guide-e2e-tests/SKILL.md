@@ -1,6 +1,6 @@
 ---
 name: guide-e2e-tests
-description: Design, implement, or review E2E tests when an E2E boundary can detect the relevant system-wide or externally visible failure. Use it for representative journeys, external API or UI entry points, deployment smoke checks, environments and test data, or slow and flaky E2E tests. It can work directly from the request or from a guide-automated-tests handoff. Use guide-automated-tests when the verification approach is unclear, the work spans test levels, or the proposed E2E boundary needs reconsideration. This skill does not choose the overall strategy or cover CI configuration, load testing, security testing, or exhaustive UI coverage.
+description: Design, implement, or review E2E tests when the boundary can detect system-wide or externally visible failures. Use it for representative journeys, external APIs or UIs, deployment smoke checks, environments, and test data. Use `guide-automated-tests` when the boundary is unclear.
 ---
 
 # Guide E2E Tests

@@ -1,6 +1,6 @@
 ---
 name: review-essential-code
-description: Review code changes for bugs, regressions, missing tests, and whether the implementation is simple, essential, and maintainable rather than a short-term workaround. Use when the user asks for a code review, says "レビューして", wants review of AI-generated fixes or implementations, or asks whether a change is overcomplicated, ad hoc, brittle, or masking the real problem.
+description: Review code changes for bugs, regressions, missing tests, and whether the implementation is simple, essential, and maintainable rather than a short-term workaround. Use for code reviews, including AI-generated fixes and implementations.
 ---
 
 # Review Essential Code
