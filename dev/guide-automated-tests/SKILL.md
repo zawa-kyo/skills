@@ -1,6 +1,6 @@
 ---
 name: guide-automated-tests
-description: Choose an automated verification strategy when the right method or boundary is unclear, the work spans test levels, or the user wants to review a test portfolio. Start from product risk and production context. Delegate clear unit, integration, or E2E work to the matching specialist; evaluate other approaches without forcing them into those labels. Use this skill to select or challenge boundaries and coordinate work across test levels. It does not cover framework setup, CI configuration, or detailed performance, security, or exploratory testing.
+description: Choose a verification strategy when the method or boundary is unclear, the work spans test levels, or the test portfolio needs review. Delegate clear unit, integration, or E2E work to the matching specialist.
 ---
 
 # Guide Automated Tests

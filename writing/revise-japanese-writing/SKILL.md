@@ -7,23 +7,22 @@ description: Review and revise Japanese documentation and comments into fluent, 
 
 ## Overview
 
-Review and improve Japanese prose in technical documents, comments, policies, guides, articles, and explanatory drafts. The goal is not to translate every technical word mechanically, but to make the text read fluently to a Japanese-speaking maintainer while preserving precise technical meaning and the document's argument.
+Review and improve Japanese prose in technical documents, comments, policies, guides, articles, and explanatory drafts. Preserve technical meaning and the document's argument while making the text fluent for Japanese-speaking maintainers.
 
-This skill is the source of truth for detailed Japanese prose style. Agent-level instruction files may reference this skill for Japanese tone, notation, terminology, and punctuation instead of duplicating those rules.
+Use this skill as the source of truth for detailed Japanese prose style. Agent-level instructions may reference it instead of duplicating rules for tone, notation, terminology, and punctuation.
 
 ## Workflow
 
-1. Identify the target text from the user request. If no range is specified, inspect the relevant diff or file.
+1. Identify the target text. If no range is specified, inspect the relevant diff or file.
 2. Separate prose from literal technical artifacts.
    - Prose: sentences, headings, bullets, explanations, labels.
    - Technical artifacts: command names, file paths, config keys, code identifiers, package names, URLs, examples, and quoted values.
-3. Rewrite prose into fluent Japanese.
-4. Preserve technical artifacts unless the user explicitly asks to rename them.
-5. Keep the repository's existing terminology and tone consistent.
-6. Avoid broad rewrites that change the document's structure or intent unless the user asks for a larger edit.
-7. For long-form prose, articles, guides, or explanatory drafts, review paragraph structure, argument flow, reader load, and unnecessary staging before making sentence-level changes.
-8. After editing, manually review term choice for translated compounds, established names, and unnatural literal renderings.
-9. After editing, search for the targeted awkward terms to confirm the intended cleanup is complete.
+3. Rewrite prose into fluent Japanese while preserving technical artifacts unless explicitly asked to rename them.
+4. Keep the repository's existing terminology and tone consistent.
+5. Avoid broad rewrites that change the document's structure or intent unless the user asks for a larger edit.
+6. For long-form prose, articles, guides, or explanatory drafts, review paragraph structure, argument flow, reader load, and unnecessary staging before making sentence-level changes.
+7. After editing, manually review term choice for translated compounds, established names, and unnatural literal renderings.
+8. After editing, search for the targeted awkward terms to confirm the intended cleanup is complete.
 
 ## Prose Guidelines
 

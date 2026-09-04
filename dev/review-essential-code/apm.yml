@@ -1,6 +1,6 @@
 name: review-essential-code
 version: 0.1.0
-description: Review code changes for correctness and essential maintainability.
+description: Review AI-generated or ad hoc code changes for root causes and ownership boundaries.
 author: Kyohei Ozawa
 license: MIT
 includes: auto

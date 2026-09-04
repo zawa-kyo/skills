@@ -1,6 +1,6 @@
 ---
 name: guide-integration-tests
-description: Design, implement, or review integration tests when confidence depends on real collaboration, infrastructure behavior, or a controlled process-external dependency. Use it for component collaboration, infrastructure semantics, test data, or slow and brittle integration tests. It can work directly from the request or from a guide-automated-tests handoff. Use guide-automated-tests when the verification approach is unclear, the work spans test levels, or the proposed integration boundary needs reconsideration. This skill does not choose the overall strategy or cover full user journeys, CI configuration, or framework installation.
+description: Design, implement, or review integration tests when confidence depends on real collaboration, infrastructure behavior, or controlled process-external dependencies. Use `guide-automated-tests` when the boundary is unclear.
 ---
 
 # Guide Integration Tests

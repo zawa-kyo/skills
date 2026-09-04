@@ -1,4 +1,4 @@
 interface:
   display_name: "Review Essential Code"
-  short_description: "Review code for bugs and essential simplicity"
-  default_prompt: "Use $review-essential-code to review this change for bugs, regressions, and whether the implementation stays simple and essential."
+  short_description: "Review AI code for root causes and ad hoc fixes"
+  default_prompt: "Use $review-essential-code to verify the diagnosis and check whether this AI-generated change fixes the root cause or adds an ad hoc workaround."

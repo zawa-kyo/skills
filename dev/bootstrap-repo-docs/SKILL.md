@@ -1,6 +1,6 @@
 ---
 name: bootstrap-repo-docs
-description: Set up initial documentation and agent guidance for a new or minimally scaffolded repository. Use when a repository has only a few starter files such as README.md or .gitignore, and the user wants README.md, AGENTS.md, and matching *-ja.md files with a clear bilingual synchronization rule.
+description: Set up `README.md`, `AGENTS.md`, matching `*-ja.md` files, and bilingual synchronization rules for a new or minimally scaffolded repository.
 ---
 
 # Bootstrap Repository Docs
@@ -28,13 +28,6 @@ Use this skill when the user wants to:
 - bring a sparse repository up to a usable baseline for future agent work
 
 Do not use this skill for mature repositories with an established documentation structure unless the user explicitly wants to realign or simplify it.
-
-## Assumptions
-
-- The repository may be almost empty.
-- Existing files may be incomplete rather than wrong.
-- The user usually wants a small but usable setup, not a full documentation suite.
-- The bilingual policy should be introduced early so later edits follow it consistently.
 
 ## Files To Inspect First
 

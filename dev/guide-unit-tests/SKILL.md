@@ -1,6 +1,6 @@
 ---
 name: guide-unit-tests
-description: Design, implement, or review unit tests when a unit boundary can protect the relevant behavior and risk. Use it to choose cases and assertions, handle test doubles, improve existing tests, or refactor hard-to-test behavior. It can work directly from the request or from a guide-automated-tests handoff. Use guide-automated-tests when the verification approach is unclear, the work spans test levels, or controlling dependencies would remove the mechanism at risk. This skill does not choose the overall strategy or cover detailed integration, E2E, CI, or framework setup.
+description: Design, implement, or review unit tests when a unit boundary can protect the relevant behavior and risk. Use it for cases, assertions, test doubles, existing tests, and hard-to-test behavior. Use `guide-automated-tests` when the boundary is unclear.
 ---
 
 # Guide Unit Tests

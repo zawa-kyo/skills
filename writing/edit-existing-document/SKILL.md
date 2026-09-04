@@ -7,9 +7,9 @@ description: Use when editing an existing document, README, policy, AGENTS.md, C
 
 ## Purpose
 
-When revising existing prose, do not treat the requested change as an isolated patch. Edit with the whole text in mind. Before changing a document or comment, understand the document's purpose, audience, section structure, and nearby explanations so the edit fits the overall flow.
+When revising existing prose, consider the whole document. Before editing, understand its purpose, audience, structure, and nearby explanations so the change fits the flow.
 
-This skill handles structure and integration decisions. It does not replace language-specific prose skills. When revising prose in Japanese or English, also use:
+This skill handles structure and integration, not language-specific prose. When revising Japanese or English, also use:
 
 - Japanese: `revise-japanese-writing`
 - English: `revise-english-writing`, `stop-slop`
@@ -27,7 +27,7 @@ Also use it when creating a new document that must fit into an existing document
 
 ## Non-Goals
 
-Do not use this skill as the source of truth for:
+Do not use this skill for:
 
 - Detailed Japanese prose style. Use `revise-japanese-writing`.
 - Detailed English prose style. Use `revise-english-writing` and `stop-slop`.
@@ -37,19 +37,19 @@ Do not use this skill as the source of truth for:
 
 ## Workflow
 
-1. Identify the requested change and the target file or files. If the target is unclear and cannot be inferred safely, ask before editing.
+1. Identify the requested change and target files. If the target cannot be inferred safely, ask before editing.
 2. Read the target section and enough surrounding text to understand the local flow.
 3. Inspect the whole document's heading structure before deciding where the change belongs.
 4. Check whether nearby sections already cover the same idea, conflict with it, or use a different level of detail or abstraction.
-5. Decide whether the right edit is a small addition, a revision of existing text, a move, a merge, or a broader reorganization.
+5. Decide whether to add, revise, move, merge, or reorganize.
 6. Check for related files that must stay aligned, such as English and Japanese versions of the same document, generated metadata, or companion examples.
 7. If no broader reorganization is needed, make the smallest edit that preserves the document's flow and avoids duplicate guidance.
-8. Use the relevant language-specific prose skill for edited natural language when available.
+8. Use the relevant language-specific prose skill for natural-language edits.
 9. Run the repository formatter or validation command when the project provides one. If you do not run it, report why.
 
 ## Reorganization Gate
 
-Do not start a structural reorganization without user confirmation when any of these conditions apply:
+Ask for confirmation before structural reorganization when any of these conditions apply:
 
 - The requested content would make the target section cover too many responsibilities.
 - Similar guidance is already spread across multiple sections and another addition would increase duplication.

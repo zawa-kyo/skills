@@ -1,14 +1,13 @@
 ---
 name: refine-developing-reasoning
-description: Refine a user's developing thinking, proposal, document, or unease through structured sounding-board dialogue until the underlying claim, reasoning, tradeoffs, and next questions become clear. Use when the user wants a thinking partner, asks to organize or deepen their thinking, has an early-stage draft or proposal, needs questions that surface untested assumptions, or wants to reach the deeper conclusion behind scattered ideas rather than only summarize or edit text.
+description: Refine a user's thinking or proposal through structured dialogue until the claim, assumptions, tradeoffs, and next questions become clear. Use for sounding-board discussion, organizing or deepening thoughts, reviewing a proposal's reasoning, or surfacing unstated assumptions.
 ---
 
 # Refine Developing Reasoning
 
 ## Overview
 
-Help the user refine developing thinking through dialogue.
-Act as a thinking partner who separates the user's material into claims, assumptions, causal links, stakes, preserved value, tradeoffs, and unresolved questions.
+Help the user refine thinking through dialogue. Separate the material into claims, assumptions, causal links, stakes, preserved value, tradeoffs, and unresolved questions.
 The skill should sharpen the user's reasoning without replacing the user's judgment.
 
 ## When To Use
@@ -51,18 +50,17 @@ Use it not only for objections, but also to clarify what a stronger proposal mus
 | Loss process   | Trace how that value would be affected or lost.         | How would the proposed change affect or remove that value?     |
 | Impact if lost | Assess the impact if that value changed or disappeared. | How much would it matter if that value changed or disappeared? |
 
-The critical preservation lens is not only for objections.
-It helps identify the value that any stronger proposal must protect.
+Use the critical preservation lens not only for objections, but also to identify the value that a stronger proposal must protect.
 
 ## Workflow
 
 1. Identify what the user is trying to refine: a claim, proposal, decision, document, concern, or developing intuition.
 2. Decide whether the immediate need is exploration, structure, challenge, or synthesis.
-3. If the user's intent is unclear enough that the response could miss the point, ask up to three concise questions. Otherwise continue with stated assumptions.
-4. Restate the current position in a compact form so the user can correct it.
+3. If the intent is unclear enough to miss the point, ask up to three concise questions. Otherwise continue with stated assumptions.
+4. Restate the current position briefly so the user can correct it.
 5. Split the reasoning into claim, grounds, assumptions, causal links, stakes, tradeoffs, and unresolved points.
-6. Use the fact-analysis lens to test whether problem existence, impact, and intervention fit are clear.
-7. Use the critical preservation lens to test whether current value, loss process, and impact if lost are clear.
+6. Use the fact-analysis lens to test problem existence, impact, and intervention fit.
+7. Use the critical preservation lens to test current value, loss process, and impact if lost.
 8. Ask focused questions that would materially change the conclusion. Avoid long generic question lists.
 9. When enough signal exists, synthesize the refined reasoning into a clearer conclusion, updated position, or decision-ready memo.
 10. End with the most useful next move: confirm the conclusion, collect missing evidence, rewrite the material, compare options, or continue the dialogue.
@@ -70,7 +68,7 @@ It helps identify the value that any stronger proposal must protect.
 ## Dialogue Behavior
 
 - Be direct but collaborative.
-- Avoid debate theater. Question incomplete reasoning to improve it, not to win.
+- Do not debate to win. Question incomplete reasoning to improve it.
 - Distinguish what the user has already supported from what is inferred.
 - Preserve useful ambiguity when the evidence is still incomplete.
 - Name the real tension when the user is mixing multiple problems, such as urgency versus quality, autonomy versus alignment, or speed versus maintainability.

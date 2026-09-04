@@ -1,6 +1,6 @@
 ---
 name: rewrite-final-plan
-description: Rewrite an iteratively revised plan or design as a self-contained final design. Use after planning discussions, review rounds, or changing requirements when the result should read as if it had been planned in its final form from the beginning and must make sense to a new participant without the preceding conversation.
+description: Rewrite a revised plan or design as a self-contained final design for readers who do not know the preceding discussion. Use after planning discussions, reviews, or requirement changes.
 ---
 
 # Rewrite Final Plan

@@ -8,20 +8,20 @@ description: Revise English documentation, comments, prompts, release notes, and
 ## Overview
 
 Improve English prose in technical documents, comments, prompts, policies, release notes, and guides.
-Use `stop-slop` as the baseline anti-AI-writing pass, then apply the additional checks in this skill for English technical prose.
+Use `stop-slop` as the baseline check, then apply this skill's additional checks for English technical prose.
 If this skill conflicts with `stop-slop`, follow `stop-slop`.
 
-The goal is clear, specific, human English. Do not turn practical documentation into marketing copy, and do not change technical meaning for style.
+Aim for clear, specific English. Do not turn practical documentation into marketing copy or change technical meaning for style.
 
 ## Workflow
 
-1. Identify the target text from the user request. If no range is specified, inspect the relevant diff or file.
+1. Identify the target text. If no range is specified, inspect the relevant diff or file.
 2. Separate prose from literal technical artifacts.
    - Prose: sentences, headings, bullets, descriptions, labels, comments, prompts, and explanations.
    - Technical artifacts: commands, file paths, config keys, code identifiers, package names, API names, URLs, examples, quoted values, and product names.
-3. Apply `stop-slop` as the baseline anti-AI-writing pass when it is available. Do not duplicate its checklist here.
+3. Apply `stop-slop` when available. Do not duplicate its checklist here.
 4. Apply the technical-prose checks in this skill.
-5. Preserve technical artifacts unless the user explicitly asks to rename them.
+5. Preserve technical artifacts unless explicitly asked to rename them.
 6. Keep the repository's existing terminology, capitalization, and tone consistent.
 7. Avoid broad rewrites that change document structure or intent unless the user asks for a larger edit.
 8. After editing, search for targeted awkward terms or repeated phrases to confirm the intended cleanup is complete.
