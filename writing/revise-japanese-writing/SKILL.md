@@ -59,7 +59,7 @@ Preserve literal technical artifacts:
 ### Prose Noise
 
 - Keep one name for one concept. Do not vary key terms only to avoid repetition, and do not use one vague term for distinct concepts. Remove duplicated information instead of treating repeated key terms as a problem by themselves.
-- Avoid empty emphasis and posture words that make prose sound careful without adding information, such as broad claims of importance, depth, comprehensiveness, or significance.
+- As a rule, do not use empty emphasis and posture words that make prose sound careful without adding information, such as broad claims of importance, depth, comprehensiveness, or significance.
 - Treat AI-like surface markers as signals, not mechanical bans. Remove meaningless quotation marks, emoji, grand metaphors, stacked intensifiers, or generic claims when they do not fit the document's purpose.
 - Avoid theatrical setup, rhetorical questions, and punch-line contrasts when a direct explanation is enough. Use emphasis only where it clarifies the argument.
 - Choose precise subjects and verbs. Do not hide actors behind vague words such as `AI`, `tool`, `system`, or `context` when the document can name the responsible agent, component, or reader role.
@@ -129,8 +129,8 @@ Follow the surrounding document's format first. For Japanese articles, book-like
 - Put code, diffs, logs, and configuration fragments in fenced code blocks.
 - Use footnotes for side notes that would interrupt the main argument.
 - Use bold text mainly for first definitions or important logical distinctions; do not use it as decoration.
-- Avoid em dashes, double dashes, and box-drawing separators in Japanese prose and headings. Use parentheses, commas, or separate sentences instead.
-- Avoid using `・` for ordinary Japanese parallel items unless it is part of a proper noun or established notation.
+- As a rule, do not use em dashes, double dashes, or box-drawing separators in Japanese prose and headings. Use parentheses, commas, or separate sentences instead.
+- As a rule, do not use `・` for ordinary Japanese parallel items unless it is part of a proper noun or established notation.
 - Keep headings as one natural phrase. Do not pack a category and topic into a separator-based heading.
 - In definition lists, prefer `term: explanation` in English prose and `用語：説明` in Japanese prose, matching the surrounding document language.
 
