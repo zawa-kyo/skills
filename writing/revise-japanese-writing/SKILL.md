@@ -49,7 +49,7 @@ Preserve literal technical artifacts:
 
 - Do not force Japanese replacements for domain terms that are common in Japanese, lack a clear Japanese equivalent, or would become less precise when translated.
 - When several forms are possible, choose the one that reads most naturally in Japanese prose: full Japanese translation, katakana, or the original alphabetic form. Prefer established Japanese usage over literal translation. For example, keep `hexagonal architecture` as `ヘキサゴナルアーキテクチャ`, not `六角形アーキテクチャ`.
-- Avoid translationese and coined compounds that Japanese readers do not use. For example, write `重要な用語` rather than `鍵語`, and expand a label-like phrase such as `基礎チェック` to `基礎的なチェック` when needed.
+- Do not use translationese or coined compounds that Japanese readers do not use. For example, write `重要な用語` instead of `鍵語`, and rewrite a coined noun compound such as `基礎チェック` as `基礎的なチェック`.
 - Do not omit the shared head noun from coordinated Japanese terms and make the reader reconstruct it. Write `単体テスト、結合テスト、E2E テスト`, not `単体、結合、E2E の各テスト`.
 - Preserve technical terms established by a source, its Japanese edition, or the project glossary even when they look compact. For example, keep established terms such as `共有依存`, `揮発性依存`, and `協力オブジェクト` instead of expanding them merely because they are short.
 - For possible calques, test whether the Japanese phrase appears to trace an English idiom, metaphor, or marked construction. If it does, discard the English shape and choose the expression again in Japanese. Do not flag ordinary grammar or established loanwords as calques.
@@ -63,6 +63,9 @@ Preserve literal technical artifacts:
 - Treat AI-like surface markers as signals, not mechanical bans. Remove meaningless quotation marks, emoji, grand metaphors, stacked intensifiers, or generic claims when they do not fit the document's purpose.
 - Avoid theatrical setup, rhetorical questions, and punch-line contrasts when a direct explanation is enough. Use emphasis only where it clarifies the argument.
 - Choose precise subjects and verbs. Do not hide actors behind vague words such as `AI`, `tool`, `system`, or `context` when the document can name the responsible agent, component, or reader role.
+- Do not use internal terms such as `正本` without explanation. As a rule, replace them with familiar terms.
+- Do not use figurative verbs such as `効く`, `刺さる`, and `回す`.
+- Do not use translation-shaped boilerplate such as `これにより`, `〜することが可能です`, and `〜が求められます`.
 
 ### Preferred Terms
 
@@ -91,7 +94,6 @@ Prefer fluent Japanese for ordinary prose.
 Keep project-specific preferences when they are established:
 
 - Use `lock ファイル`, not `ロックファイル`, when that is the local convention.
-- Avoid overly formal or AI-like words such as `正本` when a plainer term works better.
 - Use context-specific alternatives such as `管理元`, `置き場所`, `参照先`, `基準`, `まとめるディレクトリ`, or `まとめるファイル`.
 - Avoid redundant phrases such as `ポリシー文書` when `ポリシー` is enough.
 
