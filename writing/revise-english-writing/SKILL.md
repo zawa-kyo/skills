@@ -30,7 +30,7 @@ Aim for clear, specific English. Do not turn practical documentation into market
 
 Prefer direct, specific English:
 
-| Avoid                              | Prefer                                     |
+| Generally do not use               | Prefer                                     |
 | ---------------------------------- | ------------------------------------------ |
 | `utilize`                          | `use`                                      |
 | `leverage`                         | `use`, `build on`, or a more specific verb |
